@@ -1,0 +1,10 @@
+
+adapters:
+  inputs:
+    rf_json: nr_urllc_s4_3/artifacts/s3/s3_timely_bler_results.json
+    vlc_json: nr_urllc_s4_3/artifacts/s4/s4_vlc_timely_results.json
+  outputs:
+    rf_lut: artifacts/adapters/rf_lut.json
+    vlc_lut: artifacts/adapters/vlc_lut.json
+  interp: linear
+  snr_bounds: [0, 24]

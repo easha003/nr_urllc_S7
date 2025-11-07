@@ -1,0 +1,45 @@
+hybrid:
+  policy: conditional_dup
+  K_total: 2
+  dup_split: [1, 1]
+
+  # ↓ Lower the duplication gate so DUP can trigger at mid SNRs
+  p_gate: 0.92          # was 0.97
+
+  allow_switch: true
+  # ↓ Soften the “stickiness” so it can switch back sooner
+  hysteresis_margin_prob: 0.02   # was 0.05
+
+  # ↓ Soften the safety margin so idle link isn’t over-penalized
+  conf_k: 0.5           # was 1.0
+
+  # ↓ Small, controlled exploration of the other link
+  epsilon: 0.03         # NEW (3% ε-greedy)
+
+  # ↓ Keep the idle link’s estimate fresh (periodic probing)
+  probe:                # NEW
+    period: 8           # measure both links every 8 steps
+    r_probe: 1.0        # probing uses a noisier measurement
+    on_switch: true     # also probe the link we didn’t choose whenever we switch
+
+predictor:
+  # ↓ Make SNR forecasts mean-reverting instead of drifting to 0
+  model: ar1_mean_revert    # NEW (add support per the code snippet I gave)
+  phi: 0.92
+  q: 0.5               # was 0.8 (faster tracking, less drift)
+  r: 0.5
+
+  # Long-run SNR anchors (mean reversion targets)
+  revert_to:           # NEW
+    rf: 8.0
+    vlc: 12.0
+
+  # Keep your existing priors (used as initial posteriors at t=0)
+  mu_rf: 8.0
+  var_rf: 6.0
+  mu_vlc: 14.0
+  var_vlc: 9.0
+
+adapters:
+  rf_lut: artifacts/adapters/rf_lut.json
+  vlc_lut: artifacts/adapters/vlc_lut.json
