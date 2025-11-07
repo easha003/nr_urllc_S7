@@ -27,51 +27,70 @@ def main(cfg_path: str):
     ctrl = HybridController(rf, vlc, pc, predictor=pred, conf_k=cfg["hybrid"].get("conf_k", 1.0))
 
     # ✅ FIXED: Define probe before using it
+    # ✅ FIXED: Safe extraction with proper defaults
     hy = cfg.get("hybrid", {})
-    probe = hy.get("probe", {}) if isinstance(hy.get("probe", {}), dict) else {}
+    probe = hy.get("probe") if isinstance(hy, dict) else None
+    if probe is None:
+        probe = {}
     probe_period = int(probe.get("period", 0))          # 0 = disabled
     probe_on_switch = bool(probe.get("on_switch", False))
-    probe_r = float(probe.get("r_probe", pred.r))       # Now probe is defined
-
+    probe_r = float(probe.get("r_probe", pred.r))
+    
     # ✅ ISSUE #6 FIX: Mean-reverting trajectories with VLC blockage
+    # ✅ FIXED: Extract parameters based on model type
     T = 200
     rng = np.random.default_rng(123)
-    
-    # Get predictor parameters
+
+    # Get predictor parameters - handle different model types
     pred_cfg = cfg["predictor"]
-    phi = pred_cfg["phi"]
-    q = pred_cfg["q"]
-    
-    # Check if using mean-reverting model
     model = str(pred_cfg.get("model", "ar1")).lower()
-    if model in ("ar1_mean_revert", "ar1mr", "ar1_mr"):
+
+    # Extract parameters based on model type
+    if model in ("ar1_per_link", "ar1_perlink", "ar1pl"):
+        # Per-link model: different dynamics for RF and VLC
+        rf_cfg = pred_cfg.get("rf", {})
+        vlc_cfg = pred_cfg.get("vlc", {})
+        phi_rf = float(rf_cfg.get("phi", 0.94))
+        q_rf = float(rf_cfg.get("q", 0.3))
+        m_rf = float(rf_cfg.get("m", 8.0))
+        phi_vlc = float(vlc_cfg.get("phi", 0.82))
+        q_vlc = float(vlc_cfg.get("q", 1.2))
+        m_vlc = float(vlc_cfg.get("m", 12.0))
+    elif model in ("ar1_mean_revert", "ar1mr", "ar1_mr"):
+        # Unified mean-reverting model: same dynamics for both links
+        phi_rf = phi_vlc = float(pred_cfg.get("phi", 0.92))
+        q_rf = q_vlc = float(pred_cfg.get("q", 0.5))
         revert = pred_cfg.get("revert_to", {})
         m_rf = float(revert.get("rf", pred_cfg.get("mu_rf", 10.0)))
         m_vlc = float(revert.get("vlc", pred_cfg.get("mu_vlc", 10.0)))
     else:
-        m_rf = 0.0  # Original AR1 drifts to zero
+        # Original AR1: drifts to zero
+        phi_rf = phi_vlc = float(pred_cfg.get("phi", 0.92))
+        q_rf = q_vlc = float(pred_cfg.get("q", 0.8))
+        m_rf = 0.0
         m_vlc = 0.0
-    
+
     # Initialize trajectories
     snr_rf_true = np.zeros(T)
     snr_vlc_true = np.zeros(T)
-    snr_rf_true[0] = pred_cfg["mu_rf"]
-    snr_vlc_true[0] = pred_cfg["mu_vlc"]
-    
+    # Initialize trajectories with proper fallback to config values
+    snr_rf_true[0] = float(pred_cfg.get("mu_rf", m_rf))
+    snr_vlc_true[0] = float(pred_cfg.get("mu_vlc", m_vlc))
+
     # VLC blockage parameters (Issue #6: channel diversity)
     vlc_blockage_prob = 0.1   # 10% blockage probability per timestep
     vlc_blockage_snr = -15.0  # Deep fade when blocked
-    
+
     # Generate trajectories with mean reversion + VLC blockage
     for t in range(1, T):
-        # RF: Normal mean-reverting AR(1)
-        snr_rf_true[t] = m_rf + phi * (snr_rf_true[t-1] - m_rf) + rng.normal(0, np.sqrt(q))
+        # RF: Per-link mean-reverting AR(1)
+        snr_rf_true[t] = m_rf + phi_rf * (snr_rf_true[t-1] - m_rf) + rng.normal(0, np.sqrt(q_rf))
         
-        # VLC: Mean-reverting AR(1) + Bernoulli blockage
+        # VLC: Per-link mean-reverting AR(1) + Bernoulli blockage
         if rng.random() < vlc_blockage_prob:
             snr_vlc_true[t] = vlc_blockage_snr  # Blocked
         else:
-            snr_vlc_true[t] = m_vlc + phi * (snr_vlc_true[t-1] - m_vlc) + rng.normal(0, np.sqrt(q))
+            snr_vlc_true[t] = m_vlc + phi_vlc * (snr_vlc_true[t-1] - m_vlc) + rng.normal(0, np.sqrt(q_vlc))
     
     last_action = None
     records = []

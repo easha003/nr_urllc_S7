@@ -30,8 +30,8 @@ predictor:
     q: 0.3        # Lower process noise
     m: 8.0        # Lower mean SNR         
   vlc:
-    phi: 0.85     # Faster fading  
-    q: 0.8        # Higher process noise
+    phi: 0.82     # Faster fading  
+    q: 1.2        # Higher process noise
     m: 12.0       # Higher mean SNR (when not blocked)
   # Shared measurement noise (applies to both links)
   r: 0.5  
