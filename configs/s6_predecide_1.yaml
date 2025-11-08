@@ -4,12 +4,12 @@ hybrid:
   dup_split: [1, 1]
 
   # ✅ FIX #1: Lower DUP gate significantly
-  p_gate: 0.70          # was 0.85 → easier to trigger DUP
+  p_gate: 0.7          # was 0.85 → easier to trigger DUP
 
   allow_switch: true
   
   # ✅ FIX #2: Reduce hysteresis to allow easier switching
-  hysteresis_margin_prob: 0.01   # was 0.02 → less "sticky"
+  hysteresis_margin_prob: 0.0   # was 0.02 → less "sticky"
 
   # ✅ FIX #3: Remove safety margin OR make it favor VLC
   conf_k: 0.1          # was 0.3 → NEGATIVE = optimistic about both links!
@@ -20,8 +20,8 @@ hybrid:
 
   # ✅ FIX #5: More aggressive probing
   probe:
-    period: 4           # was 8 → measure idle link every 4 steps
-    r_probe: 0.8        # was 1.5 → less noisy measurements (more accurate)
+    period: 2           # was 8 → measure idle link every 4 steps
+    r_probe: 0.4        # was 1.5 → less noisy measurements (more accurate)
     on_switch: true     # keep this
 
 predictor:

@@ -1,0 +1,2004 @@
+{
+  "records": [
+    {
+      "t": 0,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.5832183321442644,
+      "snr_rf_true": 3.0688652782529635,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 1,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.5132415282178954,
+      "snr_rf_true": 3.2627871298140296,
+      "snr_vlc_true": 18.201002936457222,
+      "success": true
+    },
+    {
+      "t": 2,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999957387543863,
+      "snr_rf_true": 2.5539200175818944,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 3,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.941952074641869,
+      "snr_rf_true": 2.4608476867970364,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 4,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.783828535914118,
+      "snr_rf_true": 2.319952095003417,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 5,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.6560918067089166,
+      "snr_rf_true": 3.109197836130071,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 6,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.5712626524224786,
+      "snr_rf_true": 3.15413862212879,
+      "snr_vlc_true": 16.33328663369342,
+      "success": true
+    },
+    {
+      "t": 7,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9991879474753693,
+      "snr_rf_true": 3.2654961409782435,
+      "snr_vlc_true": 15.745557100493839,
+      "success": true
+    },
+    {
+      "t": 8,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9990466786376218,
+      "snr_rf_true": 3.545799699379036,
+      "snr_vlc_true": 15.986155068647072,
+      "success": true
+    },
+    {
+      "t": 9,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9991777409880386,
+      "snr_rf_true": 3.9424527668996,
+      "snr_vlc_true": 17.00888453150666,
+      "success": true
+    },
+    {
+      "t": 10,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999953498248889,
+      "snr_rf_true": 4.623071930083017,
+      "snr_vlc_true": 17.30933844918976,
+      "success": true
+    },
+    {
+      "t": 11,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999943793960324,
+      "snr_rf_true": 5.324278431960329,
+      "snr_vlc_true": 18.345191466723698,
+      "success": true
+    },
+    {
+      "t": 12,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999997235884971,
+      "snr_rf_true": 5.38056703857108,
+      "snr_vlc_true": 17.352901179120686,
+      "success": true
+    },
+    {
+      "t": 13,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999974541671036,
+      "snr_rf_true": 4.53206838034081,
+      "snr_vlc_true": 17.910380176885177,
+      "success": true
+    },
+    {
+      "t": 14,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999983314702862,
+      "snr_rf_true": 3.7915761563802968,
+      "snr_vlc_true": 17.665981121649896,
+      "success": true
+    },
+    {
+      "t": 15,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999994562072515,
+      "snr_rf_true": 4.696772609101528,
+      "snr_vlc_true": 16.94257766617266,
+      "success": true
+    },
+    {
+      "t": 16,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999993322368647,
+      "snr_rf_true": 5.462270067473002,
+      "snr_vlc_true": 17.564195201376705,
+      "success": true
+    },
+    {
+      "t": 17,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999951389836726,
+      "snr_rf_true": 5.68900421236771,
+      "snr_vlc_true": 18.088669141863775,
+      "success": true
+    },
+    {
+      "t": 18,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999964952916,
+      "snr_rf_true": 4.804434131720939,
+      "snr_vlc_true": 17.851909506084002,
+      "success": true
+    },
+    {
+      "t": 19,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999977617988304,
+      "snr_rf_true": 5.792923670861239,
+      "snr_vlc_true": 17.512071900596865,
+      "success": true
+    },
+    {
+      "t": 20,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999954474172165,
+      "snr_rf_true": 5.027702908455345,
+      "snr_vlc_true": 16.880247927511995,
+      "success": true
+    },
+    {
+      "t": 21,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999949289994788,
+      "snr_rf_true": 5.615099801373182,
+      "snr_vlc_true": 16.170991345569917,
+      "success": true
+    },
+    {
+      "t": 22,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9996728456269863,
+      "snr_rf_true": 6.320532742336854,
+      "snr_vlc_true": 15.70455993873228,
+      "success": true
+    },
+    {
+      "t": 23,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999338297802451,
+      "snr_rf_true": 6.686250899387943,
+      "snr_vlc_true": 15.80981540208,
+      "success": true
+    },
+    {
+      "t": 24,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9985140817605257,
+      "snr_rf_true": 5.697431608914902,
+      "snr_vlc_true": 16.649023008471815,
+      "success": true
+    },
+    {
+      "t": 25,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9990253870548462,
+      "snr_rf_true": 6.013770593023785,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 26,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9218423407996372,
+      "snr_rf_true": 4.600491279104407,
+      "snr_vlc_true": 16.655942619522932,
+      "success": true
+    },
+    {
+      "t": 27,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9995378287044264,
+      "snr_rf_true": 4.462998368809429,
+      "snr_vlc_true": 16.90962183700573,
+      "success": true
+    },
+    {
+      "t": 28,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9996694206132801,
+      "snr_rf_true": 5.153522374110409,
+      "snr_vlc_true": 17.168808447038117,
+      "success": true
+    },
+    {
+      "t": 29,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999956166636075,
+      "snr_rf_true": 5.455690866717469,
+      "snr_vlc_true": 17.610840939808526,
+      "success": true
+    },
+    {
+      "t": 30,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999932079418217,
+      "snr_rf_true": 5.234382167143607,
+      "snr_vlc_true": 17.107121415747716,
+      "success": true
+    },
+    {
+      "t": 31,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999940494813833,
+      "snr_rf_true": 5.241879660748199,
+      "snr_vlc_true": 16.715933155655406,
+      "success": true
+    },
+    {
+      "t": 32,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999612756631231,
+      "snr_rf_true": 5.254384970479541,
+      "snr_vlc_true": 16.99501877267972,
+      "success": true
+    },
+    {
+      "t": 33,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999948842242387,
+      "snr_rf_true": 5.887173949470153,
+      "snr_vlc_true": 17.53398036712625,
+      "success": true
+    },
+    {
+      "t": 34,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999976251137268,
+      "snr_rf_true": 5.899961051999815,
+      "snr_vlc_true": 17.74370784522134,
+      "success": true
+    },
+    {
+      "t": 35,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999997382837214,
+      "snr_rf_true": 5.900913762499979,
+      "snr_vlc_true": 17.404604652778126,
+      "success": true
+    },
+    {
+      "t": 36,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999955547572634,
+      "snr_rf_true": 5.28663687312988,
+      "snr_vlc_true": 18.31515942274581,
+      "success": true
+    },
+    {
+      "t": 37,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999977362005354,
+      "snr_rf_true": 4.6840903138636785,
+      "snr_vlc_true": 18.05313524636566,
+      "success": true
+    },
+    {
+      "t": 38,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999948189774571,
+      "snr_rf_true": 4.7477369148370325,
+      "snr_vlc_true": 17.851424425105698,
+      "success": true
+    },
+    {
+      "t": 39,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9997992426283688,
+      "snr_rf_true": 4.923882926849214,
+      "snr_vlc_true": 17.49968729258276,
+      "success": true
+    },
+    {
+      "t": 40,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999940440878232,
+      "snr_rf_true": 5.803374799224284,
+      "snr_vlc_true": 17.080799490576133,
+      "success": true
+    },
+    {
+      "t": 41,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999969909505275,
+      "snr_rf_true": 6.137701176043193,
+      "snr_vlc_true": 17.656161873673245,
+      "success": true
+    },
+    {
+      "t": 42,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999979521240899,
+      "snr_rf_true": 6.15261505469696,
+      "snr_vlc_true": 17.972351388367777,
+      "success": true
+    },
+    {
+      "t": 43,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999994692012678,
+      "snr_rf_true": 6.526984886094211,
+      "snr_vlc_true": 16.392214623260756,
+      "success": true
+    },
+    {
+      "t": 44,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9998555054248404,
+      "snr_rf_true": 5.744167769388327,
+      "snr_vlc_true": 17.159947078038382,
+      "success": true
+    },
+    {
+      "t": 45,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999928639893457,
+      "snr_rf_true": 5.864246745614014,
+      "snr_vlc_true": 16.769008206522837,
+      "success": true
+    },
+    {
+      "t": 46,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999993516420026,
+      "snr_rf_true": 5.432589064219149,
+      "snr_vlc_true": 15.645870015979197,
+      "success": true
+    },
+    {
+      "t": 47,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9998847231076652,
+      "snr_rf_true": 5.258916733498503,
+      "snr_vlc_true": 15.688122058983408,
+      "success": true
+    },
+    {
+      "t": 48,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9986067565359499,
+      "snr_rf_true": 4.802603741536634,
+      "snr_vlc_true": 15.711006376283873,
+      "success": true
+    },
+    {
+      "t": 49,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9986114073992945,
+      "snr_rf_true": 3.8152709842046466,
+      "snr_vlc_true": 16.758162288211526,
+      "success": true
+    },
+    {
+      "t": 50,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9994341233876978,
+      "snr_rf_true": 3.8558196978670023,
+      "snr_vlc_true": 15.940595698473091,
+      "success": true
+    },
+    {
+      "t": 51,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999926138591239,
+      "snr_rf_true": 3.8788133007902865,
+      "snr_vlc_true": 17.65735675171588,
+      "success": true
+    },
+    {
+      "t": 52,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999961410677505,
+      "snr_rf_true": 3.719001550714958,
+      "snr_vlc_true": 18.0616119945042,
+      "success": true
+    },
+    {
+      "t": 53,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999960780052466,
+      "snr_rf_true": 3.2006481845834207,
+      "snr_vlc_true": 20.24642271470742,
+      "success": true
+    },
+    {
+      "t": 54,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999990246699858,
+      "snr_rf_true": 2.8333561097481956,
+      "snr_vlc_true": 20.511803756185348,
+      "success": true
+    },
+    {
+      "t": 55,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999996053192,
+      "snr_rf_true": 3.3923908888041576,
+      "snr_vlc_true": 19.834988492757535,
+      "success": true
+    },
+    {
+      "t": 56,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999977091776,
+      "snr_rf_true": 2.985459970752006,
+      "snr_vlc_true": 18.70958586955833,
+      "success": true
+    },
+    {
+      "t": 57,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999982866681045,
+      "snr_rf_true": 2.339097950903581,
+      "snr_vlc_true": 17.622181911736327,
+      "success": true
+    },
+    {
+      "t": 58,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999542180685514,
+      "snr_rf_true": 1.7531001223385985,
+      "snr_vlc_true": 18.724651306221453,
+      "success": true
+    },
+    {
+      "t": 59,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999989114552408,
+      "snr_rf_true": 1.560094728809811,
+      "snr_vlc_true": 19.86905417371979,
+      "success": true
+    },
+    {
+      "t": 60,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999972705047,
+      "snr_rf_true": 3.0445092600951016,
+      "snr_vlc_true": 18.82444853884233,
+      "success": true
+    },
+    {
+      "t": 61,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999968723117,
+      "snr_rf_true": 3.0205678778495524,
+      "snr_vlc_true": 19.3930281051147,
+      "success": true
+    },
+    {
+      "t": 62,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999979936977,
+      "snr_rf_true": 3.486403378390149,
+      "snr_vlc_true": 18.534589763154017,
+      "success": true
+    },
+    {
+      "t": 63,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999987715542794,
+      "snr_rf_true": 4.742071173307018,
+      "snr_vlc_true": 17.43784985053253,
+      "success": true
+    },
+    {
+      "t": 64,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999942865678445,
+      "snr_rf_true": 4.4479684728637965,
+      "snr_vlc_true": 17.514767682000866,
+      "success": true
+    },
+    {
+      "t": 65,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999948461705268,
+      "snr_rf_true": 3.585247186040797,
+      "snr_vlc_true": 17.25536501607496,
+      "success": true
+    },
+    {
+      "t": 66,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999996560106585,
+      "snr_rf_true": 3.1221287802748265,
+      "snr_vlc_true": 16.548362525639202,
+      "success": true
+    },
+    {
+      "t": 67,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999932905204685,
+      "snr_rf_true": 3.1338222465149306,
+      "snr_vlc_true": 16.153093470190786,
+      "success": true
+    },
+    {
+      "t": 68,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999939962705776,
+      "snr_rf_true": 3.37319122229526,
+      "snr_vlc_true": 15.96624535751714,
+      "success": true
+    },
+    {
+      "t": 69,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9993310724993352,
+      "snr_rf_true": 1.7426614283136554,
+      "snr_vlc_true": 16.851143375809784,
+      "success": true
+    },
+    {
+      "t": 70,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9994316458145339,
+      "snr_rf_true": 1.4674155804600113,
+      "snr_vlc_true": 17.55879084980346,
+      "success": true
+    },
+    {
+      "t": 71,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9997482809483464,
+      "snr_rf_true": 1.9098320606708137,
+      "snr_vlc_true": 17.924852471351596,
+      "success": true
+    },
+    {
+      "t": 72,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999965327341879,
+      "snr_rf_true": 1.8155084763923495,
+      "snr_vlc_true": 18.13896743972441,
+      "success": true
+    },
+    {
+      "t": 73,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999995841672762,
+      "snr_rf_true": 2.235517349744073,
+      "snr_vlc_true": 18.30376860016507,
+      "success": true
+    },
+    {
+      "t": 74,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999949998675792,
+      "snr_rf_true": 2.5298244111445634,
+      "snr_vlc_true": 18.28690108212682,
+      "success": true
+    },
+    {
+      "t": 75,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999970930078937,
+      "snr_rf_true": 2.212653157102496,
+      "snr_vlc_true": 18.363584461441935,
+      "success": true
+    },
+    {
+      "t": 76,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999976537575875,
+      "snr_rf_true": 2.0061208849205747,
+      "snr_vlc_true": 19.187754514930095,
+      "success": true
+    },
+    {
+      "t": 77,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999974961347,
+      "snr_rf_true": 2.1625978066586127,
+      "snr_vlc_true": 18.405182566451277,
+      "success": true
+    },
+    {
+      "t": 78,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999979940792936,
+      "snr_rf_true": 2.582590002763307,
+      "snr_vlc_true": 18.388030417291883,
+      "success": true
+    },
+    {
+      "t": 79,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999964437538946,
+      "snr_rf_true": 2.772891312970383,
+      "snr_vlc_true": 18.86325501694055,
+      "success": true
+    },
+    {
+      "t": 80,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999938489593,
+      "snr_rf_true": 2.580559281601675,
+      "snr_vlc_true": 18.825009740608333,
+      "success": true
+    },
+    {
+      "t": 81,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999997375495875,
+      "snr_rf_true": 2.958563405587622,
+      "snr_vlc_true": 18.374257187209622,
+      "success": true
+    },
+    {
+      "t": 82,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999976200597309,
+      "snr_rf_true": 3.1365186512217456,
+      "snr_vlc_true": 17.477904288384465,
+      "success": true
+    },
+    {
+      "t": 83,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999929159952762,
+      "snr_rf_true": 2.5591129906589476,
+      "snr_vlc_true": 17.859977072575,
+      "success": true
+    },
+    {
+      "t": 84,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999961958716674,
+      "snr_rf_true": 2.4497811580667945,
+      "snr_vlc_true": 16.908093292496215,
+      "success": true
+    },
+    {
+      "t": 85,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999941162570947,
+      "snr_rf_true": 3.4087568706461253,
+      "snr_vlc_true": 17.040144736249974,
+      "success": true
+    },
+    {
+      "t": 86,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999975946833681,
+      "snr_rf_true": 3.1678756391593614,
+      "snr_vlc_true": 16.585893605954688,
+      "success": true
+    },
+    {
+      "t": 87,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999936204807316,
+      "snr_rf_true": 2.9565684094443814,
+      "snr_vlc_true": 16.92110345203574,
+      "success": true
+    },
+    {
+      "t": 88,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999952787320153,
+      "snr_rf_true": 2.205944929233589,
+      "snr_vlc_true": 18.630344972586744,
+      "success": true
+    },
+    {
+      "t": 89,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999968325512354,
+      "snr_rf_true": 1.7228382666503912,
+      "snr_vlc_true": 18.783485460244385,
+      "success": true
+    },
+    {
+      "t": 90,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999977503095961,
+      "snr_rf_true": 2.243810308113332,
+      "snr_vlc_true": 18.70328827569883,
+      "success": true
+    },
+    {
+      "t": 91,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999966506117,
+      "snr_rf_true": 3.0381258079045748,
+      "snr_vlc_true": 17.5305507470013,
+      "success": true
+    },
+    {
+      "t": 92,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999986467119334,
+      "snr_rf_true": 3.429618224832733,
+      "snr_vlc_true": 17.527291071458258,
+      "success": true
+    },
+    {
+      "t": 93,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999944410487144,
+      "snr_rf_true": 2.593683974127009,
+      "snr_vlc_true": 17.253297492972386,
+      "success": true
+    },
+    {
+      "t": 94,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999931111806212,
+      "snr_rf_true": 2.351202560979504,
+      "snr_vlc_true": 16.728582835968126,
+      "success": true
+    },
+    {
+      "t": 95,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9995689830722773,
+      "snr_rf_true": 2.59139993732844,
+      "snr_vlc_true": 17.27938488134601,
+      "success": true
+    },
+    {
+      "t": 96,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999933051801637,
+      "snr_rf_true": 2.2976712944787017,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 97,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.935257402333817,
+      "snr_rf_true": 2.538361812768915,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 98,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.7807434694816487,
+      "snr_rf_true": 1.7781487996686307,
+      "snr_vlc_true": 19.652858110147502,
+      "success": true
+    },
+    {
+      "t": 99,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999978325604,
+      "snr_rf_true": 1.2373956907028785,
+      "snr_vlc_true": 20.408654218592016,
+      "success": true
+    },
+    {
+      "t": 100,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999990169586,
+      "snr_rf_true": 1.3723695275633292,
+      "snr_vlc_true": 20.790785533086776,
+      "success": true
+    },
+    {
+      "t": 101,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999970139873,
+      "snr_rf_true": 1.0537260115611558,
+      "snr_vlc_true": 20.681044823379096,
+      "success": true
+    },
+    {
+      "t": 102,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999995963766,
+      "snr_rf_true": 1.72661994980666,
+      "snr_vlc_true": 19.984258528050905,
+      "success": true
+    },
+    {
+      "t": 103,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999999815906,
+      "snr_rf_true": 2.396235585811688,
+      "snr_vlc_true": 19.254581708708685,
+      "success": true
+    },
+    {
+      "t": 104,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999976684166,
+      "snr_rf_true": 1.8096353292058749,
+      "snr_vlc_true": 19.180109043871546,
+      "success": true
+    },
+    {
+      "t": 105,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999989523481,
+      "snr_rf_true": 1.3900095783376902,
+      "snr_vlc_true": 19.812470911115675,
+      "success": true
+    },
+    {
+      "t": 106,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999982460245,
+      "snr_rf_true": 2.078441290209394,
+      "snr_vlc_true": 18.294089149903982,
+      "success": true
+    },
+    {
+      "t": 107,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999996897499926,
+      "snr_rf_true": 1.836630790460633,
+      "snr_vlc_true": 18.819211868540084,
+      "success": true
+    },
+    {
+      "t": 108,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999970825268,
+      "snr_rf_true": 3.001606289637107,
+      "snr_vlc_true": 18.965737224541147,
+      "success": true
+    },
+    {
+      "t": 109,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999998853538369,
+      "snr_rf_true": 3.0598553878664054,
+      "snr_vlc_true": 19.147004165601977,
+      "success": true
+    },
+    {
+      "t": 110,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999971044675,
+      "snr_rf_true": 3.2896512568667875,
+      "snr_vlc_true": 19.428446851480665,
+      "success": true
+    },
+    {
+      "t": 111,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999970912768,
+      "snr_rf_true": 2.8185850150966165,
+      "snr_vlc_true": 18.771239173840513,
+      "success": true
+    },
+    {
+      "t": 112,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999999996506567,
+      "snr_rf_true": 3.2604971032160517,
+      "snr_vlc_true": 17.57663460174215,
+      "success": true
+    },
+    {
+      "t": 113,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999990527547035,
+      "snr_rf_true": 3.8298773839816933,
+      "snr_vlc_true": 17.56483729534139,
+      "success": true
+    },
+    {
+      "t": 114,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999963854008832,
+      "snr_rf_true": 3.616994609423355,
+      "snr_vlc_true": 17.387524112306885,
+      "success": true
+    },
+    {
+      "t": 115,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999993878160581,
+      "snr_rf_true": 3.475848013264848,
+      "snr_vlc_true": 18.464235868675004,
+      "success": true
+    },
+    {
+      "t": 116,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999964242191,
+      "snr_rf_true": 3.23165497749578,
+      "snr_vlc_true": 18.261597645187162,
+      "success": true
+    },
+    {
+      "t": 117,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999967077929163,
+      "snr_rf_true": 2.626131496403597,
+      "snr_vlc_true": 18.711874388912275,
+      "success": true
+    },
+    {
+      "t": 118,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999974236247,
+      "snr_rf_true": 2.3819535113496215,
+      "snr_vlc_true": 18.733217558720952,
+      "success": true
+    },
+    {
+      "t": 119,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999998329322878,
+      "snr_rf_true": 2.0284509813501685,
+      "snr_vlc_true": 18.503790267966608,
+      "success": true
+    },
+    {
+      "t": 120,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999988358704857,
+      "snr_rf_true": 1.653744697495435,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 121,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9528143612208088,
+      "snr_rf_true": 0.7002287316179343,
+      "snr_vlc_true": 18.76566424989366,
+      "success": true
+    },
+    {
+      "t": 122,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999946199658255,
+      "snr_rf_true": 1.0360818348361374,
+      "snr_vlc_true": 19.409255089162546,
+      "success": true
+    },
+    {
+      "t": 123,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999971537373883,
+      "snr_rf_true": 0.7550680819565903,
+      "snr_vlc_true": 20.165852061113924,
+      "success": true
+    },
+    {
+      "t": 124,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999999997734858,
+      "snr_rf_true": 1.1314195151495636,
+      "snr_vlc_true": 20.23873114180286,
+      "success": true
+    },
+    {
+      "t": 125,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999983194712,
+      "snr_rf_true": 1.3218113739384978,
+      "snr_vlc_true": 19.512847298039137,
+      "success": true
+    },
+    {
+      "t": 126,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999989715358,
+      "snr_rf_true": 0.8924059200087515,
+      "snr_vlc_true": 20.776216268152073,
+      "success": true
+    },
+    {
+      "t": 127,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999980794338,
+      "snr_rf_true": 0.9416202700063274,
+      "snr_vlc_true": 20.644143842375644,
+      "success": true
+    },
+    {
+      "t": 128,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999999998521347,
+      "snr_rf_true": 0.9350851211986313,
+      "snr_vlc_true": 20.815812935312596,
+      "success": true
+    },
+    {
+      "t": 129,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999997574106,
+      "snr_rf_true": 1.0027972169917767,
+      "snr_vlc_true": 21.41725399041636,
+      "success": true
+    },
+    {
+      "t": 130,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 1.0,
+      "snr_rf_true": 0.9412563266285064,
+      "snr_vlc_true": 22.24102918764598,
+      "success": true
+    },
+    {
+      "t": 131,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 1.0,
+      "snr_rf_true": 0.20091339452389,
+      "snr_vlc_true": 22.25824971823293,
+      "success": true
+    },
+    {
+      "t": 132,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 1.0,
+      "snr_rf_true": 0.21596101434623552,
+      "snr_vlc_true": 21.936339367627564,
+      "success": true
+    },
+    {
+      "t": 133,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 1.0,
+      "snr_rf_true": 0.8244784303065296,
+      "snr_vlc_true": 20.406092988509368,
+      "success": true
+    },
+    {
+      "t": 134,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999999879599,
+      "snr_rf_true": 1.427281409927227,
+      "snr_vlc_true": 19.952738996962644,
+      "success": true
+    },
+    {
+      "t": 135,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999983981184,
+      "snr_rf_true": 1.7177045020341857,
+      "snr_vlc_true": 19.86231930202073,
+      "success": true
+    },
+    {
+      "t": 136,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999984436113,
+      "snr_rf_true": 1.6191724493214925,
+      "snr_vlc_true": 18.362422599747273,
+      "success": true
+    },
+    {
+      "t": 137,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999985472845071,
+      "snr_rf_true": 1.4953572105167057,
+      "snr_vlc_true": 18.432194057260592,
+      "success": true
+    },
+    {
+      "t": 138,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999984072505179,
+      "snr_rf_true": 1.8443840203044326,
+      "snr_vlc_true": 19.14664795181428,
+      "success": true
+    },
+    {
+      "t": 139,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999975788717,
+      "snr_rf_true": 1.6527257804651234,
+      "snr_vlc_true": 19.570234408954867,
+      "success": true
+    },
+    {
+      "t": 140,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999986432849,
+      "snr_rf_true": 1.183890018256891,
+      "snr_vlc_true": 19.008852960265344,
+      "success": true
+    },
+    {
+      "t": 141,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999971299006,
+      "snr_rf_true": 1.0962457737047973,
+      "snr_vlc_true": 18.956263114852607,
+      "success": true
+    },
+    {
+      "t": 142,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999979854165,
+      "snr_rf_true": 0.5262764649666479,
+      "snr_vlc_true": 18.94491505194038,
+      "success": true
+    },
+    {
+      "t": 143,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999969499928,
+      "snr_rf_true": 0.23526889086521124,
+      "snr_vlc_true": 18.35595559703817,
+      "success": true
+    },
+    {
+      "t": 144,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999973560208889,
+      "snr_rf_true": 0.7551144649565993,
+      "snr_vlc_true": 17.08805786647415,
+      "success": true
+    },
+    {
+      "t": 145,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999926621224824,
+      "snr_rf_true": 1.2469286547511405,
+      "snr_vlc_true": 16.98667341834055,
+      "success": true
+    },
+    {
+      "t": 146,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9994587000784948,
+      "snr_rf_true": 0.4946043209749442,
+      "snr_vlc_true": 17.41480854448352,
+      "success": true
+    },
+    {
+      "t": 147,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9996875792240097,
+      "snr_rf_true": 0.5182804009671296,
+      "snr_vlc_true": 19.010340041283097,
+      "success": true
+    },
+    {
+      "t": 148,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999999620826349,
+      "snr_rf_true": 0.78369421355563,
+      "snr_vlc_true": 19.312125206773416,
+      "success": true
+    },
+    {
+      "t": 149,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999966461246,
+      "snr_rf_true": 0.18103261015346572,
+      "snr_vlc_true": 19.089186109319236,
+      "success": true
+    },
+    {
+      "t": 150,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999999996835788,
+      "snr_rf_true": 0.24501163600081072,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 151,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9593660164119907,
+      "snr_rf_true": -0.9161816349086842,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 152,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.8114757894190003,
+      "snr_rf_true": 0.312128032863904,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 153,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.6687003615645214,
+      "snr_rf_true": -0.45659959553770035,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 154,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.5798768147552068,
+      "snr_rf_true": 0.08387582623342577,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 155,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.5050849202366524,
+      "snr_rf_true": 0.45685181350020254,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 156,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.42892253317447954,
+      "snr_rf_true": 0.6923785422769285,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 157,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.3487760570658292,
+      "snr_rf_true": 1.0032703763755018,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 158,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.3176770402019859,
+      "snr_rf_true": -0.13418145714369256,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 159,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.31765148917249697,
+      "snr_rf_true": 0.8480500390347258,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 160,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.3176447437007117,
+      "snr_rf_true": 1.2763910277325654,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 161,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.31764296289616034,
+      "snr_rf_true": 1.0095461720330796,
+      "snr_vlc_true": -15.0,
+      "success": false
+    },
+    {
+      "t": 162,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.31764249276375883,
+      "snr_rf_true": 2.438952972201985,
+      "snr_vlc_true": 16.65601411453555,
+      "success": true
+    },
+    {
+      "t": 163,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999952813779052,
+      "snr_rf_true": 2.39315320783687,
+      "snr_vlc_true": 17.571266070570726,
+      "success": true
+    },
+    {
+      "t": 164,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999963456859737,
+      "snr_rf_true": 2.3471009239201686,
+      "snr_vlc_true": 17.689337189279414,
+      "success": true
+    },
+    {
+      "t": 165,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999939891426411,
+      "snr_rf_true": 1.7979455378917977,
+      "snr_vlc_true": 18.83831738071072,
+      "success": true
+    },
+    {
+      "t": 166,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999986902507475,
+      "snr_rf_true": 1.8459280858270637,
+      "snr_vlc_true": 18.927570019606282,
+      "success": true
+    },
+    {
+      "t": 167,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999982062808698,
+      "snr_rf_true": 2.629680994123929,
+      "snr_vlc_true": 18.581574344827484,
+      "success": true
+    },
+    {
+      "t": 168,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999978990866939,
+      "snr_rf_true": 3.4059636807891644,
+      "snr_vlc_true": 18.392640885383923,
+      "success": true
+    },
+    {
+      "t": 169,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999969829747453,
+      "snr_rf_true": 2.359708457049587,
+      "snr_vlc_true": 17.956309105735926,
+      "success": true
+    },
+    {
+      "t": 170,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999994162274136,
+      "snr_rf_true": 2.2081092907045274,
+      "snr_vlc_true": 17.771653340744116,
+      "success": true
+    },
+    {
+      "t": 171,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999969476281144,
+      "snr_rf_true": 1.543988794330396,
+      "snr_vlc_true": 18.86832506612152,
+      "success": true
+    },
+    {
+      "t": 172,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999988187370322,
+      "snr_rf_true": 1.7100408778507579,
+      "snr_vlc_true": 18.99826773803731,
+      "success": true
+    },
+    {
+      "t": 173,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999990817540775,
+      "snr_rf_true": 1.7240345855292547,
+      "snr_vlc_true": 19.041885497124742,
+      "success": true
+    },
+    {
+      "t": 174,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999997444799945,
+      "snr_rf_true": 2.4863871274941345,
+      "snr_vlc_true": 17.952730331511077,
+      "success": true
+    },
+    {
+      "t": 175,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999941238760771,
+      "snr_rf_true": 2.81350535175957,
+      "snr_vlc_true": 18.34234055589465,
+      "success": true
+    },
+    {
+      "t": 176,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999989251975601,
+      "snr_rf_true": 3.06608005600567,
+      "snr_vlc_true": 18.378810933402217,
+      "success": true
+    },
+    {
+      "t": 177,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999968023289,
+      "snr_rf_true": 2.8711944697209186,
+      "snr_vlc_true": 17.360886620297272,
+      "success": true
+    },
+    {
+      "t": 178,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999449614865,
+      "snr_rf_true": 2.3530263748883513,
+      "snr_vlc_true": 17.512705091206275,
+      "success": true
+    },
+    {
+      "t": 179,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999996044123857,
+      "snr_rf_true": 2.417090952781218,
+      "snr_vlc_true": 16.66375708737469,
+      "success": true
+    },
+    {
+      "t": 180,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999514156812936,
+      "snr_rf_true": 2.140834400515919,
+      "snr_vlc_true": 16.08459780002128,
+      "success": true
+    },
+    {
+      "t": 181,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9985674896157023,
+      "snr_rf_true": 2.8602523503312622,
+      "snr_vlc_true": 16.339161020329616,
+      "success": true
+    },
+    {
+      "t": 182,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9990600449480981,
+      "snr_rf_true": 2.5014228647222922,
+      "snr_vlc_true": 16.15461590679933,
+      "success": true
+    },
+    {
+      "t": 183,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9997490533311157,
+      "snr_rf_true": 2.314513967816837,
+      "snr_vlc_true": 16.71582109205289,
+      "success": true
+    },
+    {
+      "t": 184,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999949070923063,
+      "snr_rf_true": 1.3615966442371263,
+      "snr_vlc_true": 18.367666349986198,
+      "success": true
+    },
+    {
+      "t": 185,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999973010651,
+      "snr_rf_true": 1.572172247473425,
+      "snr_vlc_true": 18.7741816845317,
+      "success": true
+    },
+    {
+      "t": 186,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999976343382,
+      "snr_rf_true": 1.749763981977165,
+      "snr_vlc_true": 18.281327480875657,
+      "success": true
+    },
+    {
+      "t": 187,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999988709353501,
+      "snr_rf_true": 1.8296316920791638,
+      "snr_vlc_true": 18.052615805179265,
+      "success": true
+    },
+    {
+      "t": 188,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999987871854622,
+      "snr_rf_true": 2.3042973871972814,
+      "snr_vlc_true": 18.068698915697063,
+      "success": true
+    },
+    {
+      "t": 189,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999996699843775,
+      "snr_rf_true": 2.1542060992639507,
+      "snr_vlc_true": 17.254296822380184,
+      "success": true
+    },
+    {
+      "t": 190,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999945851471395,
+      "snr_rf_true": 2.513239057325586,
+      "snr_vlc_true": 16.460791132285262,
+      "success": true
+    },
+    {
+      "t": 191,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9993862183628762,
+      "snr_rf_true": 1.5932400404772276,
+      "snr_vlc_true": 16.174590394877903,
+      "success": true
+    },
+    {
+      "t": 192,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.999380833036654,
+      "snr_rf_true": 1.4738617974434813,
+      "snr_vlc_true": 16.37063701441462,
+      "success": true
+    },
+    {
+      "t": 193,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9992838488958197,
+      "snr_rf_true": 1.9531932995103576,
+      "snr_vlc_true": 17.044315654680773,
+      "success": true
+    },
+    {
+      "t": 194,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999932318434454,
+      "snr_rf_true": 2.4477205875607773,
+      "snr_vlc_true": 16.20211218757373,
+      "success": true
+    },
+    {
+      "t": 195,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9991833732192092,
+      "snr_rf_true": 1.7737318969135611,
+      "snr_vlc_true": 16.700437497820936,
+      "success": true
+    },
+    {
+      "t": 196,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999929618779042,
+      "snr_rf_true": 1.8311929323971745,
+      "snr_vlc_true": 17.080958698405528,
+      "success": true
+    },
+    {
+      "t": 197,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999925544144814,
+      "snr_rf_true": 1.8516576349956464,
+      "snr_vlc_true": 17.147108257088835,
+      "success": true
+    },
+    {
+      "t": 198,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999945372916553,
+      "snr_rf_true": 2.32948502083154,
+      "snr_vlc_true": 17.13771119514545,
+      "success": true
+    },
+    {
+      "t": 199,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999931381709465,
+      "snr_rf_true": 2.6548583211867847,
+      "snr_vlc_true": -15.0,
+      "success": false
+    }
+  ]
+}

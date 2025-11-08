@@ -1,0 +1,192 @@
+# S7 Comprehensive Evaluation Configuration
+# This evaluates multiple policies across multiple scenarios with statistical rigor
+
+adapters:
+  rf_lut: artifacts/adapters/rf_lut.json
+  vlc_lut: artifacts/adapters/vlc_lut.json
+
+evaluation:
+  n_runs: 10              # Number of independent runs per (scenario, policy)
+  timesteps: 200           # Timesteps per run
+  deadline_ms: 5.0         # Latency deadline for timely delivery
+  
+  # Scenarios to evaluate (all from S7 milestones)
+  scenarios:
+    - rf_good              # RF superior, VLC degraded
+    - vlc_good             # VLC superior, RF degraded
+    - complementary        # Both links good with diversity
+    - correlated_blockage  # VLC experiences blockage
+    - balanced             # Neutral baseline
+
+output_dir: artifacts/s7
+
+# ============================================================================
+# POLICIES TO EVALUATE
+# ============================================================================
+
+policies:
+  
+  # ----------------- BASELINES -----------------
+  
+  rf_only:
+    name: "RF-Only"
+    K_total: 2
+  
+  vlc_only:
+    name: "VLC-Only"
+    K_total: 2
+  
+  always_dup:
+    name: "Always-DUP"
+    K_total: 2
+    split: [1, 1]
+  
+  oracle:
+    name: "Oracle (Upper Bound)"
+    K_total: 2
+  
+  threshold:
+    name: "SNR-Threshold"
+    K_total: 2
+    threshold_rf: 10.0
+    threshold_vlc: 10.0
+  
+  # ----------------- HYBRID POLICIES -----------------
+  
+  best_link:
+    name: "Best-Link (Predictive)"
+    hybrid:
+      policy: best_link
+      K_total: 2
+      allow_switch: true
+      hysteresis_margin_prob: 0.02
+      conf_k: 1.0           # Conservative (1σ lower bound)
+      epsilon: 0.0          # No exploration
+      
+      probe:
+        period: 8           # Probe every 8 timesteps
+        r_probe: 0.5
+        on_switch: true
+    
+    predictor:
+      model: ar1_per_link
+      rf:
+        phi: 0.94
+        q: 0.3
+        m: 8.0
+      vlc:
+        phi: 0.88
+        q: 0.5
+        m: 12.5
+        blockage_threshold: -10.0
+        blockage_recovery_rate: 0.7
+      r: 0.3
+      mu_rf: 8.0
+      var_rf: 4.0
+      mu_vlc: 12.5
+      var_vlc: 4.0
+  
+  conditional_dup_conservative:
+    name: "Conditional-DUP (Conservative)"
+    hybrid:
+      policy: conditional_dup
+      K_total: 2
+      dup_split: [1, 1]
+      p_gate: 0.85          # High threshold for DUP
+      allow_switch: true
+      hysteresis_margin_prob: 0.02
+      conf_k: 1.0           # Conservative
+      epsilon: 0.0
+      
+      probe:
+        period: 8
+        r_probe: 0.5
+        on_switch: true
+    
+    predictor:
+      model: ar1_per_link
+      rf:
+        phi: 0.94
+        q: 0.3
+        m: 8.0
+      vlc:
+        phi: 0.88
+        q: 0.5
+        m: 12.5
+        blockage_threshold: -10.0
+        blockage_recovery_rate: 0.7
+      r: 0.3
+      mu_rf: 8.0
+      var_rf: 4.0
+      mu_vlc: 12.5
+      var_vlc: 4.0
+  
+  conditional_dup_balanced:
+    name: "Conditional-DUP (Balanced)"
+    hybrid:
+      policy: conditional_dup
+      K_total: 2
+      dup_split: [1, 1]
+      p_gate: 0.70          # Moderate threshold
+      allow_switch: true
+      hysteresis_margin_prob: 0.02
+      conf_k: 0.5           # Moderately conservative
+      epsilon: 0.05         # Small exploration
+      
+      probe:
+        period: 4           # More frequent probing
+        r_probe: 0.4
+        on_switch: true
+    
+    predictor:
+      model: ar1_per_link
+      rf:
+        phi: 0.94
+        q: 0.3
+        m: 8.0
+      vlc:
+        phi: 0.88
+        q: 0.5
+        m: 12.5
+        blockage_threshold: -10.0
+        blockage_recovery_rate: 0.7
+      r: 0.3
+      mu_rf: 8.0
+      var_rf: 4.0
+      mu_vlc: 12.5
+      var_vlc: 4.0
+  
+  conditional_dup_aggressive:
+    name: "Conditional-DUP (Aggressive)"
+    hybrid:
+      policy: conditional_dup
+      K_total: 2
+      dup_split: [1, 1]
+      p_gate: 0.55          # Low threshold (more DUP)
+      allow_switch: true
+      hysteresis_margin_prob: 0.01
+      conf_k: 0.0           # Neutral
+      epsilon: 0.10         # More exploration
+      
+      probe:
+        period: 2           # Frequent probing
+        r_probe: 0.3
+        on_switch: true
+    
+    predictor:
+      model: ar1_per_link
+      rf:
+        phi: 0.94
+        q: 0.3
+        m: 8.0
+      vlc:
+        phi: 0.88
+        q: 0.5
+        m: 12.5
+        blockage_threshold: -10.0
+        blockage_recovery_rate: 0.7
+      r: 0.25
+      mu_rf: 8.0
+      var_rf: 2.5
+      mu_vlc: 12.5
+      var_vlc: 2.5

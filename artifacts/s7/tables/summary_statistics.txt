@@ -1,0 +1,30 @@
+================================================================================
+S7 EVALUATION SUMMARY STATISTICS
+================================================================================
+
+Total scenarios evaluated: 5
+Total policies evaluated: 9
+Runs per (scenario, policy): 10
+Timesteps per run: 200
+
+BEST POLICY PER SCENARIO:
+--------------------------------------------------------------------------------
+  Rf Good                  : best_link                 (TDR = 0.8155)
+  Vlc Good                 : oracle                    (TDR = 0.9230)
+  Complementary            : oracle                    (TDR = 0.8010)
+  Correlated Blockage      : oracle                    (TDR = 0.6710)
+  Balanced                 : oracle                    (TDR = 0.8110)
+
+OVERALL RANKING (Average TDR across all scenarios):
+--------------------------------------------------------------------------------
+  1. oracle                        : 0.8011
+  2. best_link                     : 0.7562
+  3. threshold                     : 0.7530
+  4. conditional_dup_conservative  : 0.7436
+  5. conditional_dup_balanced      : 0.7317
+  6. conditional_dup_aggressive    : 0.7110
+  7. always_dup                    : 0.6935
+  8. vlc_only                      : 0.6355
+  9. rf_only                       : 0.4315
+
+================================================================================

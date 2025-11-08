@@ -1,0 +1,35 @@
+{
+  "evaluation": {
+    "n_runs": 10,
+    "timesteps": 200,
+    "deadline_ms": 5.0,
+    "scenarios": [
+      "rf_good",
+      "vlc_good",
+      "complementary",
+      "correlated_blockage",
+      "balanced"
+    ]
+  },
+  "scenarios": [
+    "RF-Good / VLC-Poor",
+    "VLC-Good / RF-Poor",
+    "Complementary (Independent)",
+    "Correlated Blockage",
+    "Balanced"
+  ],
+  "policies": [
+    "rf_only",
+    "vlc_only",
+    "always_dup",
+    "oracle",
+    "threshold",
+    "best_link",
+    "conditional_dup_conservative",
+    "conditional_dup_balanced",
+    "conditional_dup_aggressive"
+  ],
+  "n_runs": 10,
+  "timesteps": 200,
+  "deadline_ms": 5.0
+}
