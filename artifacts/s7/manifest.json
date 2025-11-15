@@ -23,9 +23,7 @@
     "vlc_only",
     "always_dup",
     "oracle",
-    "threshold",
-    "best_link",
-    "conditional_dup_balanced"
+    "threshold"
   ],
   "n_runs": 100,
   "timesteps": 1000,

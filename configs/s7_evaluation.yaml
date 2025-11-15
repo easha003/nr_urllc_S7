@@ -53,19 +53,19 @@ policies:
   
   # ----------------- HYBRID POLICIES -----------------
   
-  best_link:
+best_link:
     name: "Best-Link (Predictive)"
     hybrid:
       policy: best_link
       K_total: 2
       allow_switch: true
-      hysteresis_margin_prob: 0.02
-      conf_k: 1.0           # Conservative (1σ lower bound)
-      epsilon: 0.0          # No exploration
+      hysteresis_margin_prob: 0.0    # ← FIX: No hysteresis (instant switching)
+      conf_k: 0.25                    # ← FIX: Less pessimistic (was 1.0)
+      epsilon: 0.12                   # ← FIX: 12% exploration (was 0.0)
       
       probe:
-        period: 8           # Probe every 8 timesteps
-        r_probe: 0.5
+        period: 2                     # ← FIX: Probe every 2 timesteps (was 8)
+        r_probe: 0.25                 # ← FIX: Less noisy probing (was 0.5)
         on_switch: true
     
     predictor:
@@ -75,16 +75,16 @@ policies:
         q: 0.3
         m: 8.0
       vlc:
-        phi: 0.88
-        q: 0.5
+        phi: 0.72                     # ← FIX: Faster VLC adaptation (was 0.88)
+        q: 1.8                        # ← FIX: Higher process noise for blockages (was 0.5)
         m: 12.5
-        blockage_threshold: -10.0
-        blockage_recovery_rate: 0.5
-      r: 0.3
+        blockage_threshold: -3.0      # ← FIX: Detect degradation earlier (was -10.0)
+        blockage_recovery_rate: 0.85  # ← FIX: Faster recovery to mean (was 0.5)
+      r: 0.2                          # ← FIX: Lower measurement noise (was 0.3)
       mu_rf: 8.0
-      var_rf: 4.0
+      var_rf: 2.0                     # ← FIX: Start more confident (was 4.0)
       mu_vlc: 12.5
-      var_vlc: 4.0
+      var_vlc: 2.0                    # ← FIX: Start more confident (was 4.0)
   
   # conditional_dup_conservative:
   #   name: "Conditional-DUP (Conservative)"
@@ -121,21 +121,21 @@ policies:
   #     mu_vlc: 12.5
   #     var_vlc: 4.0
   
-  conditional_dup_balanced:
+conditional_dup_balanced:
     name: "Conditional-DUP (Balanced)"
     hybrid:
       policy: conditional_dup
       K_total: 2
       dup_split: [1, 1]
-      p_gate: 0.70          # Moderate threshold
+      p_gate: 0.65                    # ← FIX: Lower gate for more DUP (was 0.70)
       allow_switch: true
-      hysteresis_margin_prob: 0.02
-      conf_k: 0.5           # Moderately conservative
-      epsilon: 0.05         # Small exploration
+      hysteresis_margin_prob: 0.0     # ← FIX: No hysteresis (was 0.02)
+      conf_k: 0.3                     # ← FIX: Less conservative (was 0.5)
+      epsilon: 0.10                   # ← FIX: More exploration (was 0.05)
       
       probe:
-        period: 4           # More frequent probing
-        r_probe: 0.4
+        period: 2                     # ← FIX: Faster probing (was 4)
+        r_probe: 0.25                 # ← FIX: Less noisy (was 0.4)
         on_switch: true
     
     predictor:
@@ -145,16 +145,16 @@ policies:
         q: 0.3
         m: 8.0
       vlc:
-        phi: 0.88
-        q: 0.5
+        phi: 0.72                     # ← FIX: Faster adaptation (was 0.88)
+        q: 1.8                        # ← FIX: Higher process noise (was 0.5)
         m: 12.5
-        blockage_threshold: -10.0
-        blockage_recovery_rate: 0.8
-      r: 0.3
+        blockage_threshold: -3.0      # ← FIX: Earlier detection (was -10.0)
+        blockage_recovery_rate: 0.85  # ← FIX: Faster recovery (was 0.8)
+      r: 0.2                          # ← FIX: Lower measurement noise (was 0.3)
       mu_rf: 8.0
-      var_rf: 4.0
+      var_rf: 2.0                     # ← FIX: More confident start (was 4.0)
       mu_vlc: 12.5
-      var_vlc: 4.0
+      var_vlc: 2.0                    # ← FIX: More confident start (was 4.0)
   
   # conditional_dup_aggressive:
   #   name: "Conditional-DUP (Aggressive)"

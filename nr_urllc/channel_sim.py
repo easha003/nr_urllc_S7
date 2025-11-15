@@ -127,14 +127,28 @@ class ChannelSimulator:
         if not self.history['snr_rf']:
             return {}
         
+        # ✅ NEW: Compute predictability metrics
+        rf_hist = np.array(self.history['snr_rf'])
+        vlc_hist = np.array(self.history['snr_vlc'])
+        
+        # Lag-1 autocorrelation (measure of predictability)
+        rf_autocorr = np.corrcoef(rf_hist[:-1], rf_hist[1:])[0, 1] if len(rf_hist) > 1 else 0
+        vlc_autocorr = np.corrcoef(vlc_hist[:-1], vlc_hist[1:])[0, 1] if len(vlc_hist) > 1 else 0
+        
+        # Count blockage transitions (measure of volatility)
+        blocked = np.array(self.history['blocked'])
+        transitions = np.sum(np.abs(np.diff(blocked.astype(int))))
+        
         return {
-            'rf_mean': np.mean(self.history['snr_rf']),
-            'rf_std': np.std(self.history['snr_rf']),
-            'vlc_mean': np.mean(self.history['snr_vlc']),
-            'vlc_std': np.std(self.history['snr_vlc']),
-            'blockage_rate': np.mean(self.history['blocked']),
-            'correlation': np.corrcoef(self.history['snr_rf'], 
-                                      self.history['snr_vlc'])[0, 1]
+            'rf_mean': np.mean(rf_hist),
+            'rf_std': np.std(rf_hist),
+            'rf_autocorr': float(rf_autocorr),  # ← NEW
+            'vlc_mean': np.mean(vlc_hist),
+            'vlc_std': np.std(vlc_hist),
+            'vlc_autocorr': float(vlc_autocorr),  # ← NEW
+            'blockage_rate': np.mean(blocked),
+            'blockage_transitions': int(transitions),  # ← NEW
+            'correlation': np.corrcoef(rf_hist, vlc_hist)[0, 1]
         }
 
 

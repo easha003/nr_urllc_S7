@@ -67,9 +67,20 @@ class HybridController:
         p_vl = self.vlc.p_timely(snr_vl_eff, K)
         if name == "best_link":
             prefer = self._hysteresis_pick(p_rf, p_vl, "RF" if p_rf >= p_vl else "VLC")
+            
+            # ✅ IMPROVED: Smarter exploration
             if self.cfg.epsilon > 0.0 and prefer in ("RF","VLC"):
-                if random.random() < self.cfg.epsilon:
-                    prefer = "VLC" if prefer == "RF" else "RF"
+                # ✅ FIX: Exploration probability increases when uncertain
+                uncertainty = (sig_rf + sig_vl) / 2.0
+                explore_prob = self.cfg.epsilon * (1.0 + 0.5 * min(uncertainty / 3.0, 1.0))
+                
+                if random.random() < explore_prob:
+                    # ✅ FIX: Thompson sampling - explore better link with some probability
+                    gap = abs(p_rf - p_vl)
+                    if gap < 0.1:  # Very uncertain which is better
+                        prefer = "VLC" if prefer == "RF" else "RF"
+                    elif random.random() < 0.3:  # 30% chance to try worse link anyway
+                        prefer = "VLC" if prefer == "RF" else "RF"
 
             return {"action":prefer,
                     "K_rf": K if prefer=="RF" else 0,
@@ -81,9 +92,26 @@ class HybridController:
             p_rf_k = self.rf.p_timely(snr_rf_eff, k_rf) if k_rf > 0 else 0.0
             p_vl_k = self.vlc.p_timely(snr_vl_eff, k_vl) if k_vl > 0 else 0.0
             p_dup = 1.0 - (1.0 - p_rf_k) * (1.0 - p_vl_k)
-            if (p_dup >= self.cfg.p_gate) or (p_rf >= self.cfg.p_gate and p_vl >= self.cfg.p_gate):
+            
+            # ✅ IMPROVED: Adaptive DUP triggering based on uncertainty
+            uncertainty_penalty = 0.5 * (sig_rf + sig_vl) / 4.0  # Normalize to [0, ~0.5]
+            effective_p_gate = self.cfg.p_gate - uncertainty_penalty
+            
+            # ✅ FIX: Use DUP when uncertain OR when required for reliability
+            use_dup = False
+            if p_dup >= effective_p_gate:
+                use_dup = True
+            elif (sig_rf > 3.0 or sig_vl > 3.0) and p_dup >= (effective_p_gate - 0.1):
+                # High uncertainty → use DUP even with slightly lower probability
+                use_dup = True
+            elif p_rf >= self.cfg.p_gate and p_vl >= self.cfg.p_gate:
+                # Both links good → use DUP for extra reliability
+                use_dup = True
+            
+            if use_dup:
                 self.state.last_choice = "DUP"
                 return {"action":"DUP","K_rf":k_rf,"K_vlc":k_vl,"p_est":p_dup}
+            
             prefer = self._hysteresis_pick(p_rf, p_vl, "RF" if p_rf >= p_vl else "VLC")
             if self.cfg.epsilon > 0.0 and prefer in ("RF","VLC"):
                 if random.random() < self.cfg.epsilon:

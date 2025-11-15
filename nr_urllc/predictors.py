@@ -125,7 +125,7 @@ class AR1MeanRevertingPerLink:
 
     def update(self, snr_rf_meas: float | None, snr_vlc_meas: float | None) -> None:
         """
-        Kalman-like predict→update for both links with VLC blockage handling.
+        Kalman-like predict→update for both links with improved VLC blockage handling.
         """
         # RF update (standard)
         mu_rf_pred = self.m_rf + self.phi_rf * (self.mu_rf - self.m_rf)
@@ -139,28 +139,47 @@ class AR1MeanRevertingPerLink:
             self.mu_rf = mu_rf_pred
             self.var_rf = var_rf_pred
         
-        # ✅ VLC update with blockage detection
+        # ✅ IMPROVED VLC update with blockage detection
         mu_vlc_pred = self.m_vlc + self.phi_vlc * (self.mu_vlc - self.m_vlc)
         var_vlc_pred = (self.phi_vlc ** 2) * self.var_vlc + self.q_vlc
         
         if snr_vlc_meas is not None:
-            # ✅ Detect blockage
+            # ✅ FIX: Multi-level blockage detection
             if snr_vlc_meas < self.blockage_threshold:
-                # Blockage detected! Don't fully trust this measurement
-                # Instead, do a weighted update toward the mean
+                # SEVERE blockage detected (likely complete outage)
+                # Snap toward mean quickly and increase uncertainty
                 self.mu_vlc = (1 - self.blockage_recovery_rate) * mu_vlc_pred + \
                               self.blockage_recovery_rate * self.m_vlc
-                # Keep variance higher during blockage
-                self.var_vlc = min(var_vlc_pred * 1.5, 10.0)
+                # ✅ FIX: Clamp variance to reasonable range
+                self.var_vlc = min(var_vlc_pred * 2.0, 8.0)
+                
+            elif snr_vlc_meas < (self.blockage_threshold + 5.0):
+                # ✅ NEW: Moderate degradation (not full blockage but concerning)
+                # Use measurement but with reduced trust
+                K_vlc = 0.3 * var_vlc_pred / (var_vlc_pred + self.r)  # Reduced gain
+                self.mu_vlc = mu_vlc_pred + K_vlc * (snr_vlc_meas - mu_vlc_pred)
+                # Also nudge toward mean
+                self.mu_vlc = 0.7 * self.mu_vlc + 0.3 * self.m_vlc
+                self.var_vlc = (1.0 - K_vlc) * var_vlc_pred + 1.0  # Add uncertainty
+                
             else:
-                # Normal update
+                # ✅ Normal operation - standard Kalman update
                 K_vlc = var_vlc_pred / (var_vlc_pred + self.r)
                 self.mu_vlc = mu_vlc_pred + K_vlc * (snr_vlc_meas - mu_vlc_pred)
                 self.var_vlc = (1.0 - K_vlc) * var_vlc_pred
+                
+                # ✅ NEW: Fast recovery when returning from blockage
+                # If posterior is far from mean but measurement is good, snap back faster
+                if abs(self.mu_vlc - self.m_vlc) > 5.0 and snr_vlc_meas > 10.0:
+                    self.mu_vlc = 0.6 * self.mu_vlc + 0.4 * snr_vlc_meas
+                    self.var_vlc = max(self.var_vlc * 0.7, 1.0)  # Reduce uncertainty
         else:
             # No measurement - just predict
             self.mu_vlc = mu_vlc_pred
             self.var_vlc = var_vlc_pred
+            
+            # ✅ NEW: Inflate variance when not measuring (model uncertainty)
+            self.var_vlc = min(self.var_vlc * 1.05, 6.0)
 
     def predict_next(self) -> Tuple[Tuple[float, float], Tuple[float, float]]:
         """
@@ -172,6 +191,42 @@ class AR1MeanRevertingPerLink:
         )
 # --- END PATCH ---
 
+def adapt_parameters(self, snr_rf_history: list, snr_vlc_history: list) -> None:
+        """
+        ✅ NEW: Adaptive parameter tuning based on recent prediction errors.
+        Call this periodically (e.g., every 50 timesteps) to improve tracking.
+        """
+        if len(snr_vlc_history) < 10:
+            return
+        
+        # Compute recent prediction errors for VLC
+        recent_errors = []
+        for i in range(1, min(20, len(snr_vlc_history))):
+            predicted = self.m_vlc + self.phi_vlc * (snr_vlc_history[i-1] - self.m_vlc)
+            actual = snr_vlc_history[i]
+            recent_errors.append((actual - predicted) ** 2)
+        
+        avg_error = sum(recent_errors) / len(recent_errors)
+        
+        # ✅ If errors are high, increase process noise (more volatile channel)
+        if avg_error > 4.0:  # High prediction error
+            self.q_vlc = min(self.q_vlc * 1.1, 3.0)  # Increase up to 3.0
+        elif avg_error < 1.0:  # Low prediction error
+            self.q_vlc = max(self.q_vlc * 0.95, 0.5)  # Decrease down to 0.5
+        
+        # ✅ Adapt phi based on autocorrelation
+        if len(snr_vlc_history) >= 10:
+            # Estimate autocorrelation
+            recent = snr_vlc_history[-10:]
+            mean_recent = sum(recent) / len(recent)
+            autocorr = sum((recent[i] - mean_recent) * (recent[i-1] - mean_recent) 
+                          for i in range(1, len(recent)))
+            variance = sum((x - mean_recent)**2 for x in recent)
+            
+            if variance > 0:
+                estimated_phi = autocorr / variance
+                # Blend with current phi
+                self.phi_vlc = 0.9 * self.phi_vlc + 0.1 * max(0.5, min(0.95, estimated_phi))
 
 # --- PATCH: predictor factory ---
 def make_predictor(cfg):

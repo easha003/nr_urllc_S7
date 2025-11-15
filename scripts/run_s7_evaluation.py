@@ -79,6 +79,13 @@ def run_single_simulation(policy, channel_sim, predictor, rf_lut, vlc_lut,
         # Update predictor
         if predictor is not None:
             predictor.update(meas_rf, meas_vlc)
+            
+            # ✅ NEW: Adaptive parameter tuning every 50 steps
+            if hasattr(predictor, 'adapt_parameters') and t > 0 and t % 50 == 0:
+                # Extract SNR history from records
+                rf_history = [r['snr_rf_true'] for r in records[-50:]]
+                vlc_history = [r['snr_vlc_true'] for r in records[-50:]]
+                predictor.adapt_parameters(rf_history, vlc_history)
         
         # Record
         record = {
@@ -91,6 +98,24 @@ def run_single_simulation(policy, channel_sim, predictor, rf_lut, vlc_lut,
             'snr_vlc_true': float(snr_vlc_true)
         }
         records.append(record)
+
+        # ✅ NEW: Track prediction quality
+        if predictor is not None and t > 0:
+            # Get previous prediction
+            prev_record = records[-1] if len(records) > 0 else None
+            if prev_record and 'mu_rf_pred' in prev_record:
+                # Compute prediction errors
+                rf_error = abs(snr_rf_true - prev_record['mu_rf_pred'])
+                vlc_error = abs(snr_vlc_true - prev_record['mu_vlc_pred'])
+                record['rf_pred_error'] = float(rf_error)
+                record['vlc_pred_error'] = float(vlc_error)
+            
+            # Store current prediction for next step
+            (mu_rf, sig_rf), (mu_vlc, sig_vlc) = predictor.predict_next()
+            record['mu_rf_pred'] = float(mu_rf)
+            record['mu_vlc_pred'] = float(mu_vlc)
+            record['sig_rf_pred'] = float(sig_rf)
+            record['sig_vlc_pred'] = float(sig_vlc)
         
         last_action = decision['action']
     
