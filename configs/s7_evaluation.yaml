@@ -6,9 +6,9 @@ adapters:
   vlc_lut: artifacts/adapters/vlc_lut.json
 
 evaluation:
-  n_runs: 10              # Number of independent runs per (scenario, policy)
-  timesteps: 200           # Timesteps per run
-  deadline_ms: 5.0         # Latency deadline for timely delivery
+  n_runs: 100              # Number of independent runs per (scenario, policy)
+  timesteps: 1000           # Timesteps per run
+  deadline_ms: 2.0         # Latency deadline for timely delivery
   
   # Scenarios to evaluate (all from S7 milestones)
   scenarios:
@@ -79,47 +79,47 @@ policies:
         q: 0.5
         m: 12.5
         blockage_threshold: -10.0
-        blockage_recovery_rate: 0.7
+        blockage_recovery_rate: 0.5
       r: 0.3
       mu_rf: 8.0
       var_rf: 4.0
       mu_vlc: 12.5
       var_vlc: 4.0
   
-  conditional_dup_conservative:
-    name: "Conditional-DUP (Conservative)"
-    hybrid:
-      policy: conditional_dup
-      K_total: 2
-      dup_split: [1, 1]
-      p_gate: 0.85          # High threshold for DUP
-      allow_switch: true
-      hysteresis_margin_prob: 0.02
-      conf_k: 1.0           # Conservative
-      epsilon: 0.0
+  # conditional_dup_conservative:
+  #   name: "Conditional-DUP (Conservative)"
+  #   hybrid:
+  #     policy: conditional_dup
+  #     K_total: 2
+  #     dup_split: [1, 1]
+  #     p_gate: 0.85          # High threshold for DUP
+  #     allow_switch: true
+  #     hysteresis_margin_prob: 0.02
+  #     conf_k: 1.0           # Conservative
+  #     epsilon: 0.0
       
-      probe:
-        period: 8
-        r_probe: 0.5
-        on_switch: true
+  #     probe:
+  #       period: 8
+  #       r_probe: 0.5
+  #       on_switch: true
     
-    predictor:
-      model: ar1_per_link
-      rf:
-        phi: 0.94
-        q: 0.3
-        m: 8.0
-      vlc:
-        phi: 0.88
-        q: 0.5
-        m: 12.5
-        blockage_threshold: -10.0
-        blockage_recovery_rate: 0.7
-      r: 0.3
-      mu_rf: 8.0
-      var_rf: 4.0
-      mu_vlc: 12.5
-      var_vlc: 4.0
+  #   predictor:
+  #     model: ar1_per_link
+  #     rf:
+  #       phi: 0.94
+  #       q: 0.3
+  #       m: 8.0
+  #     vlc:
+  #       phi: 0.88
+  #       q: 0.5
+  #       m: 12.5
+  #       blockage_threshold: -10.0
+  #       blockage_recovery_rate: 0.7
+  #     r: 0.3
+  #     mu_rf: 8.0
+  #     var_rf: 4.0
+  #     mu_vlc: 12.5
+  #     var_vlc: 4.0
   
   conditional_dup_balanced:
     name: "Conditional-DUP (Balanced)"
@@ -149,44 +149,44 @@ policies:
         q: 0.5
         m: 12.5
         blockage_threshold: -10.0
-        blockage_recovery_rate: 0.7
+        blockage_recovery_rate: 0.8
       r: 0.3
       mu_rf: 8.0
       var_rf: 4.0
       mu_vlc: 12.5
       var_vlc: 4.0
   
-  conditional_dup_aggressive:
-    name: "Conditional-DUP (Aggressive)"
-    hybrid:
-      policy: conditional_dup
-      K_total: 2
-      dup_split: [1, 1]
-      p_gate: 0.55          # Low threshold (more DUP)
-      allow_switch: true
-      hysteresis_margin_prob: 0.01
-      conf_k: 0.0           # Neutral
-      epsilon: 0.10         # More exploration
+  # conditional_dup_aggressive:
+  #   name: "Conditional-DUP (Aggressive)"
+  #   hybrid:
+  #     policy: conditional_dup
+  #     K_total: 2
+  #     dup_split: [1, 1]
+  #     p_gate: 0.55          # Low threshold (more DUP)
+  #     allow_switch: true
+  #     hysteresis_margin_prob: 0.01
+  #     conf_k: 0.0           # Neutral
+  #     epsilon: 0.10         # More exploration
       
-      probe:
-        period: 2           # Frequent probing
-        r_probe: 0.3
-        on_switch: true
+  #     probe:
+  #       period: 2           # Frequent probing
+  #       r_probe: 0.3
+  #       on_switch: true
     
-    predictor:
-      model: ar1_per_link
-      rf:
-        phi: 0.94
-        q: 0.3
-        m: 8.0
-      vlc:
-        phi: 0.88
-        q: 0.5
-        m: 12.5
-        blockage_threshold: -10.0
-        blockage_recovery_rate: 0.7
-      r: 0.25
-      mu_rf: 8.0
-      var_rf: 2.5
-      mu_vlc: 12.5
-      var_vlc: 2.5
+  #   predictor:
+  #     model: ar1_per_link
+  #     rf:
+  #       phi: 0.94
+  #       q: 0.3
+  #       m: 8.0
+  #     vlc:
+  #       phi: 0.88
+  #       q: 0.5
+  #       m: 12.5
+  #       blockage_threshold: -10.0
+  #       blockage_recovery_rate: 0.7
+  #     r: 0.25
+  #     mu_rf: 8.0
+  #     var_rf: 2.5
+  #     mu_vlc: 12.5
+  #     var_vlc: 2.5

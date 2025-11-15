@@ -78,7 +78,7 @@ def main(cfg_path: str):
     snr_vlc_true[0] = float(pred_cfg.get("mu_vlc", m_vlc))
 
     # VLC blockage parameters (Issue #6: channel diversity)
-    vlc_blockage_prob = 0.1   # 10% blockage probability per timestep
+    vlc_blockage_prob = 0.6   # 10% blockage probability per timestep
     vlc_blockage_snr = -15.0  # Deep fade when blocked
 
     # Generate trajectories with mean reversion + VLC blockage

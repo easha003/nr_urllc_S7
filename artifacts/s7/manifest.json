@@ -1,8 +1,8 @@
 {
   "evaluation": {
-    "n_runs": 10,
-    "timesteps": 200,
-    "deadline_ms": 5.0,
+    "n_runs": 100,
+    "timesteps": 1000,
+    "deadline_ms": 2.0,
     "scenarios": [
       "rf_good",
       "vlc_good",
@@ -25,11 +25,9 @@
     "oracle",
     "threshold",
     "best_link",
-    "conditional_dup_conservative",
-    "conditional_dup_balanced",
-    "conditional_dup_aggressive"
+    "conditional_dup_balanced"
   ],
-  "n_runs": 10,
-  "timesteps": 200,
-  "deadline_ms": 5.0
+  "n_runs": 100,
+  "timesteps": 1000,
+  "deadline_ms": 2.0
 }
