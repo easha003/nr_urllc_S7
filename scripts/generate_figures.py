@@ -325,19 +325,19 @@ def main(results_dir: str, output_dir: str):
     print("\nGenerating figures...")
     
     plot_timely_delivery_comparison(results, manifest, 
-                                    output_path / 'timely_delivery_comparison.png')
+                                    output_path / 'timely_delivery_comparison.pdf')
     
     plot_energy_vs_performance(results, manifest,
-                               output_path / 'energy_vs_performance.png')
+                               output_path / 'energy_vs_performance.pdf')
     
     plot_action_distribution(results, manifest,
-                            output_path / 'action_distribution.png')
+                            output_path / 'action_distribution.pdf')
     
     plot_latency_comparison(results, manifest,
-                           output_path / 'latency_comparison.png')
+                           output_path / 'latency_comparison.pdf')
     
     plot_scenario_heatmap(results, manifest,
-                         output_path / 'scenario_heatmap.png')
+                         output_path / 'scenario_heatmap.pdf')
     
     print(f"\nAll figures saved to: {output_path}")
 
