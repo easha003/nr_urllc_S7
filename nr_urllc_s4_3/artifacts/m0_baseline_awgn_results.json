@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "reps_used": 1,
+  "latency_ms": 0.0,
+  "crc_ok": true,
+  "meta": {
+    "mode": "baseline_awgn",
+    "seed": 1234,
+    "bits_per_frame": null,
+    "urllc": {
+      "five_qi": 85,
+      "pdb_ms": 5.0,
+      "per_target": 1e-05,
+      "core_budget_ms": 2.0,
+      "radio_deadline_ms": 3.0,
+      "app_payload_bytes": 32,
+      "tb_payload_bytes": 48,
+      "n_independent_tries": 1,
+      "bler_per_try_target": 1e-05,
+      "mdbv_bytes": 255
+    }
+  },
+  "snr_db": [],
+  "ber": 0.00636,
+  "evm_percent": [],
+  "mse_H": []
+}

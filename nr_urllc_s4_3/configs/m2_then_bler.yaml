@@ -1,0 +1,104 @@
+sim:
+  type: m2_then_bler
+  seed: 44
+  autoramp: true
+
+tx:
+  M: 4
+
+ofdm:
+  nfft: 256
+  n_subcarriers: 192
+  cp: 0.125
+  minislot_symbols: 14
+
+# Optional, explicit numerology block (your code also reads nr/ofdm if this is absent)
+numerology:
+  mu: 2
+  L_symbols: 14
+  cp_fraction: 0.125
+
+nr:
+  mu: 2
+  minislot_symbols: 14
+  dmrs:
+    freq_density: 3
+    offset_sc: 0
+    seed: 2025
+    power_boost_db: 3.0
+    power_mode: constrained
+  cg_ul:
+    period_ms: 1.0
+    K: 2
+    early_stop: true
+  harq:
+    enabled: false   # BLER path prefers urllc.harq below
+
+pilots:
+  spacing: 2
+  offset: 0
+  seed: 2025
+  power_boost_db: 3.0
+  power_mode: constrained
+
+channel:
+  seed: 4444
+  model: tdl
+  snr_db_list: [0, 4, 8, 12, 16, 20, 24]
+  tdl:
+    delays: [0, 2, 4, 6]
+    powers_db: [0.0, -2.5, -5.5, -9.0]
+
+urllc:
+  five_qi: 86
+  app_payload_bytes: 32
+  core_budget_ms: 2.0
+  tb_payload_bytes: 48
+  # Timely BLER settings used by the BLER loop
+  deadline_ms: 8.0
+  harq:
+    enabled: true
+    max_retx: 1            # total attempts = 2 (1 retransmission)
+    combining: chase
+    stop_on_first_crc_pass: true
+
+fec:
+  # none | repeat | ldpc_syst | ldpc_qc
+  type: ldpc_syst
+  rate: 0.5
+  seed: 2025
+  density: 0.05
+  max_iters: 40
+  qc:
+    use_builtin_bg2_tiny: true   # set false + base_graph_path to use a real NR BG later
+    # base_graph_path: path/to/bg.json
+    lifting_Z: 32
+
+autoramp:
+  target_errs: 200
+  base_min_bits: 1000000
+  min_used_res: 10000000
+  max_bits: 50000000
+  noise_blend_weight: 0.0
+  min_bits: 800000
+  growth: 2.0
+  
+bler:
+  packets_per_snr: 100000
+  min_errors: 100
+  adaptive_packets: true
+
+io:
+  write_json: true
+  plot: true
+  show_plot: false
+  m2:
+    out_json: artifacts/m2_then_bler/m2_curves.json
+    out_plot: artifacts/m2_then_bler/m2_curves.png
+  bler:
+    out_json: artifacts/m2_then_bler/bler_vs_snr.json
+    out_plot: artifacts/m2_then_bler/bler_vs_snr.png
+  out_urllc_json: artifacts/urllc_budget.json
+
+eq:
+  type: mmse

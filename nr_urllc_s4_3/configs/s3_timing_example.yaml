@@ -1,0 +1,86 @@
+# configs/s3_timing_example.yaml
+# S3 — NR Timing Shim Configuration Template
+# This config demonstrates how to specify URLLC deadlines, numerology, HARQ, and timing parameters
+# to generate S3 timely BLER curves.
+
+sim:
+  type: s3_timely_sweep
+  seed: 1234
+
+# NR Numerology and mini-slot configuration
+nr:
+  mu: 2                          # SCS numerology: 0=15kHz, 1=30kHz, 2=60kHz, etc.
+  minislot_symbols: 14            # L: number of symbols per mini-slot (typical: 2,4,7,14)
+  
+  cg_ul:                         # Contention-based uplink grant parameters
+    period_ms: 1.0               # CG period (informational; not used in S3 latency model yet)
+    K: 2                         # Base K (number of repetitions; can be swept)
+    early_stop: true
+  
+  harq:
+    enabled: true
+    k1_symbols: 1                # k1: HARQ feedback delay (symbols); delays next attempt
+    k2_symbols: 0                # k2: RTT delay (not used in S3 yet)
+
+# OFDM physical layer
+ofdm:
+  nfft: 256
+  cp: 0.125                      # Cyclic prefix as fraction of useful symbol time
+  n_subcarriers: 64
+  minislot_symbols: 14
+
+# Pilot configuration (for channel estimation)
+pilots:
+  spacing: 2                     # Comb spacing (every Nth subcarrier)
+  offset: 0
+  seed: 999
+  power_boost_db: 3.0
+  power_mode: constrained
+
+# Physical channel model (TDL for typical URLLC scenarios)
+channel:
+  model: tdl                     # "tdl" or "cdl"
+  snr_db_list:
+    - 0.0
+    - 2.0
+    - 4.0
+    - 6.0
+    - 8.0
+  seed: 2025
+  tdl:
+    delays: [0, 3, 5]
+    powers_db: [0.0, -4.0, -8.0]
+
+# Equalization method
+eq:
+  type: mmse                     # Zero-Forcing or MMSE
+
+# URLLC service level (5QI or explicit deadline)
+urllc:
+  five_qi: 85                    # 5QI 85: pdb=5ms, per=1e-5
+  pdb_ms: 5.0                    # Packet Delay Budget (ms)
+  core_budget_ms: 2.0            # Processing delay budget (DSP, encoding, etc.)
+  app_payload_bytes: 32
+  tb_payload_bytes: 48
+  n_independent_tries: 1         # Not used in S3 sweep; for reference
+
+# S3 Timing parameters
+timing:
+  grant_delay_ms: 0.0            # Scheduling delay before transmission starts (ms)
+  inter_attempt_gap_ms: 0.1      # Gap between end of attempt i and start of i+1 (ms)
+  proc_margin_ms: 0.2            # Processing margin for DSP/encoding buffer (ms)
+
+# S3 Sweep configuration
+s3_sweep:
+  K_list: [1, 2, 3]              # Values of K to evaluate
+  policy: independent            # BLER combination: "independent" or "union_bound"
+
+# I/O and plotting
+io:
+  write_json: true
+  out_json: artifacts/s3/s3_timely_bler_results.json
+  plot: true
+  out_plot: artifacts/s3/timely_bler_vs_snr_K
+  show_plot: false
+  out_latency_cdf: artifacts/s3/latency_cdf.png
+  out_heatmap: artifacts/s3/s3_timely_heatmap.png

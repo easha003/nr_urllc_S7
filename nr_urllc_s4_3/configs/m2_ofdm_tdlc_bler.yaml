@@ -1,0 +1,70 @@
+sim:
+  type: tb_bler
+  seed: 42
+tx:
+  M: 4
+ofdm:
+  nfft: 256
+  n_subcarriers: 120
+  cp: 0.125
+  minislot_symbols: 7
+nr:
+  mu: 2
+  minislot_symbols: 7
+  dmrs:
+    freq_density: 4
+    offset_sc: 0
+    seed: 123
+    power_boost_db: 0.0
+    power_mode: constrained
+  cg_ul:
+    period_ms: 1.0
+    K: 2
+    early_stop: true
+  harq:
+    enabled: false
+    k1_symbols: 0
+    k2_symbols: 0
+pilots:
+  spacing: 4
+  offset: 0
+  seed: 123
+  power_boost_db: 0.0
+  power_mode: constrained
+channel:
+  model: tdl
+  snr_db_list:
+  - -4
+  - -2
+  - 0
+  - 2
+  - 4
+  - 6
+  - 8
+  - 10
+  tdl:
+    delays:
+    - 0
+    - 3
+    - 5
+    - 7
+    powers_db:
+    - 0.0
+    - -3.0
+    - -6.0
+    - -9.0
+urllc:
+  five_qi: 86
+  app_payload_bytes: 32
+  core_budget_ms: 2.0
+  tb_payload_bytes: 48
+bler:
+  packets_per_snr: 200
+  min_errors: 10
+io:
+  write_json: true
+  out_json: artifacts/tdlc/bler_vs_snr.json
+  plot: true
+  show_plot: false
+  out_plot: artifacts/tdlc/bler_vs_snr.png
+  out_urllc_json: artifacts/urllc_budget.json

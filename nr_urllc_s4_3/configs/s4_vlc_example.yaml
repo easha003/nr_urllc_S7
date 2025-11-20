@@ -1,0 +1,203 @@
+# configs/s4_vlc_example.yaml
+# S4 — VLC Channel Configuration
+# Extends S3 timing configuration with VLC-specific parameters
+#
+# This config demonstrates how to run VLC sweeps with the same timing
+# framework as RF (S3), ensuring fair comparison for hybrid systems.
+
+# ============================================================================
+# SIMULATION CONTROL
+# ============================================================================
+sim:
+  type: ofdm_m2  # Use M2 OFDM with autoramp
+  seed: 1234
+  autoramp: true
+
+# ============================================================================
+# TX PARAMETERS (Shared with RF)
+# ============================================================================
+tx:
+  M: 4  # QPSK modulation
+
+# ============================================================================
+# OFDM PARAMETERS (Shared with RF)
+# ============================================================================
+ofdm:
+  nfft: 256
+  cp: 0.125  # Cyclic prefix as fraction of symbol time
+  n_subcarriers: 64
+  minislot_symbols: 14  # Number of OFDM symbols per mini-slot
+
+# ============================================================================
+# PILOT CONFIGURATION (Shared with RF)
+# ============================================================================
+pilots:
+  spacing: 3  # Comb spacing (every 2nd subcarrier)
+  offset: 0  # Starting offset
+  seed: 999  # Pilot sequence seed
+  power_boost_db: 0.0  # Pilot power boost
+  power_mode: constrained  # Keep total power constant
+
+# ============================================================================
+# VLC CHANNEL PARAMETERS (NEW for S4)
+# ============================================================================
+vlc:
+  # LED Parameters
+  led_bandwidth_mhz: 20.0  # LED 3dB bandwidth [MHz]
+                           # Typical values:
+                           #   5-10 MHz: Conservative (phosphor LEDs)
+                           #   20 MHz: Recommended (modern white LEDs)
+                           #   50+ MHz: Optimistic (custom VLC LEDs)
+  
+  filter_order: 1  # LED low-pass filter order (1 or 2)
+  
+  # DCO-OFDM Parameters
+  dc_bias: 0.6  # DC bias ratio (0-1)
+                # Controls tradeoff between clipping and power efficiency
+                # 0.3: Low overhead, high clipping (>10%)
+                # 0.5: Recommended balance (3-5% clipping)
+                # 0.7: Low clipping, high DC power waste
+  
+  clipping_ratio: 0.98  # Max signal level relative to (1+dc_bias)
+                        # 0.95: Leave 5% headroom
+                        # 1.0: Full LED range (more clipping)
+  
+  # Photodetector Parameters
+  responsivity: 0.5  # Photodetector responsivity [A/W]
+                     # Typical for Si photodiodes: 0.4-0.6 A/W
+  
+  area_cm2: 1.0  # Photodetector active area [cm²]
+  
+  # Noise Model
+  noise_type: awgn  # Noise type: "awgn" (simple) or "shot" (signal-dependent)
+  
+  # System Parameters
+  sample_rate_hz: 100.0e6  # Sampling rate [Hz] (100 MHz)
+
+# ============================================================================
+# NR NUMEROLOGY AND TIMING (Shared with RF - from S3)
+# ============================================================================
+nr:
+  mu: 2  # Subcarrier spacing numerology
+         # 0: 15 kHz
+         # 1: 30 kHz  
+         # 2: 60 kHz (recommended for URLLC)
+         # 3: 120 kHz
+  
+  minislot_symbols: 14  # Symbols per mini-slot (typically 2, 4, 7, or 14)
+  
+  cg_ul:  # Configured Grant uplink (for reference)
+    period_ms: 1.0
+    K: 2
+    early_stop: true
+  
+  harq:
+    enabled: true
+    k1_symbols: 1  # HARQ feedback delay [symbols]
+    k2_symbols: 0  # Retransmission delay [symbols]
+
+# ============================================================================
+# URLLC SERVICE LEVEL (Shared with RF - from S3)
+# ============================================================================
+urllc:
+  five_qi: 85  # 5QI 85: PDB=5ms, PER=1e-5 (URLLC)
+  pdb_ms: 5.0  # Packet Delay Budget [ms]
+  core_budget_ms: 2.0  # Processing delay budget [ms]
+  app_payload_bytes: 32  # Application payload size
+  tb_payload_bytes: 48  # Transport block size (with overhead)
+  n_independent_tries: 1  # Number of independent transmission attempts
+
+# ============================================================================
+# S3 TIMING PARAMETERS (Shared with RF)
+# ============================================================================
+timing:
+  grant_delay_ms: 0.0  # Scheduling delay before transmission [ms]
+  inter_attempt_gap_ms: 0.1  # Gap between attempts [ms]
+  proc_margin_ms: 0.2  # Processing margin [ms]
+
+# ============================================================================
+# S4 VLC SWEEP CONFIGURATION (NEW)
+# ============================================================================
+s4_sweep:
+  K_list: [1, 2, 3]  # Number of transmission attempts to evaluate
+  
+  # SNR sweep range [start, stop, step]
+  snr_db_range: [8, 24, 2]  # VLC typically needs 5-25 dB range
+                             # Note: VLC needs ~5 dB more than RF for same BLER
+                             # due to clipping distortion and LED bandwidth limits
+  
+  n_frames: 400  # Number of frames per SNR point (for BLER measurement)
+  
+  policy: independent  # BLER combination policy: "independent" or "union_bound"
+
+# ============================================================================
+# EQUALIZATION (Shared with RF)
+# ============================================================================
+eq:
+  type: mmse  # Equalization type: "zf" (Zero-Forcing) or "mmse" (MMSE)
+
+# ============================================================================
+# AUTORAMP CONTROL (Shared with RF)
+# ============================================================================
+autoramp:
+  target_errs: 200  # Target number of errors per SNR
+  base_min_bits: 200000  # Base minimum bits per SNR
+  min_used_res: 2000000  # Minimum used resource elements
+  max_bits: 2000000  # Maximum bits per SNR
+  noise_blend_weight: 0.0  # Noise blending weight (0 = no blending)
+  min_bits: 100000  # Minimum bits per iteration
+  growth: 2.0  # Growth factor for adaptive ramping
+
+# ============================================================================
+# I/O AND PLOTTING (VLC-specific paths)
+# ============================================================================
+io:
+  write_json: true
+  out_json: artifacts/s4/s4_vlc_timely_results.json
+  plot: true
+  out_plot: artifacts/s4/vlc_timely_bler_vs_snr
+  show_plot: false
+  out_latency_cdf: artifacts/s4/vlc_latency_cdf.png
+  out_heatmap: artifacts/s4/s4_vlc_timely_heatmap.png
+
+bler:
+  packets_per_snr: 100000     # ↑ was ~20; raise to 2k–10k to calm variance
+  min_errors: 100           # ↑ collect enough errors for stable estimates
+  #max_packets_per_snr: 100000   # (optional) safety cap if you want one
+  adaptive_packets: true
+# ============================================================================
+# NOTES AND RECOMMENDATIONS
+# ============================================================================
+# 
+# 1. TIMING ALIGNMENT:
+#    - VLC uses the SAME nr, timing, and urllc blocks as RF
+#    - This ensures fair comparison in hybrid systems
+#    - Latency should be identical between RF and VLC
+#
+# 2. SNR COMPARISON:
+#    - VLC typically needs 3-5 dB higher SNR than RF for same BLER
+#    - This is due to:
+#      * Clipping distortion (nonlinear)
+#      * LED bandwidth limitations (ISI)
+#      * DC power waste (~30-50% overhead)
+#    - When comparing: VLC @ 20dB ≈ RF @ 15dB
+#
+# 3. PARAMETER TUNING:
+#    - Start with dc_bias=0.5, adjust if clipping rate >10%
+#    - LED bandwidth: 20 MHz is realistic for modern LEDs
+#    - SNR range: 5-25 dB covers typical indoor VLC scenarios
+#
+# 4. EXPECTED PERFORMANCE:
+#    SNR=10dB → BLER ~1e-2 (moderate)
+#    SNR=15dB → BLER ~1e-3 (good)
+#    SNR=20dB → BLER ~1e-4 (excellent)
+#    SNR=25dB → BLER ~1e-5 (URLLC-grade)
+#
+# 5. INTEGRATION WITH RF:
+#    - For hybrid comparison, copy this file and:
+#      a) Change 'channel.model' to 'tdl' or 'cdl' for RF
+#      b) Remove 'vlc' block
+#      c) Use 'channel.snr_db_list' instead of 's4_sweep.snr_db_range'
+#      d) Keep nr, timing, urllc blocks IDENTICAL
+#
+# ============================================================================

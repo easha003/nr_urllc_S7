@@ -1,0 +1,37 @@
+{
+  "five_qi": 86,
+  "pdb_ms": 5.0,
+  "per_target": 0.0001,
+  "core_budget_ms": 2.0,
+  "radio_deadline_ms": 3.0,
+  "nr": {
+    "mu": 2,
+    "minislot_symbols": 14,
+    "cp": 0.125,
+    "tti_ms": 0.2625,
+    "cg_ul": {
+      "period_ms": 1.0,
+      "K": 2,
+      "early_stop": true
+    },
+    "harq": {
+      "enabled": false,
+      "k1_symbols": 0,
+      "k2_symbols": 0
+    }
+  },
+  "payload": {
+    "app_payload_bytes": 32,
+    "tb_payload_bytes": 48,
+    "mdbv_bytes": 1354
+  },
+  "tries": {
+    "max_tries_by_deadline": 11,
+    "n_independent_tries": 11,
+    "bler_per_try_target": 9.091322340393226e-06
+  },
+  "notes": {
+    "formula": "per_try = 1 - (1 - PER_target)^(1 / N_tries) with N_tries <= floor(deadline/TTI)",
+    "tti_model": "TTI ~= L*(1+cp)/(15*2^mu) ms (approx.)"
+  }
+}

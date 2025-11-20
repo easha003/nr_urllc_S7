@@ -1,0 +1,14 @@
+S3 integration applied.
+Run examples:
+
+# (A) If you already have artifacts/bler_vs_snr.json from S2
+python scripts/run_s3_timely_sweep.py --cfg configs/s3_timing_example.yaml --bler-json artifacts/bler_vs_snr.json
+
+# (B) End-to-end (first run BLER using current cfg, then S3)
+python scripts/run_s3_timely_sweep.py --cfg configs/s3_timing_example.yaml --run-bler
+
+Outputs (artifacts/s3/):
+- timely_bler_vs_snr_K*.png
+- latency_cdf.png
+- s3_timely_heatmap.png
+- s3_timely_bler_results.json

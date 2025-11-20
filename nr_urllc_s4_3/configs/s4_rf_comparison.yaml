@@ -1,0 +1,158 @@
+# configs/s4_rf_comparison.yaml
+# S4 — RF Configuration for VLC Comparison
+# This config uses the SAME timing/numerology as s4_vlc_example.yaml
+# to enable direct performance comparison between RF and VLC.
+
+# ============================================================================
+# SIMULATION CONTROL
+# ============================================================================
+sim:
+  type: ofdm_m2
+  seed: 1234  # Same seed as VLC for reproducibility
+  autoramp: true
+
+# ============================================================================
+# TX PARAMETERS (Identical to VLC)
+# ============================================================================
+tx:
+  M: 4  # QPSK (same as VLC)
+
+# ============================================================================
+# OFDM PARAMETERS (Identical to VLC)
+# ============================================================================
+ofdm:
+  nfft: 256
+  cp: 0.125
+  n_subcarriers: 64
+  minislot_symbols: 14
+
+# ============================================================================
+# PILOT CONFIGURATION (Identical to VLC)
+# ============================================================================
+pilots:
+  spacing: 2
+  offset: 0
+  seed: 999
+  power_boost_db: 3.0
+  power_mode: constrained
+
+# ============================================================================
+# RF CHANNEL PARAMETERS
+# ============================================================================
+channel:
+  model: tdl  # Time-Domain Line-of-sight model
+              # Alternatives: "cdl" (Clustered Delay Line), "flat"
+  
+  # SNR range adjusted to match VLC performance region
+  # Note: RF @ 10dB ≈ VLC @ 15dB (5 dB gap expected)
+  snr_db_list:
+    - 0
+    - 2
+    - 4
+    - 6
+    - 8
+    - 10
+    - 12
+    - 14
+    - 16
+    - 18
+    - 20
+  
+  seed: 2025
+  
+  tdl:
+    delays: [0, 3, 5]  # Tap delays [samples]
+    powers_db: [0.0, -4.0, -8.0]  # Tap powers [dB]
+
+# ============================================================================
+# NR NUMEROLOGY AND TIMING (Identical to VLC)
+# ============================================================================
+nr:
+  mu: 2
+  minislot_symbols: 14
+  cg_ul:
+    period_ms: 1.0
+    K: 2
+    early_stop: true
+  harq:
+    enabled: true
+    k1_symbols: 1
+    k2_symbols: 0
+
+# ============================================================================
+# URLLC SERVICE LEVEL (Identical to VLC)
+# ============================================================================
+urllc:
+  five_qi: 85
+  pdb_ms: 5.0
+  core_budget_ms: 2.0
+  app_payload_bytes: 32
+  tb_payload_bytes: 48
+  n_independent_tries: 1
+
+# ============================================================================
+# S3 TIMING PARAMETERS (Identical to VLC)
+# ============================================================================
+timing:
+  grant_delay_ms: 0.0
+  inter_attempt_gap_ms: 0.1
+  proc_margin_ms: 0.2
+
+# ============================================================================
+# S3 SWEEP CONFIGURATION (Identical K values to VLC)
+# ============================================================================
+s3_sweep:
+  K_list: [1, 2, 3]  # Same as VLC for direct comparison
+  policy: independent
+
+# ============================================================================
+# EQUALIZATION (Identical to VLC)
+# ============================================================================
+eq:
+  type: mmse
+
+# ============================================================================
+# AUTORAMP CONTROL (Identical to VLC)
+# ============================================================================
+autoramp:
+  target_errs: 200
+  base_min_bits: 200000
+  min_used_res: 2000000
+  max_bits: 2000000
+  noise_blend_weight: 0.0
+  min_bits: 100000
+  growth: 2.0
+
+# ============================================================================
+# I/O AND PLOTTING (RF-specific paths)
+# ============================================================================
+io:
+  write_json: true
+  out_json: artifacts/s3/s3_timely_bler_results.json
+  plot: true
+  out_plot: artifacts/s3/timely_bler_vs_snr
+  show_plot: false
+  out_latency_cdf: artifacts/s3/latency_cdf.png
+  out_heatmap: artifacts/s3/s3_timely_heatmap.png
+
+# ============================================================================
+# EXPECTED COMPARISON RESULTS
+# ============================================================================
+#
+# RF vs VLC Performance Gap (~5 dB):
+#
+# | Target BLER | RF SNR | VLC SNR | Gap |
+# |-------------|--------|---------|-----|
+# | 1e-2        | 5 dB   | 10 dB   | 5 dB|
+# | 1e-3        | 10 dB  | 15 dB   | 5 dB|
+# | 1e-4        | 15 dB  | 20 dB   | 5 dB|
+# | 1e-5        | 20 dB  | 25 dB   | 5 dB|
+#
+# Latency Distributions:
+#   - Should be IDENTICAL (same timing parameters)
+#   - K_max_by_deadline should be IDENTICAL
+#   - Attempt latency should be IDENTICAL
+#
+# This confirms timing alignment between RF and VLC!
+#
+# ============================================================================

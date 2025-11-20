@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "snr_db": [
+    8.0,
+    10.0,
+    12.0,
+    14.0,
+    16.0,
+    18.0,
+    20.0,
+    22.0,
+    24.0
+  ],
+  "bler": [
+    1.0,
+    0.7246376811594203,
+    0.30303030303030304,
+    0.045787545787545784,
+    0.002732389748073665,
+    6e-05,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "packets": [
+    100,
+    138,
+    330,
+    2184,
+    36598,
+    100000,
+    1000000,
+    1000000,
+    1000000
+  ],
+  "meta": {
+    "mode": "tb_bler_vlc",
+    "seed": 1234,
+    "M": 4,
+    "nfft": 256,
+    "cp": 0.125,
+    "n_subcarriers": 64,
+    "minislot_symbols": 14,
+    "pilot_spacing": 3,
+    "pilot_offset": 0,
+    "pilot_seed": 999,
+    "pilot_power_boost_db": 0.0,
+    "pilot_power_mode": "constrained",
+    "tb_payload_bytes": 48,
+    "packets_per_snr": 100000,
+    "min_errors": 100,
+    "vlc": {
+      "led_bandwidth_mhz": 20.0,
+      "dc_bias": 0.6,
+      "clipping_ratio": 0.98,
+      "responsivity": 0.5,
+      "area_cm2": 1.0,
+      "noise_type": "awgn"
+    }
+  }
+}

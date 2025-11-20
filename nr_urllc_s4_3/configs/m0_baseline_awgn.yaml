@@ -1,0 +1,27 @@
+sim:
+  type: baseline_awgn
+  seed: 1234
+tx:
+  M: 4
+  n_bits: 100000
+channel:
+  snr_db: 5
+io:
+  write_json: true
+  out_json: artifacts/m0_baseline_awgn_results.json
+urllc:
+  five_qi: 85
+  core_budget_ms: 2.0
+  app_payload_bytes: 32
+  n_independent_tries: 1
+nr:
+  mu: 2
+  minislot_symbols: 4
+  cg_ul:
+    period_ms: 1.0
+    K: 2
+    early_stop: true
+  harq:
+    enabled: false
+    k1_symbols: 0
+    k2_symbols: 0

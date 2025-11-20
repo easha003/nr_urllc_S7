@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "reps_used": 1,
+  "latency_ms": 0.0,
+  "crc_ok": true,
+  "meta": {
+    "mode": "ofdm_m2",
+    "seed": 1234,
+    "bits_per_frame": 896,
+    "urllc": {
+      "five_qi": 85,
+      "pdb_ms": 5.0,
+      "per_target": 1e-05,
+      "core_budget_ms": 2.0,
+      "radio_deadline_ms": 3.0,
+      "nr": {
+        "mu": 2,
+        "minislot_symbols": 14,
+        "cp": 0.125,
+        "tti_ms": 0.2625,
+        "cg_ul": {
+          "period_ms": 1.0,
+          "K": 2,
+          "early_stop": true
+        },
+        "harq": {
+          "enabled": false,
+          "k1_symbols": 0,
+          "k2_symbols": 0
+        }
+      },
+      "payload": {
+        "app_payload_bytes": 32,
+        "tb_payload_bytes": 48,
+        "mdbv_bytes": 255
+      },
+      "tries": {
+        "max_tries_by_deadline": 11,
+        "n_independent_tries": 1,
+        "bler_per_try_target": 9.99999999995449e-06
+      },
+      "notes": {
+        "formula": "per_try = 1 - (1 - PER_target)^(1 / N_tries) with N_tries <= floor(deadline/TTI)",
+        "tti_model": "TTI ~= L*(1+cp)/(15*2^mu) ms (approx.)"
+      }
+    },
+    "nr_step1": {
+      "mu": 2,
+      "scs_khz": 60.0,
+      "minislot_symbols": 14,
+      "cp": 0.125,
+      "tti_ms": 0.2625,
+      "cg_ul": {
+        "period_ms": 1.0,
+        "K": 2,
+        "early_stop": true,
+        "K_span_ms": 0.525,
+        "max_reps_in_deadline": 11,
+        "span_fits_deadline": true
+      },
+      "harq": {
+        "enabled": false,
+        "k1_symbols": 0,
+        "k2_symbols": 0
+      }
+    }
+  },
+  "snr_db": [
+    0.0,
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0
+  ],
+  "ber": [
+    0.12523446248600223,
+    0.08937944928811391,
+    0.05961421172612382,
+    0.0352781055031195,
+    0.017356972884338507,
+    0.00640872460406335
+  ],
+  "evm_percent": [
+    67.81979860107688,
+    60.76350017375582,
+    53.33865850049283,
+    45.76487286451127,
+    38.38676124932602,
+    31.527417338735162
+  ],
+  "mse_H": [
+    0.07814091611799574,
+    0.04936718326917154,
+    0.031131566071847385,
+    0.019657482764572073,
+    0.01244302390170391,
+    0.007883098810569103
+  ]
+}

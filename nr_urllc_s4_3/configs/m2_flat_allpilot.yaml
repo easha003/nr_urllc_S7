@@ -1,0 +1,45 @@
+sim:
+  type: ofdm_m2
+  seed: 1234
+tx:
+  M: 4
+  n_bits: 6400
+ofdm:
+  nfft: 256
+  cp: 0.125
+  n_subcarriers: 64
+  minislot_symbols: 4
+pilots:
+  spacing: 1
+  offset: 0
+  seed: 999
+  power_boost_db: 0.0
+  power_mode: constrained
+channel:
+  model: flat
+  snr_db_list:
+  - 0
+  - 4
+  - 8
+  - 12
+eq:
+  type: zf
+io:
+  write_json: true
+  out_json: artifacts/m2_flat_allpilot.json
+urllc:
+  five_qi: 85
+  core_budget_ms: 2.0
+  app_payload_bytes: 32
+  n_independent_tries: 1
+nr:
+  mu: 2
+  minislot_symbols: 4
+  cg_ul:
+    period_ms: 1.0
+    K: 2
+    early_stop: true
+  harq:
+    enabled: false
+    k1_symbols: 0
+    k2_symbols: 0

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: nr-urllc
+Version: 0.1.0
+Summary: NR URLLC PHY simulation package
+Author-email: Eashraque <easha003eee@gmail.com>
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pytest
