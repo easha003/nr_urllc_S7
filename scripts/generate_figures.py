@@ -31,8 +31,13 @@ DISPLAY_POLICY = {
     "threshold": "threshold",
     "best_link": "best_link",
 }
+DISPLAY_SCENARIO = {
+    "RF_good": "RF Good",
+    "VLC_good": "VLC Good",
+}
 
-
+def pretty_scenario(s: str) -> str:
+    return DISPLAY_SCENARIO.get(s, s.replace("_", " ").title())
 
 
 def load_results(results_dir: Path) -> Dict:
@@ -94,7 +99,7 @@ def plot_timely_delivery_comparison(results: Dict, manifest: Dict, output_path: 
         ax.set_xlabel('Policy', fontweight='bold')
         if i == 0:
             ax.set_ylabel('Timely Delivery Ratio', fontweight='bold')
-        ax.set_title(scenario.replace('_', ' ').title(), fontweight='bold')
+        ax.set_title(pretty_scenario(scenario), fontweight='bold')
         ax.set_xticks(x)
         ax.set_xticklabels(policy_labels, rotation=45, ha='right')
         ax.set_ylim([0, 1.05])
@@ -145,13 +150,13 @@ def plot_energy_vs_performance(results: Dict, manifest: Dict, output_path: Path)
                        marker=markers[j % len(markers)],
                        markersize=10,  markeredgewidth=0.05,
                        capsize=0.05, capthick=0.05, elinewidth=0.05,
-                       color=colors[j], label=policy,
+                       color=colors[j], label=policy_labels[j],
                        linestyle='none', alpha=0.8)
         
         ax.set_xlabel('Mean Energy per Packet', fontweight='bold')
         if i == 0:
             ax.set_ylabel('Timely Delivery Ratio', fontweight='bold')
-        ax.set_title(scenario.replace('_', ' ').title(), fontweight='bold')
+        ax.set_title(pretty_scenario(scenario), fontweight='bold')
         ax.grid(True, alpha=0.3, linestyle='--')
         ax.set_axisbelow(True)
         
@@ -213,7 +218,7 @@ def plot_action_distribution(results: Dict, manifest: Dict, output_path: Path):
         ax.set_xlabel('Policy', fontweight='bold')
         if i == 0:
             ax.set_ylabel('Action Distribution', fontweight='bold')
-        ax.set_title(scenario.replace('_', ' ').title(), fontweight='bold')
+        ax.set_title(pretty_scenario(scenario), fontweight='bold')
         ax.set_xticks(x)
         ax.set_xticklabels(policy_labels, rotation=45, ha='right')
         ax.set_ylim([0, 1.0])
@@ -269,7 +274,7 @@ def plot_latency_comparison(results: Dict, manifest: Dict, output_path: Path):
         ax.set_xlabel('Policy', fontweight='bold')
         if i == 0:
             ax.set_ylabel('Mean Latency (ms)', fontweight='bold')
-        ax.set_title(scenario.replace('_', ' ').title(), fontweight='bold')
+        ax.set_title(pretty_scenario(scenario), fontweight='bold')
         ax.set_xticks(x)
         ax.set_xticklabels(labels, rotation=45, ha='right')
         ax.grid(axis='y', alpha=0.3, linestyle='--')
@@ -304,7 +309,7 @@ def plot_scenario_heatmap(results: Dict, manifest: Dict, output_path: Path):
     # Set ticks
     ax.set_xticks(np.arange(len(scenarios)))
     ax.set_yticks(np.arange(len(policies)))
-    ax.set_xticklabels([s.replace('_', '\n') for s in scenarios])
+    ax.set_xticklabels([pretty_scenario(s).replace(" ", "\n") for s in scenarios])
     ax.set_yticklabels(policy_labels)
     
     # Rotate x labels
