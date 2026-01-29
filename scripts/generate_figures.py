@@ -111,7 +111,7 @@ def plot_energy_vs_performance(results: Dict, manifest: Dict, output_path: Path)
     if len(scenarios) == 1:
         axes = [axes]
     
-    markers = ['o', 's', '^', 'D', 'v', 'P', '*', 'X']
+    markers = ['o', 's', 'v', '^', 'd', 'p', 'h']
     colors = plt.cm.tab10(np.linspace(0, 1, len(policies)))
     
     for i, (ax, scenario) in enumerate(zip(axes, scenarios)):
@@ -128,7 +128,8 @@ def plot_energy_vs_performance(results: Dict, manifest: Dict, output_path: Path)
             ax.errorbar(energy['mean'], tdr['mean'],
                        xerr=energy['std'], yerr=tdr['std'],
                        marker=markers[j % len(markers)],
-                       markersize=8, capsize=3, capthick=1.5,
+                       markersize=10,  markeredgewidth=0.05,
+                       capsize=0.05, capthick=0.05, elinewidth=0.05,
                        color=colors[j], label=policy,
                        linestyle='none', alpha=0.8)
         
@@ -325,19 +326,19 @@ def main(results_dir: str, output_dir: str):
     print("\nGenerating figures...")
     
     plot_timely_delivery_comparison(results, manifest, 
-                                    output_path / 'timely_delivery_comparison.pdf')
+                                    output_path / 'timely_delivery_comparison.png')
     
     plot_energy_vs_performance(results, manifest,
-                               output_path / 'energy_vs_performance.pdf')
+                               output_path / 'energy_vs_performance.png')
     
     plot_action_distribution(results, manifest,
-                            output_path / 'action_distribution.pdf')
+                            output_path / 'action_distribution.png')
     
     plot_latency_comparison(results, manifest,
-                           output_path / 'latency_comparison.pdf')
+                           output_path / 'latency_comparison.png')
     
     plot_scenario_heatmap(results, manifest,
-                         output_path / 'scenario_heatmap.pdf')
+                         output_path / 'scenario_heatmap.png')
     
     print(f"\nAll figures saved to: {output_path}")
 
