@@ -4,11 +4,11 @@
     "timesteps": 1000,
     "deadline_ms": 2.0,
     "scenarios": [
-      "rf_good",
-      "vlc_good",
-      "complementary",
-      "correlated_blockage",
-      "balanced"
+      "RF_good",
+      "VLC_good",
+      "Complementary",
+      "Correlated_blockage",
+      "Balanced"
     ]
   },
   "scenarios": [

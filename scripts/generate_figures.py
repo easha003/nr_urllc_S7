@@ -22,6 +22,18 @@ mpl.rcParams['ytick.labelsize'] = 9
 mpl.rcParams['legend.fontsize'] = 9
 mpl.rcParams['figure.titlesize'] = 12
 
+DISPLAY_POLICY = {
+    "rf_only": "RF_only",
+    "vlc_only": "VLC_only",
+    "always_dup": "always_DUP",
+    "conditional_dup_balanced": "conditional_DUP_balanced",
+    "oracle": "oracle",
+    "threshold": "threshold",
+    "best_link": "best_link",
+}
+
+
+
 
 def load_results(results_dir: Path) -> Dict:
     """Load all S7 evaluation results."""
@@ -40,12 +52,14 @@ def load_results(results_dir: Path) -> Dict:
     return results, manifest
 
 
+
 def plot_timely_delivery_comparison(results: Dict, manifest: Dict, output_path: Path):
     """
     Bar chart comparing timely delivery ratio across policies and scenarios.
     """
     scenarios = manifest['evaluation']['scenarios']
     policies = manifest['policies']
+    policy_labels = [DISPLAY_POLICY.get(p, p) for p in policies]
     
     # Extract data
     data = np.zeros((len(scenarios), len(policies)))
@@ -82,7 +96,7 @@ def plot_timely_delivery_comparison(results: Dict, manifest: Dict, output_path: 
             ax.set_ylabel('Timely Delivery Ratio', fontweight='bold')
         ax.set_title(scenario.replace('_', ' ').title(), fontweight='bold')
         ax.set_xticks(x)
-        ax.set_xticklabels(policies, rotation=45, ha='right')
+        ax.set_xticklabels(policy_labels, rotation=45, ha='right')
         ax.set_ylim([0, 1.05])
         ax.grid(axis='y', alpha=0.3, linestyle='--')
         ax.set_axisbelow(True)
@@ -106,6 +120,7 @@ def plot_energy_vs_performance(results: Dict, manifest: Dict, output_path: Path)
     """
     scenarios = manifest['evaluation']['scenarios']
     policies = manifest['policies']
+    policy_labels = [DISPLAY_POLICY.get(p, p) for p in policies]
     
     fig, axes = plt.subplots(1, len(scenarios), figsize=(14, 3.5), sharey=True)
     if len(scenarios) == 1:
@@ -155,6 +170,7 @@ def plot_action_distribution(results: Dict, manifest: Dict, output_path: Path):
     """
     scenarios = manifest['evaluation']['scenarios']
     policies = manifest['policies']
+    policy_labels = [DISPLAY_POLICY.get(p, p) for p in policies]
     
     fig, axes = plt.subplots(1, len(scenarios), figsize=(14, 3.5), sharey=True)
     if len(scenarios) == 1:
@@ -199,7 +215,7 @@ def plot_action_distribution(results: Dict, manifest: Dict, output_path: Path):
             ax.set_ylabel('Action Distribution', fontweight='bold')
         ax.set_title(scenario.replace('_', ' ').title(), fontweight='bold')
         ax.set_xticks(x)
-        ax.set_xticklabels(policies, rotation=45, ha='right')
+        ax.set_xticklabels(policy_labels, rotation=45, ha='right')
         ax.set_ylim([0, 1.0])
         
         if i == len(scenarios) - 1:
@@ -217,6 +233,7 @@ def plot_latency_comparison(results: Dict, manifest: Dict, output_path: Path):
     """
     scenarios = manifest['evaluation']['scenarios']
     policies = manifest['policies']
+    policy_labels = [DISPLAY_POLICY.get(p, p) for p in policies]
     
     fig, axes = plt.subplots(1, len(scenarios), figsize=(14, 3.5), sharey=True)
     if len(scenarios) == 1:
@@ -270,6 +287,7 @@ def plot_scenario_heatmap(results: Dict, manifest: Dict, output_path: Path):
     """
     scenarios = manifest['evaluation']['scenarios']
     policies = manifest['policies']
+    policy_labels = [DISPLAY_POLICY.get(p, p) for p in policies]
     
     # Prepare data matrix
     data = np.zeros((len(policies), len(scenarios)))
@@ -287,7 +305,7 @@ def plot_scenario_heatmap(results: Dict, manifest: Dict, output_path: Path):
     ax.set_xticks(np.arange(len(scenarios)))
     ax.set_yticks(np.arange(len(policies)))
     ax.set_xticklabels([s.replace('_', '\n') for s in scenarios])
-    ax.set_yticklabels(policies)
+    ax.set_yticklabels(policy_labels)
     
     # Rotate x labels
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
