@@ -51,7 +51,7 @@ policies:
       allow_switch: true
       hysteresis_margin_prob: 0.05
       conf_k: 0.8
-      epsilon: 0.0
+      epsilon: 0.02
       probe:
         period: 2
         r_probe: 0.5
@@ -84,7 +84,7 @@ policies:
       allow_switch: true
       hysteresis_margin_prob: 0.05
       conf_k: 0.8
-      epsilon: 0.0
+      epsilon: 0.02
       probe:
         period: 2
         r_probe: 0.5

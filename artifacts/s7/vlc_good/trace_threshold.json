@@ -28,7 +28,7 @@
       "p_est": 0.06162304266029939,
       "snr_rf_true": 2.5539200175818944,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 3,
@@ -48,7 +48,7 @@
       "p_est": 0.05424957032258171,
       "snr_rf_true": 2.1898343390394803,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 5,
@@ -468,7 +468,7 @@
       "p_est": 0.0562151346240477,
       "snr_rf_true": 2.2868895363251975,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 47,
@@ -818,7 +818,7 @@
       "p_est": 0.046275373611100123,
       "snr_rf_true": 1.7960862258636558,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 82,
@@ -1648,7 +1648,7 @@
       "p_est": 0.06999801526672889,
       "snr_rf_true": 2.9674575538371446,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 165,
@@ -2108,7 +2108,7 @@
       "p_est": 0.0629658281997112,
       "snr_rf_true": 2.620223783550185,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 211,
@@ -2858,7 +2858,7 @@
       "p_est": 0.04111952460358259,
       "snr_rf_true": 1.5415018593146788,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 286,
@@ -2918,7 +2918,7 @@
       "p_est": 0.06254999962306573,
       "snr_rf_true": 2.5996910924989316,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 292,
@@ -3698,7 +3698,7 @@
       "p_est": 0.10888806171409082,
       "snr_rf_true": 4.369168200529332,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 370,
@@ -4348,7 +4348,7 @@
       "p_est": 0.10057279760888882,
       "snr_rf_true": 4.198428110902515,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 435,
@@ -4368,7 +4368,7 @@
       "p_est": 0.10242955138190268,
       "snr_rf_true": 4.236553455041736,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 437,
@@ -4978,7 +4978,7 @@
       "p_est": 0.05618434814525686,
       "snr_rf_true": 2.285369368416906,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 498,
@@ -4998,7 +4998,7 @@
       "p_est": 0.06480760720246859,
       "snr_rf_true": 2.7111667378641138,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 500,
@@ -5258,7 +5258,7 @@
       "p_est": 0.10981008955770666,
       "snr_rf_true": 4.388100505584909,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 526,
@@ -6178,7 +6178,7 @@
       "p_est": 0.05952528620288311,
       "snr_rf_true": 2.4503374653956937,
       "snr_vlc_true": -15.0,
-      "success": false
+      "success": true
     },
     {
       "t": 618,
@@ -6798,7 +6798,7 @@
       "p_est": 0.06476990354074041,
       "snr_rf_true": 2.709305014833892,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 680,
@@ -7048,7 +7048,7 @@
       "p_est": 0.05890678649157943,
       "snr_rf_true": 2.4197973240953234,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 705,
@@ -7532,10 +7532,10 @@
     },
     {
       "t": 753,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.7089368010888624,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.8962073505018995,
       "snr_rf_true": 3.2159725620793744,
       "snr_vlc_true": 11.944767842023115,
       "success": true
@@ -7545,89 +7545,89 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9793150002838231,
-      "snr_rf_true": 2.660245678721373,
-      "snr_vlc_true": 13.585683246798482,
+      "p_est": 0.8268659614226689,
+      "snr_rf_true": 4.02479466270143,
+      "snr_vlc_true": 11.624685656428946,
       "success": true
     },
     {
       "t": 755,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9990758547971188,
-      "snr_rf_true": 2.564240807562618,
-      "snr_vlc_true": 15.12238909046113,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.10624719454807097,
+      "snr_rf_true": 4.31494239472039,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 756,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9995750652717589,
-      "snr_rf_true": 3.4326059274099507,
-      "snr_vlc_true": 15.600323503297915,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.14342201717556446,
+      "snr_rf_true": 5.078265419338257,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 757,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9995612632936046,
-      "snr_rf_true": 3.5498311086109857,
-      "snr_vlc_true": 15.587109757472755,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.13000476271261885,
+      "snr_rf_true": 4.80276446103244,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 758,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999976043527398,
-      "snr_rf_true": 2.7715621186139376,
-      "snr_vlc_true": 17.358902741654962,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.12611713118234558,
+      "snr_rf_true": 4.722938426944162,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 759,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999950033530577,
-      "snr_rf_true": 3.292694725335199,
-      "snr_vlc_true": 16.661803736623142,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.11234744763756233,
+      "snr_rf_true": 4.440200924824613,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 760,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.999996381370782,
-      "snr_rf_true": 3.2559976126273193,
-      "snr_vlc_true": 17.03112895842832,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.1402870149185077,
+      "snr_rf_true": 5.0138933729933575,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 761,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999970812565376,
-      "snr_rf_true": 3.900742259527901,
-      "snr_vlc_true": 17.218706706805605,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.1586569946026436,
+      "snr_rf_true": 5.391090289174281,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 762,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999969562208,
-      "snr_rf_true": 2.7023343878142034,
-      "snr_vlc_true": 18.309011547110586,
+      "p_est": 0.9999986293622446,
+      "snr_rf_true": 4.865610715270329,
+      "snr_vlc_true": 17.633617541077307,
       "success": true
     },
     {
@@ -7635,9 +7635,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999942888062018,
-      "snr_rf_true": 4.099396894524711,
-      "snr_vlc_true": 16.470296638120228,
+      "p_est": 0.9999995489563778,
+      "snr_rf_true": 4.837499594018955,
+      "snr_vlc_true": 17.88007976086223,
       "success": true
     },
     {
@@ -7645,9 +7645,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999992982793696,
-      "snr_rf_true": 3.7060411973768526,
-      "snr_vlc_true": 16.120269675563268,
+      "p_est": 0.9999999975718832,
+      "snr_rf_true": 3.6161323438271067,
+      "snr_vlc_true": 18.65104621349545,
       "success": true
     },
     {
@@ -7655,9 +7655,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999055935659217,
-      "snr_rf_true": 4.142626817211028,
-      "snr_vlc_true": 15.916764872663308,
+      "p_est": 0.9999978565049806,
+      "snr_rf_true": 4.010075312353215,
+      "snr_vlc_true": 17.42648255621892,
       "success": true
     },
     {
@@ -7665,9 +7665,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9994920174846789,
-      "snr_rf_true": 4.78360423787468,
-      "snr_vlc_true": 15.520815164887996,
+      "p_est": 0.9999948649777042,
+      "snr_rf_true": 4.002074677304502,
+      "snr_vlc_true": 16.624717487870633,
       "success": true
     },
     {
@@ -7675,9 +7675,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9990642353289002,
-      "snr_rf_true": 4.280928658483919,
-      "snr_vlc_true": 15.111264837260032,
+      "p_est": 0.9999970239603401,
+      "snr_rf_true": 3.9658250193764863,
+      "snr_vlc_true": 17.203350641003745,
       "success": true
     },
     {
@@ -7685,9 +7685,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999953833328747,
-      "snr_rf_true": 3.562420987267791,
-      "snr_vlc_true": 16.76364286955636,
+      "p_est": 0.9999980386174225,
+      "snr_rf_true": 3.4496746058570174,
+      "snr_vlc_true": 17.475290867489342,
       "success": true
     },
     {
@@ -7695,9 +7695,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999983616186884,
-      "snr_rf_true": 3.920745630560367,
-      "snr_vlc_true": 17.561859067623516,
+      "p_est": 0.9999985344224094,
+      "snr_rf_true": 3.2106676395671716,
+      "snr_vlc_true": 17.608172530397216,
       "success": true
     },
     {
@@ -7705,9 +7705,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999971666613398,
-      "snr_rf_true": 3.913312836343669,
-      "snr_vlc_true": 17.241596214638932,
+      "p_est": 0.9999980154873007,
+      "snr_rf_true": 3.117137542680815,
+      "snr_vlc_true": 17.46909171837078,
       "success": true
     },
     {
@@ -7715,9 +7715,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999998692578941,
-      "snr_rf_true": 3.8973268050106324,
-      "snr_vlc_true": 17.96592439586075,
+      "p_est": 0.9999954459032175,
+      "snr_rf_true": 3.7506039403337335,
+      "snr_vlc_true": 16.780412469336227,
       "success": true
     },
     {
@@ -7725,9 +7725,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999983112646529,
-      "snr_rf_true": 3.715655427857481,
-      "snr_vlc_true": 17.548363584227566,
+      "p_est": 0.999994507791147,
+      "snr_rf_true": 4.3992624483301555,
+      "snr_vlc_true": 16.528987220994544,
       "success": true
     },
     {
@@ -7735,9 +7735,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999971947149713,
-      "snr_rf_true": 3.3119245222375664,
-      "snr_vlc_true": 17.24911492321711,
+      "p_est": 0.9999979580967738,
+      "snr_rf_true": 4.536783657855777,
+      "snr_vlc_true": 17.45371037115497,
       "success": true
     },
     {
@@ -7745,69 +7745,69 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999995337242846,
-      "snr_rf_true": 3.2370927396522218,
-      "snr_vlc_true": 17.875997377832178,
+      "p_est": 0.9999946242580043,
+      "snr_rf_true": 5.053234670420346,
+      "snr_vlc_true": 16.560201730927275,
       "success": true
     },
     {
       "t": 775,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999987250329102,
-      "snr_rf_true": 3.948776506030003,
-      "snr_vlc_true": 17.659258423046168,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.1119852201284548,
+      "snr_rf_true": 4.432763186637605,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 776,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999987218546209,
-      "snr_rf_true": 3.353226383514648,
-      "snr_vlc_true": 17.65840660352756,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.11746600743936741,
+      "snr_rf_true": 4.545302019421678,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 777,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999960754931803,
-      "snr_rf_true": 4.784155941649282,
-      "snr_vlc_true": 16.949150104953812,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.13148125509004682,
+      "snr_rf_true": 4.833081771182293,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 778,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999959428364965,
-      "snr_rf_true": 4.875611209132654,
-      "snr_vlc_true": 16.913596528062882,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.1430973945735835,
+      "snr_rf_true": 5.071599835244248,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 779,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999980338419837,
-      "snr_rf_true": 4.707687204596423,
-      "snr_vlc_true": 17.474010992799293,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.16268814210857352,
+      "snr_rf_true": 5.473863184629376,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 780,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999974727602459,
-      "snr_rf_true": 4.34464709184602,
-      "snr_vlc_true": 17.323634380346963,
+      "p_est": 0.9999987822390568,
+      "snr_rf_true": 4.942985314722003,
+      "snr_vlc_true": 17.674590354128203,
       "success": true
     },
     {
@@ -7815,129 +7815,129 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999978257210423,
-      "snr_rf_true": 4.255294881598343,
-      "snr_vlc_true": 17.41823209280732,
+      "p_est": 0.9999977894691658,
+      "snr_rf_true": 5.553035665910277,
+      "snr_vlc_true": 17.40851615657812,
       "success": true
     },
     {
       "t": 782,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999967991717,
-      "snr_rf_true": 3.5259293987952987,
-      "snr_vlc_true": 18.22176205741183,
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.1732177463241963,
+      "snr_rf_true": 5.690071057856831,
+      "snr_vlc_true": -15.0,
       "success": true
     },
     {
       "t": 783,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999988237924229,
-      "snr_rf_true": 3.3406374395318505,
-      "snr_vlc_true": 17.68572715292323,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.16277979495723693,
+      "snr_rf_true": 5.47574512312193,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 784,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999959073546151,
-      "snr_rf_true": 3.3496739297060922,
-      "snr_vlc_true": 16.904086959701146,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.14432378219008213,
+      "snr_rf_true": 5.096781660969686,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 785,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999960519676915,
-      "snr_rf_true": 3.2959505247023606,
-      "snr_vlc_true": 16.94284499277468,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.11162139533914206,
+      "snr_rf_true": 4.425292650963717,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 786,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999949584581097,
-      "snr_rf_true": 3.2252718219567287,
-      "snr_vlc_true": 16.64977135392139,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.12127060682283453,
+      "snr_rf_true": 4.623423126762202,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 787,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999936679062301,
-      "snr_rf_true": 3.6355711982202923,
-      "snr_vlc_true": 16.303888023998155,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.15860207206402865,
+      "snr_rf_true": 5.389962546381389,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 788,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999976284528722,
-      "snr_rf_true": 3.021108845544834,
-      "snr_vlc_true": 17.36536186522766,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.15622868323599026,
+      "snr_rf_true": 5.341228962445666,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 789,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999984069904417,
-      "snr_rf_true": 3.870901256850551,
-      "snr_vlc_true": 17.57401923986241,
+      "p_est": 0.9999955578184565,
+      "snr_rf_true": 6.124226317913703,
+      "snr_vlc_true": 16.81040709113526,
       "success": true
     },
     {
       "t": 790,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999963233479912,
-      "snr_rf_true": 2.475116254477241,
-      "snr_vlc_true": 17.01557815692633,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.158008258584605,
+      "snr_rf_true": 5.377769576270555,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 791,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999956277623525,
-      "snr_rf_true": 3.3705540864335246,
-      "snr_vlc_true": 16.82915289132092,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.16584531893583043,
+      "snr_rf_true": 5.538690548815719,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 792,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999962289568529,
-      "snr_rf_true": 3.441159156337362,
-      "snr_vlc_true": 16.990280203606545,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.14313676609852677,
+      "snr_rf_true": 5.07240826388975,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 793,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999966885257728,
-      "snr_rf_true": 2.801994487358326,
-      "snr_vlc_true": 17.113450167479268,
+      "p_est": 0.9988329862604521,
+      "snr_rf_true": 4.758786042653573,
+      "snr_vlc_true": 14.8898714704092,
       "success": true
     },
     {
@@ -7945,9 +7945,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999970028398762,
-      "snr_rf_true": 3.821123250095574,
-      "snr_vlc_true": 17.197690104232976,
+      "p_est": 0.9988389367742246,
+      "snr_rf_true": 4.943080608670445,
+      "snr_vlc_true": 14.895568376725127,
       "success": true
     },
     {
@@ -7955,49 +7955,49 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999971147183,
-      "snr_rf_true": 3.8047027537772835,
-      "snr_vlc_true": 18.397065741662594,
+      "p_est": 0.9985768823434121,
+      "snr_rf_true": 5.477893364617325,
+      "snr_vlc_true": 14.644682554243184,
       "success": true
     },
     {
       "t": 796,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.09203135485782821,
-      "snr_rf_true": 4.023043819747406,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9986756695934372,
+      "snr_rf_true": 5.576086424712952,
+      "snr_vlc_true": 14.73925954878752,
+      "success": true
     },
     {
       "t": 797,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.07988615872592919,
-      "snr_rf_true": 3.455712104200322,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9996505295855684,
+      "snr_rf_true": 5.366715271442755,
+      "snr_vlc_true": 15.672571571683694,
+      "success": true
     },
     {
       "t": 798,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06094752292285588,
-      "snr_rf_true": 2.520564354101905,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999962943149214,
+      "snr_rf_true": 5.402976010816417,
+      "snr_vlc_true": 17.007796947207154,
+      "success": true
     },
     {
       "t": 799,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999938155766519,
-      "snr_rf_true": 2.7633678530875265,
-      "snr_vlc_true": 16.34346546216495,
+      "p_est": 0.9999981715756506,
+      "snr_rf_true": 5.327922653031886,
+      "snr_vlc_true": 17.510925261904887,
       "success": true
     },
     {
@@ -8005,39 +8005,39 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999950688047243,
-      "snr_rf_true": 2.3361667395616665,
-      "snr_vlc_true": 16.67934556563128,
+      "p_est": 0.9999999979999469,
+      "snr_rf_true": 5.665646791130351,
+      "snr_vlc_true": 18.888859364838282,
       "success": true
     },
     {
       "t": 801,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06534122737773695,
-      "snr_rf_true": 2.737515716296255,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999978129128,
+      "snr_rf_true": 4.52154404846154,
+      "snr_vlc_true": 18.78495156720429,
+      "success": true
     },
     {
       "t": 802,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06251407860615932,
-      "snr_rf_true": 2.5979173925085774,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999975484615,
+      "snr_rf_true": 3.9558318330044218,
+      "snr_vlc_true": 18.638034142507266,
+      "success": true
     },
     {
       "t": 803,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999947726781908,
-      "snr_rf_true": 2.6911675518225175,
-      "snr_vlc_true": 16.59998011500846,
+      "p_est": 0.9999999969453325,
+      "snr_rf_true": 4.752539241339738,
+      "snr_vlc_true": 18.302962498859788,
       "success": true
     },
     {
@@ -8045,9 +8045,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999965570098,
-      "snr_rf_true": 3.187096995993544,
-      "snr_vlc_true": 18.087227635569427,
+      "p_est": 0.999999997535161,
+      "snr_rf_true": 4.420775567231883,
+      "snr_vlc_true": 18.630644967806834,
       "success": true
     },
     {
@@ -8055,9 +8055,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999965431282,
-      "snr_rf_true": 2.1917072410329417,
-      "snr_vlc_true": 18.079515645447696,
+      "p_est": 0.9999986432510382,
+      "snr_rf_true": 4.74759787540127,
+      "snr_vlc_true": 17.637339903775583,
       "success": true
     },
     {
@@ -8065,9 +8065,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999996431051,
-      "snr_rf_true": 1.765785234021539,
-      "snr_vlc_true": 18.017250531361466,
+      "p_est": 0.9999949972183385,
+      "snr_rf_true": 5.302406939882643,
+      "snr_vlc_true": 16.660159558566278,
       "success": true
     },
     {
@@ -8075,9 +8075,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999990885036317,
-      "snr_rf_true": 2.693895438295828,
-      "snr_vlc_true": 17.756672921051486,
+      "p_est": 0.9999945154739117,
+      "snr_rf_true": 5.180736474733404,
+      "snr_vlc_true": 16.531046293799818,
       "success": true
     },
     {
@@ -8085,9 +8085,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999966698383,
-      "snr_rf_true": 2.4856503923706073,
-      "snr_vlc_true": 18.149910139335528,
+      "p_est": 0.9999960535851887,
+      "snr_rf_true": 4.431548378907668,
+      "snr_vlc_true": 16.94327850136951,
       "success": true
     },
     {
@@ -8095,9 +8095,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999970647891673,
-      "snr_rf_true": 2.928580211031672,
-      "snr_vlc_true": 17.214293254720836,
+      "p_est": 0.9999941370204396,
+      "snr_rf_true": 4.874404510961702,
+      "snr_vlc_true": 16.429616239530286,
       "success": true
     },
     {
@@ -8105,39 +8105,39 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999936081718922,
-      "snr_rf_true": 3.5925303353752205,
-      "snr_vlc_true": 16.2878785073981,
+      "p_est": 0.9997624603029316,
+      "snr_rf_true": 4.630350878248556,
+      "snr_vlc_true": 15.779731866587245,
       "success": true
     },
     {
       "t": 811,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999932931130389,
-      "snr_rf_true": 3.5734524664964264,
-      "snr_vlc_true": 16.203438968771824,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.13686343195674588,
+      "snr_rf_true": 4.943595802845181,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 812,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999949779076207,
-      "snr_rf_true": 2.9207014111649094,
-      "snr_vlc_true": 16.654984055344872,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.11971725025533442,
+      "snr_rf_true": 4.591527538576199,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 813,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999931904241797,
-      "snr_rf_true": 3.454208361283509,
-      "snr_vlc_true": 16.175917127028605,
+      "p_est": 0.9999933352062415,
+      "snr_rf_true": 4.494826473198834,
+      "snr_vlc_true": 16.21472045020822,
       "success": true
     },
     {
@@ -8145,39 +8145,39 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9995292664988235,
-      "snr_rf_true": 3.2953664975510546,
-      "snr_vlc_true": 15.556476647585765,
+      "p_est": 0.9999992915982717,
+      "snr_rf_true": 3.8383853930305474,
+      "snr_vlc_true": 17.811104712194894,
       "success": true
     },
     {
       "t": 815,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.08460484780581856,
-      "snr_rf_true": 3.6887104849895302,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999976758456,
+      "snr_rf_true": 3.8435322464530453,
+      "snr_vlc_true": 18.708803098611543,
+      "success": true
     },
     {
       "t": 816,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.07899959058984474,
-      "snr_rf_true": 3.4119353397918877,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999998478632263,
+      "snr_rf_true": 5.132193530512054,
+      "snr_vlc_true": 17.96019036914557,
+      "success": true
     },
     {
       "t": 817,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999927675368566,
-      "snr_rf_true": 3.386009806341581,
-      "snr_vlc_true": 16.062578269604842,
+      "p_est": 0.9999985573842349,
+      "snr_rf_true": 4.851850006722833,
+      "snr_vlc_true": 17.614326574131056,
       "success": true
     },
     {
@@ -8185,9 +8185,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999998792049213,
-      "snr_rf_true": 2.7960977261847297,
-      "snr_vlc_true": 17.67721959326392,
+      "p_est": 0.9999976542687808,
+      "snr_rf_true": 5.7011175270172,
+      "snr_vlc_true": 17.372280837333008,
       "success": true
     },
     {
@@ -8195,9 +8195,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999974637716,
-      "snr_rf_true": 2.8637818396179764,
-      "snr_vlc_true": 18.590984193952288,
+      "p_est": 0.9999927365859212,
+      "snr_rf_true": 5.626880780244855,
+      "snr_vlc_true": 16.05428304895306,
       "success": true
     },
     {
@@ -8205,9 +8205,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999994610124352,
-      "snr_rf_true": 4.2112281480870895,
-      "snr_vlc_true": 17.856509733045424,
+      "p_est": 0.9999949340097708,
+      "snr_rf_true": 5.685589908910634,
+      "snr_vlc_true": 16.64321890687752,
       "success": true
     },
     {
@@ -8215,9 +8215,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999982169555388,
-      "snr_rf_true": 3.9861425472433667,
-      "snr_vlc_true": 17.523087614362925,
+      "p_est": 0.9999946793619601,
+      "snr_rf_true": 4.650036077045847,
+      "snr_vlc_true": 16.574970249722877,
       "success": true
     },
     {
@@ -8225,9 +8225,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999973546915283,
-      "snr_rf_true": 4.887352515106501,
-      "snr_vlc_true": 17.291990552737055,
+      "p_est": 0.9993694202610844,
+      "snr_rf_true": 4.7529079518110455,
+      "snr_vlc_true": 15.403442964081712,
       "success": true
     },
     {
@@ -8235,9 +8235,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999754327995245,
-      "snr_rf_true": 4.861941669048799,
-      "snr_vlc_true": 15.983627598508619,
+      "p_est": 0.9989929550096448,
+      "snr_rf_true": 4.103523830037596,
+      "snr_vlc_true": 15.043022443999561,
       "success": true
     },
     {
@@ -8245,9 +8245,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999947020171465,
-      "snr_rf_true": 4.966547144386341,
-      "snr_vlc_true": 16.58104211048641,
+      "p_est": 0.9999956219671282,
+      "snr_rf_true": 2.9103182421923472,
+      "snr_vlc_true": 16.82759970193513,
       "success": true
     },
     {
@@ -8255,9 +8255,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999944752084505,
-      "snr_rf_true": 3.9741358783930116,
-      "snr_vlc_true": 16.520254668898698,
+      "p_est": 0.9999993148056399,
+      "snr_rf_true": 2.0727508585579204,
+      "snr_vlc_true": 17.81732456423494,
       "success": true
     },
     {
@@ -8265,9 +8265,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999319127083822,
-      "snr_rf_true": 4.117561765077381,
-      "snr_vlc_true": 15.355293252956436,
+      "p_est": 0.9999991274845135,
+      "snr_rf_true": 1.344115458182799,
+      "snr_vlc_true": 17.76712026328109,
       "success": true
     },
     {
@@ -8275,9 +8275,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9989486970136539,
-      "snr_rf_true": 3.506298414507952,
-      "snr_vlc_true": 15.000650698209318,
+      "p_est": 0.9999999974065764,
+      "snr_rf_true": 1.9146305213752757,
+      "snr_vlc_true": 18.55920911910033,
       "success": true
     },
     {
@@ -8285,9 +8285,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999954828422278,
-      "snr_rf_true": 2.348926351594482,
-      "snr_vlc_true": 16.790312565639717,
+      "p_est": 0.9999999976911917,
+      "snr_rf_true": 2.4578701961671574,
+      "snr_vlc_true": 18.717328710136673,
       "success": true
     },
     {
@@ -8295,9 +8295,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999991923757274,
-      "snr_rf_true": 1.5450424813959271,
-      "snr_vlc_true": 17.784511884294975,
+      "p_est": 0.9999999984239811,
+      "snr_rf_true": 2.8252806521346594,
+      "snr_vlc_true": 19.12443392414094,
       "success": true
     },
     {
@@ -8305,9 +8305,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999990197461905,
-      "snr_rf_true": 0.8480695836505254,
-      "snr_vlc_true": 17.73824510493392,
+      "p_est": 0.9999999982072078,
+      "snr_rf_true": 2.816612287607773,
+      "snr_vlc_true": 19.00400431116444,
       "success": true
     },
     {
@@ -8315,9 +8315,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999973608382,
-      "snr_rf_true": 1.4483473993149385,
-      "snr_vlc_true": 18.533798979754824,
+      "p_est": 0.9999999983542046,
+      "snr_rf_true": 2.553528543438493,
+      "snr_vlc_true": 19.085669247775034,
       "success": true
     },
     {
@@ -8325,9 +8325,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999997650942,
-      "snr_rf_true": 2.0195640614304406,
-      "snr_vlc_true": 18.694967787512628,
+      "p_est": 0.9999999964325684,
+      "snr_rf_true": 3.0262969305669944,
+      "snr_vlc_true": 18.018093541135276,
       "success": true
     },
     {
@@ -8335,9 +8335,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999983885614,
-      "snr_rf_true": 2.4132728854821455,
-      "snr_vlc_true": 19.104756312231782,
+      "p_est": 0.9999984834455121,
+      "snr_rf_true": 3.261428395712415,
+      "snr_vlc_true": 17.59451011261105,
       "success": true
     },
     {
@@ -8345,9 +8345,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999981760385,
-      "snr_rf_true": 2.4293249869544096,
-      "snr_vlc_true": 18.986688012684382,
+      "p_est": 0.9999934994142661,
+      "snr_rf_true": 3.7086551658708413,
+      "snr_vlc_true": 16.25873016361397,
       "success": true
     },
     {
@@ -8355,9 +8355,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999983267757,
-      "snr_rf_true": 2.1894784808243313,
-      "snr_vlc_true": 19.07043090511258,
+      "p_est": 0.9999990455350317,
+      "snr_rf_true": 3.388458329120363,
+      "snr_vlc_true": 17.74515682261738,
       "success": true
     },
     {
@@ -8365,9 +8365,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999964084308,
-      "snr_rf_true": 2.6840898717096824,
-      "snr_vlc_true": 18.004683799592318,
+      "p_est": 0.999995453207391,
+      "snr_rf_true": 2.517947751256764,
+      "snr_vlc_true": 16.782370075148016,
       "success": true
     },
     {
@@ -8375,9 +8375,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999984394154888,
-      "snr_rf_true": 2.9397537603865413,
-      "snr_vlc_true": 17.582709540053248,
+      "p_est": 0.9999957374610358,
+      "snr_rf_true": 2.925289006439186,
+      "snr_vlc_true": 16.858553449667397,
       "success": true
     },
     {
@@ -8385,9 +8385,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999934606678456,
-      "snr_rf_true": 3.40628100866452,
-      "snr_vlc_true": 16.248345659763103,
+      "p_est": 0.9999952022365541,
+      "snr_rf_true": 3.5319897435737966,
+      "snr_vlc_true": 16.715106890961692,
       "success": true
     },
     {
@@ -8395,9 +8395,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999990114381816,
-      "snr_rf_true": 3.104226621346421,
-      "snr_vlc_true": 17.736018459228617,
+      "p_est": 0.9999938652652957,
+      "snr_rf_true": 3.715677159280985,
+      "snr_vlc_true": 16.356782612611056,
       "success": true
     },
     {
@@ -8405,9 +8405,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999995423202163,
-      "snr_rf_true": 2.2507699459492585,
-      "snr_vlc_true": 16.774328315365906,
+      "p_est": 0.9999970412771706,
+      "snr_rf_true": 3.8247694620340886,
+      "snr_vlc_true": 17.207991758581386,
       "success": true
     },
     {
@@ -8415,9 +8415,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999995711056435,
-      "snr_rf_true": 2.674141869450131,
-      "snr_vlc_true": 16.85147670105914,
+      "p_est": 0.9999951213788086,
+      "snr_rf_true": 3.336821786223908,
+      "snr_vlc_true": 16.69343604864768,
       "success": true
     },
     {
@@ -8425,9 +8425,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999951790005055,
-      "snr_rf_true": 3.2959114348040854,
-      "snr_vlc_true": 16.70887935218643,
+      "p_est": 0.9999939591361144,
+      "snr_rf_true": 3.509781398418948,
+      "snr_vlc_true": 16.38194111411319,
       "success": true
     },
     {
@@ -8435,9 +8435,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999938448175728,
-      "snr_rf_true": 3.493763549037457,
-      "snr_vlc_true": 16.351302378488825,
+      "p_est": 0.9999935383870692,
+      "snr_rf_true": 3.6999278288624833,
+      "snr_vlc_true": 16.269175340687262,
       "success": true
     },
     {
@@ -8445,9 +8445,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999970232831745,
-      "snr_rf_true": 3.616170668405172,
-      "snr_vlc_true": 17.203169152553823,
+      "p_est": 0.9999948729137813,
+      "snr_rf_true": 3.0092237862176914,
+      "snr_vlc_true": 16.626844451386905,
       "success": true
     },
     {
@@ -8455,9 +8455,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999951055440921,
-      "snr_rf_true": 3.1407389202127263,
-      "snr_vlc_true": 16.689192155343424,
+      "p_est": 0.9999942611200195,
+      "snr_rf_true": 3.415309897659028,
+      "snr_vlc_true": 16.46287641036031,
       "success": true
     },
     {
@@ -8465,9 +8465,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999939452015639,
-      "snr_rf_true": 3.3254635043684373,
-      "snr_vlc_true": 16.378206488005443,
+      "p_est": 0.9999945480469239,
+      "snr_rf_true": 3.5498186692282006,
+      "snr_vlc_true": 16.539776250403094,
       "success": true
     },
     {
@@ -8475,9 +8475,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999935261246647,
-      "snr_rf_true": 3.5266690084550034,
-      "snr_vlc_true": 16.265888869712445,
+      "p_est": 0.9999949072476164,
+      "snr_rf_true": 3.3253443862600385,
+      "snr_vlc_true": 16.636046329591963,
       "success": true
     },
     {
@@ -8485,9 +8485,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999948621228654,
-      "snr_rf_true": 2.8463604950346606,
-      "snr_vlc_true": 16.623952356929067,
+      "p_est": 0.9999931995160565,
+      "snr_rf_true": 3.8978164668863156,
+      "snr_vlc_true": 16.178353858697694,
       "success": true
     },
     {
@@ -8495,9 +8495,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999942516240136,
-      "snr_rf_true": 3.2622184039469793,
-      "snr_vlc_true": 16.460331367237412,
+      "p_est": 0.9999956834859154,
+      "snr_rf_true": 3.9137699319832433,
+      "snr_vlc_true": 16.84408747225317,
       "success": true
     },
     {
@@ -8505,9 +8505,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999945396904386,
-      "snr_rf_true": 3.4059126651388745,
-      "snr_vlc_true": 16.537536612454947,
+      "p_est": 0.9999965053788769,
+      "snr_rf_true": 3.324870670317263,
+      "snr_vlc_true": 17.064364610145315,
       "success": true
     },
     {
@@ -8515,9 +8515,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999948998939093,
-      "snr_rf_true": 3.190072742416072,
-      "snr_vlc_true": 16.634075448197592,
+      "p_est": 0.9999999966034153,
+      "snr_rf_true": 3.3729344888145816,
+      "snr_vlc_true": 18.11300850888322,
       "success": true
     },
     {
@@ -8525,9 +8525,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999931930447943,
-      "snr_rf_true": 3.7706611216729873,
-      "snr_vlc_true": 16.176619483070645,
+      "p_est": 0.999998149989392,
+      "snr_rf_true": 3.328229060394436,
+      "snr_vlc_true": 17.505139886548733,
       "success": true
     },
     {
@@ -8535,9 +8535,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999956777912047,
-      "snr_rf_true": 3.7942439074827146,
-      "snr_vlc_true": 16.84256122170137,
+      "p_est": 0.9999999965639135,
+      "snr_rf_true": 2.4202715554555287,
+      "snr_vlc_true": 18.091062997278584,
       "success": true
     },
     {
@@ -8545,9 +8545,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999965003675314,
-      "snr_rf_true": 3.2125162072867663,
-      "snr_vlc_true": 17.06302150965973,
+      "p_est": 0.9999999975661227,
+      "snr_rf_true": 2.017719245451646,
+      "snr_vlc_true": 18.647845945999993,
       "success": true
     },
     {
@@ -8555,168 +8555,168 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999966012879,
-      "snr_rf_true": 3.267321293565915,
-      "snr_vlc_true": 18.111826580455904,
+      "p_est": 0.9999978964517577,
+      "snr_rf_true": 2.043678152142299,
+      "snr_vlc_true": 17.437188769988513,
       "success": true
     },
     {
       "t": 856,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.999998146108606,
-      "snr_rf_true": 3.2289526568606894,
-      "snr_vlc_true": 17.5040997895327,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.04568518852059378,
+      "snr_rf_true": 1.7669441976168754,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 857,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999965622659,
-      "snr_rf_true": 2.326951736133807,
-      "snr_vlc_true": 18.090147711904475,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.05197114124500035,
+      "snr_rf_true": 2.077330574364238,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 858,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.999999997564673,
-      "snr_rf_true": 1.9299986152892277,
-      "snr_vlc_true": 18.647040494870776,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.04825635076319135,
+      "snr_rf_true": 1.8939024754624716,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 859,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999978938071108,
-      "snr_rf_true": 1.9612207597896254,
-      "snr_vlc_true": 17.4364799729948,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.05493196116235388,
+      "snr_rf_true": 2.223529282283338,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 860,
       "action": "DUP",
       "K_rf": 1,
       "K_vlc": 1,
-      "p_est": 0.04411545508381698,
-      "snr_rf_true": 1.689434248805362,
+      "p_est": 0.053093531891582946,
+      "snr_rf_true": 2.1327517302910515,
       "snr_vlc_true": -15.0,
-      "success": true
+      "success": false
     },
     {
       "t": 861,
       "action": "DUP",
       "K_rf": 1,
       "K_vlc": 1,
-      "p_est": 0.050495591814430085,
-      "snr_rf_true": 2.004471222481415,
+      "p_est": 0.05003013329157546,
+      "snr_rf_true": 1.9814879149751277,
       "snr_vlc_true": -15.0,
       "success": false
     },
     {
       "t": 862,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.04686933429845541,
-      "snr_rf_true": 1.8254146846926183,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999971183462,
+      "snr_rf_true": 2.6158460313200314,
+      "snr_vlc_true": 18.399081229278554,
+      "success": true
     },
     {
       "t": 863,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.053628165685501994,
-      "snr_rf_true": 2.159150758959676,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999966753281,
+      "snr_rf_true": 1.8083967751530672,
+      "snr_vlc_true": 18.152960025711693,
+      "success": true
     },
     {
       "t": 864,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.05186796414334227,
-      "snr_rf_true": 2.072235918366809,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999144428645,
+      "snr_rf_true": 2.0628271382256655,
+      "snr_vlc_true": 17.97803450802283,
+      "success": true
     },
     {
       "t": 865,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.0488780996082292,
-      "snr_rf_true": 1.9246030517663395,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999964607806,
+      "snr_rf_true": 1.0909141762718002,
+      "snr_vlc_true": 18.033766997174826,
+      "success": true
     },
     {
       "t": 866,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999971178248,
-      "snr_rf_true": 2.5623742599037707,
-      "snr_vlc_true": 18.398791561244447,
+      "p_est": 0.9999999977106548,
+      "snr_rf_true": 1.459799983678895,
+      "snr_vlc_true": 18.728141577395927,
       "success": true
     },
     {
       "t": 867,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999966748693,
-      "snr_rf_true": 1.7581333100217824,
-      "snr_vlc_true": 18.152705117841677,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.03424195640631744,
+      "snr_rf_true": 1.201902825218609,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 868,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999136058909,
-      "snr_rf_true": 2.015579481002258,
-      "snr_vlc_true": 17.97781018909722,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.05431534889368994,
+      "snr_rf_true": 2.1930823387062013,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 869,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999964604253,
-      "snr_rf_true": 1.046501378481797,
-      "snr_vlc_true": 18.03356959652029,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.06084611159941444,
+      "snr_rf_true": 2.515556888308864,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 870,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999977103422,
-      "snr_rf_true": 1.4180519537562921,
-      "snr_vlc_true": 18.727967864819934,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.06831224534162839,
+      "snr_rf_true": 2.8842179810910706,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 871,
       "action": "DUP",
       "K_rf": 1,
       "K_vlc": 1,
-      "p_est": 0.03344720318141825,
-      "snr_rf_true": 1.1626596770913622,
+      "p_est": 0.06153446900999693,
+      "snr_rf_true": 2.5495464475602896,
       "snr_vlc_true": -15.0,
       "success": false
     },
@@ -8725,59 +8725,59 @@
       "action": "DUP",
       "K_rf": 1,
       "K_vlc": 1,
-      "p_est": 0.05356828086228471,
-      "snr_rf_true": 2.156193779466589,
+      "p_est": 0.06210898908707263,
+      "snr_rf_true": 2.577914972255009,
       "snr_vlc_true": -15.0,
       "success": false
     },
     {
       "t": 873,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.060143867649893545,
-      "snr_rf_true": 2.4808816426236286,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999991618391,
+      "snr_rf_true": 1.5364236589067548,
+      "snr_vlc_true": 19.534355081245433,
+      "success": true
     },
     {
       "t": 874,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06765213602907871,
-      "snr_rf_true": 2.8516232501469494,
-      "snr_vlc_true": -15.0,
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999994574937,
+      "snr_rf_true": 1.1893774249367781,
+      "snr_vlc_true": 19.698607613383,
       "success": true
     },
     {
       "t": 875,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06091396625620016,
-      "snr_rf_true": 2.5189074004728154,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999984806788,
+      "snr_rf_true": 2.0013917303008384,
+      "snr_vlc_true": 19.155932625493254,
+      "success": true
     },
     {
       "t": 876,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06152571649850369,
-      "snr_rf_true": 2.5491142679927834,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999968598462,
+      "snr_rf_true": 2.252834633740323,
+      "snr_vlc_true": 18.255470086326397,
+      "success": true
     },
     {
       "t": 877,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999991617113,
-      "snr_rf_true": 1.5093509969002625,
-      "snr_vlc_true": 19.534284089154845,
+      "p_est": 0.9999999992420587,
+      "snr_rf_true": 2.626699335467253,
+      "snr_vlc_true": 19.578921513244936,
       "success": true
     },
     {
@@ -8785,9 +8785,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999994573813,
-      "snr_rf_true": 1.1639291226506754,
-      "snr_vlc_true": 19.698545140343285,
+      "p_est": 0.9999999994663042,
+      "snr_rf_true": 2.4515871841545334,
+      "snr_vlc_true": 19.703502365665546,
       "success": true
     },
     {
@@ -8795,9 +8795,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999984805797,
-      "snr_rf_true": 1.9774703261519018,
-      "snr_vlc_true": 19.155877649218304,
+      "p_est": 0.9999999969608504,
+      "snr_rf_true": 2.2653058101266685,
+      "snr_vlc_true": 18.311583536906145,
       "success": true
     },
     {
@@ -8805,9 +8805,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999968597592,
-      "snr_rf_true": 2.2303485138403225,
-      "snr_vlc_true": 18.25542170720444,
+      "p_est": 0.9999992715507546,
+      "snr_rf_true": 1.3192410442162146,
+      "snr_vlc_true": 17.805731737969733,
       "success": true
     },
     {
@@ -8815,9 +8815,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999992419821,
-      "snr_rf_true": 2.6055623827612524,
-      "snr_vlc_true": 19.578878939617613,
+      "p_est": 0.9999999972711875,
+      "snr_rf_true": 0.9284671949028254,
+      "snr_vlc_true": 18.483993042196285,
       "success": true
     },
     {
@@ -8825,9 +8825,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999994662369,
-      "snr_rf_true": 2.4317184486108925,
-      "snr_vlc_true": 19.703464900873502,
+      "p_est": 0.9999999982970583,
+      "snr_rf_true": 0.47954499680178,
+      "snr_vlc_true": 19.053921263799822,
       "success": true
     },
     {
@@ -8835,9 +8835,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999996960791,
-      "snr_rf_true": 2.246629198715646,
-      "snr_vlc_true": 18.311550567889146,
+      "p_est": 0.9999999977379168,
+      "snr_rf_true": 0.9334728488412194,
+      "snr_vlc_true": 18.74328710551844,
       "success": true
     },
     {
@@ -8845,9 +8845,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999271442503,
-      "snr_rf_true": 1.3016850294898537,
-      "snr_vlc_true": 17.805702725234774,
+      "p_est": 0.9999999974669944,
+      "snr_rf_true": 1.2626710862433987,
+      "snr_vlc_true": 18.592774648456167,
       "success": true
     },
     {
@@ -8855,9 +8855,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999972711415,
-      "snr_rf_true": 0.9119645410600461,
-      "snr_vlc_true": 18.483967510989523,
+      "p_est": 0.9999999993215075,
+      "snr_rf_true": 0.9730130677545047,
+      "snr_vlc_true": 19.623059735453253,
       "success": true
     },
     {
@@ -8865,9 +8865,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999982970178,
-      "snr_rf_true": 0.46403250218956726,
-      "snr_vlc_true": 19.05389879633787,
+      "p_est": 0.9999999988368264,
+      "snr_rf_true": 0.7433677288273314,
+      "snr_vlc_true": 19.353792475801182,
       "success": true
     },
     {
@@ -8875,9 +8875,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999977378812,
-      "snr_rf_true": 0.9188911039057397,
-      "snr_vlc_true": 18.743267334151923,
+      "p_est": 0.9999999977604817,
+      "snr_rf_true": 0.7305735234162317,
+      "snr_vlc_true": 18.75582313790649,
       "success": true
     },
     {
@@ -8885,9 +8885,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999974669631,
-      "snr_rf_true": 1.2489642460040475,
-      "snr_vlc_true": 18.59275724965363,
+      "p_est": 0.9999999965204316,
+      "snr_rf_true": 0.4461216817534589,
+      "snr_vlc_true": 18.066906407374464,
       "success": true
     },
     {
@@ -8895,9 +8895,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.99999999932148,
-      "snr_rf_true": 0.9601286379295147,
-      "snr_vlc_true": 19.623044424507018,
+      "p_est": 0.9999999972978071,
+      "snr_rf_true": 1.1654490503434598,
+      "snr_vlc_true": 18.49878172785166,
       "success": true
     },
     {
@@ -8905,9 +8905,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999988368022,
-      "snr_rf_true": 0.731256364791841,
-      "snr_vlc_true": 19.353779002168494,
+      "p_est": 0.9999999982083269,
+      "snr_rf_true": 1.4326205202043258,
+      "snr_vlc_true": 19.004626031171163,
       "success": true
     },
     {
@@ -8915,9 +8915,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999977604603,
-      "snr_rf_true": 0.7191888412228707,
-      "snr_vlc_true": 18.75581128110972,
+      "p_est": 0.9999999965041453,
+      "snr_rf_true": 1.9344990562274835,
+      "snr_vlc_true": 18.057858464618633,
       "success": true
     },
     {
@@ -8925,9 +8925,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999965204128,
-      "snr_rf_true": 0.4354200804916998,
-      "snr_vlc_true": 18.066895973393308,
+      "p_est": 0.9999999971475879,
+      "snr_rf_true": 1.424022198824098,
+      "snr_vlc_true": 18.415326603158366,
       "success": true
     },
     {
@@ -8935,9 +8935,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999972977907,
-      "snr_rf_true": 1.1553895451574059,
-      "snr_vlc_true": 18.498772545948242,
+      "p_est": 0.9999999965790701,
+      "snr_rf_true": 1.6016977214357517,
+      "snr_vlc_true": 18.099483394511324,
       "success": true
     },
     {
@@ -8945,9 +8945,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999982083123,
-      "snr_rf_true": 1.4231645853294352,
-      "snr_vlc_true": 19.004617951096154,
+      "p_est": 0.9999999973060721,
+      "snr_rf_true": 1.1504799592043693,
+      "snr_vlc_true": 18.503373368595593,
       "success": true
     },
     {
@@ -8955,9 +8955,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999965041325,
-      "snr_rf_true": 1.9256104774450864,
-      "snr_vlc_true": 18.057851354152625,
+      "p_est": 0.9999999973071814,
+      "snr_rf_true": 1.3164344514229862,
+      "snr_vlc_true": 18.503989634699884,
       "success": true
     },
     {
@@ -8965,9 +8965,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999971475767,
-      "snr_rf_true": 1.415666934768645,
-      "snr_vlc_true": 18.41532034594828,
+      "p_est": 0.9999999980145186,
+      "snr_rf_true": 1.0751450480654532,
+      "snr_vlc_true": 18.896954763286526,
       "success": true
     },
     {
@@ -8975,9 +8975,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999965790602,
-      "snr_rf_true": 1.5938437732236261,
-      "snr_vlc_true": 18.099477888166447,
+      "p_est": 0.9999999995485973,
+      "snr_rf_true": 1.4040748802508842,
+      "snr_vlc_true": 19.74922069632798,
       "success": true
     },
     {
@@ -8985,9 +8985,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999973060634,
-      "snr_rf_true": 1.1430972478849712,
-      "snr_vlc_true": 18.503368523012103,
+      "p_est": 0.999999997768627,
+      "snr_rf_true": 0.7387562111918423,
+      "snr_vlc_true": 18.760348337320128,
       "success": true
     },
     {
@@ -8995,9 +8995,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999973071737,
-      "snr_rf_true": 1.3094947027827522,
-      "snr_vlc_true": 18.503985370586413,
+      "p_est": 0.9999999980403943,
+      "snr_rf_true": -0.18268128932572236,
+      "snr_vlc_true": 18.911330163951884,
       "success": true
     },
     {
@@ -9005,9 +9005,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999980145119,
-      "snr_rf_true": 1.0686216843436331,
-      "snr_vlc_true": 18.896951010866673,
+      "p_est": 0.9999998704472534,
+      "snr_rf_true": -0.009445722852668204,
+      "snr_vlc_true": 17.96624315834644,
       "success": true
     },
     {
@@ -9015,9 +9015,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999995485913,
-      "snr_rf_true": 1.3979429183523735,
-      "snr_vlc_true": 19.74921739419851,
+      "p_est": 0.999999997847934,
+      "snr_rf_true": -0.14125337992865045,
+      "snr_vlc_true": 18.804407790903763,
       "success": true
     },
     {
@@ -9025,9 +9025,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999977686218,
-      "snr_rf_true": 0.7329921670072422,
-      "snr_vlc_true": 18.760345431446193,
+      "p_est": 0.9999999980377213,
+      "snr_rf_true": 0.041687731311543345,
+      "snr_vlc_true": 18.909845199946336,
       "success": true
     },
     {
@@ -9035,9 +9035,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999980403897,
-      "snr_rf_true": -0.18809949085924615,
-      "snr_vlc_true": 18.911327606782823,
+      "p_est": 0.9999999974217539,
+      "snr_rf_true": 0.5051652851033683,
+      "snr_vlc_true": 18.56764104877646,
       "success": true
     },
     {
@@ -9045,89 +9045,89 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999998704388571,
-      "snr_rf_true": -0.014538832294180959,
-      "snr_vlc_true": 17.966240908037665,
+      "p_est": 0.9999999983701144,
+      "snr_rf_true": 1.056022919307992,
+      "snr_vlc_true": 19.094507989156433,
       "success": true
     },
     {
       "t": 905,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999978479305,
-      "snr_rf_true": -0.1460409028036727,
-      "snr_vlc_true": 18.80440581063204,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.054739654666493776,
+      "snr_rf_true": 2.2140336148655386,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 906,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999980377182,
-      "snr_rf_true": 0.037187459809022265,
-      "snr_vlc_true": 18.90984345730722,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.05341086745365431,
+      "snr_rf_true": 2.1484210551559975,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 907,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999974217512,
-      "snr_rf_true": 0.5009350298909987,
-      "snr_vlc_true": 18.567639515254037,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.06325791589893981,
+      "snr_rf_true": 2.6346464250543167,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 908,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999998370112,
-      "snr_rf_true": 1.0520464794083644,
-      "snr_vlc_true": 19.0945066396567,
+      "p_est": 0.9999999978492841,
+      "snr_rf_true": 2.1025320406004235,
+      "snr_vlc_true": 18.805157774998094,
       "success": true
     },
     {
       "t": 909,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.05466395556309411,
-      "snr_rf_true": 2.2102957613598884,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 1.0,
+      "snr_rf_true": 1.7521253858788066,
+      "snr_vlc_true": 20.108921770964766,
+      "success": true
     },
     {
       "t": 910,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.053339710296458565,
-      "snr_rf_true": 2.144907472860686,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999999412015,
+      "snr_rf_true": 2.1886654501424716,
+      "snr_vlc_true": 19.96733416105157,
+      "success": true
     },
     {
       "t": 911,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.06319102817117583,
-      "snr_rf_true": 2.6313436576967235,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999998762317,
+      "snr_rf_true": 3.2709845546114407,
+      "snr_vlc_true": 19.931239813288556,
+      "success": true
     },
     {
       "t": 912,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999978492825,
-      "snr_rf_true": 2.0994274392842858,
-      "snr_vlc_true": 18.805156965709365,
+      "p_est": 0.999999999280572,
+      "snr_rf_true": 3.633084689117716,
+      "snr_vlc_true": 19.60031776520298,
       "success": true
     },
     {
@@ -9136,8 +9136,8 @@
       "K_rf": 0,
       "K_vlc": 2,
       "p_est": 1.0,
-      "snr_rf_true": 1.7492070606416372,
-      "snr_vlc_true": 20.108921058790685,
+      "snr_rf_true": 3.4135576834667725,
+      "snr_vlc_true": 20.01720137348637,
       "success": true
     },
     {
@@ -9145,9 +9145,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999999412004,
-      "snr_rf_true": 2.1859222244195324,
-      "snr_vlc_true": 19.96733353433838,
+      "p_est": 0.9999999994443516,
+      "snr_rf_true": 3.124557766138511,
+      "snr_vlc_true": 19.691306428184138,
       "success": true
     },
     {
@@ -9155,9 +9155,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999998762307,
-      "snr_rf_true": 3.268405922431878,
-      "snr_vlc_true": 19.93123926178095,
+      "p_est": 0.9999999980207672,
+      "snr_rf_true": 4.140414510645963,
+      "snr_vlc_true": 18.90042620890562,
       "success": true
     },
     {
@@ -9165,9 +9165,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999992805712,
-      "snr_rf_true": 3.630660774868927,
-      "snr_vlc_true": 19.600317279876286,
+      "p_est": 0.999999930807711,
+      "snr_rf_true": 5.856031047514531,
+      "snr_vlc_true": 17.982420482500522,
       "success": true
     },
     {
@@ -9175,9 +9175,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 1.0,
-      "snr_rf_true": 3.411279204072911,
-      "snr_vlc_true": 20.017200946398876,
+      "p_est": 0.9999999980727933,
+      "snr_rf_true": 6.044780683489212,
+      "snr_vlc_true": 18.92932958008924,
       "success": true
     },
     {
@@ -9185,9 +9185,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999994443509,
-      "snr_rf_true": 3.1224159955082813,
-      "snr_vlc_true": 19.691306052347144,
+      "p_est": 0.9999999973790407,
+      "snr_rf_true": 5.741981392836059,
+      "snr_vlc_true": 18.543911448639257,
       "success": true
     },
     {
@@ -9195,9 +9195,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999980207666,
-      "snr_rf_true": 4.138401246253546,
-      "snr_vlc_true": 18.900425878169067,
+      "p_est": 0.9999992298987493,
+      "snr_rf_true": 6.353271143292289,
+      "snr_vlc_true": 17.79456850267255,
       "success": true
     },
     {
@@ -9205,9 +9205,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999308066251,
-      "snr_rf_true": 5.85413857898566,
-      "snr_vlc_true": 17.982420191452352,
+      "p_est": 0.9999999965131499,
+      "snr_rf_true": 5.742611949885374,
+      "snr_vlc_true": 18.06286100142788,
       "success": true
     },
     {
@@ -9215,9 +9215,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999980727928,
-      "snr_rf_true": 6.043001763072074,
-      "snr_vlc_true": 18.92932932396685,
+      "p_est": 0.9999999987101365,
+      "snr_rf_true": 5.982525168994045,
+      "snr_vlc_true": 19.28340912996192,
       "success": true
     },
     {
@@ -9225,9 +9225,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999973790402,
-      "snr_rf_true": 5.740309207643949,
-      "snr_vlc_true": 18.543911223251555,
+      "p_est": 0.9999999977148016,
+      "snr_rf_true": 5.158438124162001,
+      "snr_vlc_true": 18.73044534730064,
       "success": true
     },
     {
@@ -9235,9 +9235,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999992298980093,
-      "snr_rf_true": 6.351699289211705,
-      "snr_vlc_true": 17.794568304331374,
+      "p_est": 0.9999999969728519,
+      "snr_rf_true": 5.910211676428624,
+      "snr_vlc_true": 18.318251048371767,
       "success": true
     },
     {
@@ -9245,89 +9245,89 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999965131495,
-      "snr_rf_true": 5.741134407049626,
-      "snr_vlc_true": 18.062860826887643,
+      "p_est": 0.9999999966259498,
+      "snr_rf_true": 5.542686785301886,
+      "snr_vlc_true": 18.125527653775134,
       "success": true
     },
     {
       "t": 925,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999987101361,
-      "snr_rf_true": 5.981136278728442,
-      "snr_vlc_true": 19.283408976366513,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.13499961915418535,
+      "snr_rf_true": 4.905325513299273,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 926,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999977148014,
-      "snr_rf_true": 5.157132567312334,
-      "snr_vlc_true": 18.73044521213668,
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.15441950835352425,
+      "snr_rf_true": 5.304080571525698,
+      "snr_vlc_true": -15.0,
       "success": true
     },
     {
       "t": 927,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999969728517,
-      "snr_rf_true": 5.9089844529899365,
-      "snr_vlc_true": 18.31825092942748,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.1520681675253318,
+      "snr_rf_true": 5.255799706520147,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 928,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999966259496,
-      "snr_rf_true": 5.54153319526952,
-      "snr_vlc_true": 18.125527549104163,
+      "p_est": 0.9999999985822842,
+      "snr_rf_true": 4.4140113119689985,
+      "snr_vlc_true": 19.212380086480934,
       "success": true
     },
     {
       "t": 929,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.13494680870140496,
-      "snr_rf_true": 4.904241138668849,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999976401492,
+      "snr_rf_true": 4.296869259778653,
+      "snr_vlc_true": 18.688971790541387,
+      "success": true
     },
     {
       "t": 930,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.15436986652791074,
-      "snr_rf_true": 5.3030612593730995,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999982832533,
+      "snr_rf_true": 4.640832638288556,
+      "snr_vlc_true": 19.046251803428028,
+      "success": true
     },
     {
       "t": 931,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.1520215042092551,
-      "snr_rf_true": 5.254841553096704,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9999999989193915,
+      "snr_rf_true": 4.966637588505169,
+      "snr_vlc_true": 19.399661913364167,
+      "success": true
     },
     {
       "t": 932,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999998582284,
-      "snr_rf_true": 4.413110647750964,
-      "snr_vlc_true": 19.212380023710235,
+      "p_est": 0.9999999985141106,
+      "snr_rf_true": 5.091162090681015,
+      "snr_vlc_true": 19.174505887900583,
       "success": true
     },
     {
@@ -9335,9 +9335,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999976401491,
-      "snr_rf_true": 4.2960226354137,
-      "snr_vlc_true": 18.68897173530317,
+      "p_est": 0.999999996804484,
+      "snr_rf_true": 5.620084979742231,
+      "snr_vlc_true": 18.224713357779194,
       "success": true
     },
     {
@@ -9345,9 +9345,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999982832531,
-      "snr_rf_true": 4.6400368113855,
-      "snr_vlc_true": 19.046251754818396,
+      "p_est": 0.9999999980467362,
+      "snr_rf_true": 5.9867731003847755,
+      "snr_vlc_true": 18.91485347200021,
       "success": true
     },
     {
@@ -9355,9 +9355,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999989193914,
-      "snr_rf_true": 4.965889511216297,
-      "snr_vlc_true": 19.399661870587693,
+      "p_est": 0.999999998055378,
+      "snr_rf_true": 5.923993185161837,
+      "snr_vlc_true": 18.91965441576979,
       "success": true
     },
     {
@@ -9365,9 +9365,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999985141106,
-      "snr_rf_true": 5.090458898029476,
-      "snr_vlc_true": 19.174505850257287,
+      "p_est": 0.9999994736363705,
+      "snr_rf_true": 5.8190718208813195,
+      "snr_vlc_true": 17.85989309859086,
       "success": true
     },
     {
@@ -9375,9 +9375,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999996804484,
-      "snr_rf_true": 5.619423978649784,
-      "snr_vlc_true": 18.224713324653095,
+      "p_est": 0.9999999975472488,
+      "snr_rf_true": 5.60023563649034,
+      "snr_vlc_true": 18.637360435221556,
       "success": true
     },
     {
@@ -9385,9 +9385,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999980467362,
-      "snr_rf_true": 5.986151759357875,
-      "snr_vlc_true": 18.914853442849243,
+      "p_est": 0.9999999979676968,
+      "snr_rf_true": 5.917195055513359,
+      "snr_vlc_true": 18.870942658556803,
       "success": true
     },
     {
@@ -9395,9 +9395,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999980553779,
-      "snr_rf_true": 5.9234091245965494,
-      "snr_vlc_true": 18.91965439011694,
+      "p_est": 0.9999999862565786,
+      "snr_rf_true": 6.361207496540293,
+      "snr_vlc_true": 17.997281441815417,
       "success": true
     },
     {
@@ -9405,9 +9405,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999994736362863,
-      "snr_rf_true": 5.818522803949949,
-      "snr_vlc_true": 17.85989307601635,
+      "p_est": 0.9999998212271981,
+      "snr_rf_true": 6.9544729134387495,
+      "snr_vlc_true": 17.953051595208915,
       "success": true
     },
     {
@@ -9415,29 +9415,29 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999975472488,
-      "snr_rf_true": 5.599719560574853,
-      "snr_vlc_true": 18.63736041535599,
+      "p_est": 0.9999998392804841,
+      "snr_rf_true": 6.5801004184381,
+      "snr_vlc_true": 17.957890091652306,
       "success": true
     },
     {
       "t": 942,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999999979676968,
-      "snr_rf_true": 5.916709944152801,
-      "snr_vlc_true": 18.870942641075104,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.19915528878008026,
+      "snr_rf_true": 6.2226552629509815,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 943,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999862565212,
-      "snr_rf_true": 6.360751491861369,
-      "snr_vlc_true": 17.997281426431524,
+      "p_est": 0.9999946740247381,
+      "snr_rf_true": 6.560558134091483,
+      "snr_vlc_true": 16.573539810439375,
       "success": true
     },
     {
@@ -9445,9 +9445,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999998212271476,
-      "snr_rf_true": 6.954044269040562,
-      "snr_vlc_true": 17.953051581671087,
+      "p_est": 0.9998691297037778,
+      "snr_rf_true": 5.891143034533364,
+      "snr_vlc_true": 15.881855079241888,
       "success": true
     },
     {
@@ -9455,29 +9455,29 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999998392804397,
-      "snr_rf_true": 6.579697492703803,
-      "snr_vlc_true": 17.95789007973902,
+      "p_est": 0.9994378289013822,
+      "snr_rf_true": 5.071073480717116,
+      "snr_vlc_true": 15.468936067681508,
       "success": true
     },
     {
       "t": 946,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.19913684315393232,
-      "snr_rf_true": 6.222276512760743,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9987752034340834,
+      "snr_rf_true": 5.035302184995018,
+      "snr_vlc_true": 14.834551314692282,
+      "success": true
     },
     {
       "t": 947,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999946740247037,
-      "snr_rf_true": 6.560202108912659,
-      "snr_vlc_true": 16.573539801213727,
+      "p_est": 0.9999932526305026,
+      "snr_rf_true": 4.500067110799223,
+      "snr_vlc_true": 16.192589165151045,
       "success": true
     },
     {
@@ -9485,9 +9485,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9998691296952978,
-      "snr_rf_true": 5.890808370865269,
-      "snr_vlc_true": 15.881855071123319,
+      "p_est": 0.9999941449941311,
+      "snr_rf_true": 4.843696731414312,
+      "snr_vlc_true": 16.431753284171503,
       "success": true
     },
     {
@@ -9495,9 +9495,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9994378288939199,
-      "snr_rf_true": 5.070758896869107,
-      "snr_vlc_true": 15.468936060537168,
+      "p_est": 0.99999388216393,
+      "snr_rf_true": 3.845690248426515,
+      "snr_vlc_true": 16.361311648622593,
       "success": true
     },
     {
@@ -9505,9 +9505,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9987752034275165,
-      "snr_rf_true": 5.035006476177889,
-      "snr_vlc_true": 14.834551308405263,
+      "p_est": 0.9993628919832602,
+      "snr_rf_true": 3.949055029883877,
+      "snr_vlc_true": 15.397192917683974,
       "success": true
     },
     {
@@ -9515,9 +9515,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999993252630482,
-      "snr_rf_true": 4.499789144511121,
-      "snr_vlc_true": 16.192589159618468,
+      "p_est": 0.9990025217695343,
+      "snr_rf_true": 3.3995710966142063,
+      "snr_vlc_true": 15.05218147411374,
       "success": true
     },
     {
@@ -9525,9 +9525,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999994144994113,
-      "snr_rf_true": 4.8434354431034965,
-      "snr_vlc_true": 16.431753279302836,
+      "p_est": 0.9998344207083685,
+      "snr_rf_true": 3.8410897443570793,
+      "snr_vlc_true": 15.848625361149425,
       "success": true
     },
     {
@@ -9535,29 +9535,29 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999993882163914,
-      "snr_rf_true": 3.8454446374143494,
-      "snr_vlc_true": 16.361311644338166,
+      "p_est": 0.9989495677803245,
+      "snr_rf_true": 3.302731241105746,
+      "snr_vlc_true": 15.001484353307886,
       "success": true
     },
     {
       "t": 954,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.999362891979322,
-      "snr_rf_true": 3.9488241555324413,
-      "snr_vlc_true": 15.397192913913678,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.09777359845704647,
+      "snr_rf_true": 4.140951221651353,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 955,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9990025217660687,
-      "snr_rf_true": 3.3993540747238566,
-      "snr_vlc_true": 15.05218147079588,
+      "p_est": 0.9984075796618233,
+      "snr_rf_true": 3.5921959913263715,
+      "snr_vlc_true": 14.482595455058796,
       "success": true
     },
     {
@@ -9565,9 +9565,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9998344207053188,
-      "snr_rf_true": 3.8408857437801514,
-      "snr_vlc_true": 15.84862535822971,
+      "p_est": 0.9969577928071723,
+      "snr_rf_true": 4.00400495355898,
+      "snr_vlc_true": 13.978921236490557,
       "success": true
     },
     {
@@ -9575,29 +9575,29 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9989495677776408,
-      "snr_rf_true": 3.302539480563434,
-      "snr_vlc_true": 15.001484350738538,
+      "p_est": 0.9984435740317934,
+      "snr_rf_true": 3.439884781832342,
+      "snr_vlc_true": 14.517055765791486,
       "success": true
     },
     {
       "t": 958,
-      "action": "DUP",
-      "K_rf": 1,
-      "K_vlc": 1,
-      "p_est": 0.09776481980884322,
-      "snr_rf_true": 4.140770966741579,
-      "snr_vlc_true": -15.0,
-      "success": false
+      "action": "VLC",
+      "K_rf": 0,
+      "K_vlc": 2,
+      "p_est": 0.9986548657042215,
+      "snr_rf_true": 3.2729441351078012,
+      "snr_vlc_true": 14.719342309302053,
+      "success": true
     },
     {
       "t": 959,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.998407579659745,
-      "snr_rf_true": 3.592026551711184,
-      "snr_vlc_true": 14.482595453069091,
+      "p_est": 0.9996454907272174,
+      "snr_rf_true": 3.8292360155767877,
+      "snr_vlc_true": 15.667747466562394,
       "success": true
     },
     {
@@ -9605,9 +9605,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9969577927286156,
-      "snr_rf_true": 4.003845680320704,
-      "snr_vlc_true": 13.978921234739616,
+      "p_est": 0.9992923634084703,
+      "snr_rf_true": 4.682027232237736,
+      "snr_vlc_true": 15.329670229974496,
       "success": true
     },
     {
@@ -9615,9 +9615,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.998443574030184,
-      "snr_rf_true": 3.4397350649883625,
-      "snr_vlc_true": 14.517055764250657,
+      "p_est": 0.9994389619035343,
+      "snr_rf_true": 4.4700863921010665,
+      "snr_vlc_true": 15.470020781936917,
       "success": true
     },
     {
@@ -9625,9 +9625,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9986548657028052,
-      "snr_rf_true": 3.2728034012744605,
-      "snr_vlc_true": 14.719342307946125,
+      "p_est": 0.9995829093213963,
+      "snr_rf_true": 4.319112796763821,
+      "snr_vlc_true": 15.607833244074932,
       "success": true
     },
     {
@@ -9635,9 +9635,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9996454907259711,
-      "snr_rf_true": 3.8291037257734475,
-      "snr_vlc_true": 15.667747465369176,
+      "p_est": 0.9998688637348565,
+      "snr_rf_true": 4.086442032021029,
+      "snr_vlc_true": 15.881600445762311,
       "success": true
     },
     {
@@ -9645,9 +9645,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9992923634073736,
-      "snr_rf_true": 4.681902879822596,
-      "snr_vlc_true": 15.329670228924464,
+      "p_est": 0.9993362773961019,
+      "snr_rf_true": 4.323077153500065,
+      "snr_vlc_true": 15.371712628842696,
       "success": true
     },
     {
@@ -9655,9 +9655,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9994389619025691,
-      "snr_rf_true": 4.469969500830835,
-      "snr_vlc_true": 15.470020781012888,
+      "p_est": 0.9999936972391545,
+      "snr_rf_true": 4.179684599560466,
+      "snr_vlc_true": 16.311749598363306,
       "success": true
     },
     {
@@ -9665,9 +9665,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9995829093205469,
-      "snr_rf_true": 4.319002918969804,
-      "snr_vlc_true": 15.607833243261787,
+      "p_est": 0.9999947840773471,
+      "snr_rf_true": 3.91147479599525,
+      "snr_vlc_true": 16.603035225143433,
       "success": true
     },
     {
@@ -9675,9 +9675,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9998688637341091,
-      "snr_rf_true": 4.086338746894653,
-      "snr_vlc_true": 15.881600445046743,
+      "p_est": 0.9999999964227039,
+      "snr_rf_true": 3.9860717199453632,
+      "snr_vlc_true": 18.012613265397803,
       "success": true
     },
     {
@@ -9685,9 +9685,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9993362773954442,
-      "snr_rf_true": 4.322980065481271,
-      "snr_vlc_true": 15.371712628212995,
+      "p_est": 0.9999999966880927,
+      "snr_rf_true": 3.556462065985047,
+      "snr_vlc_true": 18.1600515019394,
       "success": true
     },
     {
@@ -9695,9 +9695,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999936972391525,
-      "snr_rf_true": 4.1795933368228,
-      "snr_vlc_true": 16.311749597809168,
+      "p_est": 0.9999999966371518,
+      "snr_rf_true": 3.1625560850017216,
+      "snr_vlc_true": 18.131750989616314,
       "success": true
     },
     {
@@ -9705,9 +9705,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999947840773453,
-      "snr_rf_true": 3.911389009021845,
-      "snr_vlc_true": 16.60303522465579,
+      "p_est": 0.999999997931104,
+      "snr_rf_true": 2.8274849833215945,
+      "snr_vlc_true": 18.85061331380102,
       "success": true
     },
     {
@@ -9715,9 +9715,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999964227039,
-      "snr_rf_true": 3.985991080190362,
-      "snr_vlc_true": 18.012613264968678,
+      "p_est": 1.0,
+      "snr_rf_true": 2.927756268680738,
+      "snr_vlc_true": 20.00607912469626,
       "success": true
     },
     {
@@ -9725,9 +9725,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999966880927,
-      "snr_rf_true": 3.5563862646153463,
-      "snr_vlc_true": 18.160051501561767,
+      "p_est": 1.0,
+      "snr_rf_true": 2.5754195481007893,
+      "snr_vlc_true": 20.035680156433305,
       "success": true
     },
     {
@@ -9735,9 +9735,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999966371518,
-      "snr_rf_true": 3.162484831714203,
-      "snr_vlc_true": 18.131750989283997,
+      "p_est": 0.9999999967303647,
+      "snr_rf_true": 1.6605070279173906,
+      "snr_vlc_true": 18.18353591981994,
       "success": true
     },
     {
@@ -9745,9 +9745,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999997931104,
-      "snr_rf_true": 2.827418005231327,
-      "snr_vlc_true": 18.85061331350858,
+      "p_est": 0.9999993824176493,
+      "snr_rf_true": 1.5804880328308777,
+      "snr_vlc_true": 17.835445390946933,
       "success": true
     },
     {
@@ -9755,9 +9755,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 1.0,
-      "snr_rf_true": 2.927693309275887,
-      "snr_vlc_true": 20.006079124438912,
+      "p_est": 0.9999964632380863,
+      "snr_rf_true": 1.3838826538809528,
+      "snr_vlc_true": 17.05307037458454,
       "success": true
     },
     {
@@ -9765,9 +9765,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 1.0,
-      "snr_rf_true": 2.575360366260229,
-      "snr_vlc_true": 20.03568015620684,
+      "p_est": 0.9999978465723688,
+      "snr_rf_true": 1.0143226219588515,
+      "snr_vlc_true": 17.423820497539314,
       "success": true
     },
     {
@@ -9775,9 +9775,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999967303647,
-      "snr_rf_true": 1.6604513969872636,
-      "snr_vlc_true": 18.18353591962065,
+      "p_est": 0.9999997152868758,
+      "snr_rf_true": 1.3035564431378353,
+      "snr_vlc_true": 17.924658322505298,
       "success": true
     },
     {
@@ -9785,9 +9785,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999993824176486,
-      "snr_rf_true": 1.5804357397565583,
-      "snr_vlc_true": 17.83544539077156,
+      "p_est": 0.9999981321138186,
+      "snr_rf_true": 1.8359706954871537,
+      "snr_vlc_true": 17.500349019206112,
       "success": true
     },
     {
@@ -9795,9 +9795,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999964632380858,
-      "snr_rf_true": 1.3838334983910925,
-      "snr_vlc_true": 17.05307037443021,
+      "p_est": 0.9999951319864241,
+      "snr_rf_true": 2.017317523530221,
+      "snr_vlc_true": 16.69627901640698,
       "success": true
     },
     {
@@ -9805,9 +9805,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999978465723683,
-      "snr_rf_true": 1.0142764157983826,
-      "snr_vlc_true": 17.423820497403504,
+      "p_est": 0.9999958745462222,
+      "snr_rf_true": 1.6607269981723842,
+      "snr_vlc_true": 16.895293918247525,
       "success": true
     },
     {
@@ -9815,9 +9815,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999997152868754,
-      "snr_rf_true": 1.3035130093469944,
-      "snr_vlc_true": 17.924658322385785,
+      "p_est": 0.9999993311704294,
+      "snr_rf_true": 1.8139876286765915,
+      "snr_vlc_true": 17.82171052345706,
       "success": true
     },
     {
@@ -9825,9 +9825,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999981321138182,
-      "snr_rf_true": 1.8359298677237632,
-      "snr_vlc_true": 17.50034901910094,
+      "p_est": 0.9999962757412222,
+      "snr_rf_true": 1.79729634667491,
+      "snr_vlc_true": 17.002818973790827,
       "success": true
     },
     {
@@ -9835,9 +9835,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999951319864238,
-      "snr_rf_true": 2.017279145432634,
-      "snr_vlc_true": 16.696279016314428,
+      "p_est": 0.9999988186248296,
+      "snr_rf_true": 0.8470906830682774,
+      "snr_vlc_true": 17.684342176155415,
       "success": true
     },
     {
@@ -9845,9 +9845,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999958745462219,
-      "snr_rf_true": 1.6606909227606526,
-      "snr_vlc_true": 16.89529391816608,
+      "p_est": 0.9999999970136747,
+      "snr_rf_true": 0.8881032566268716,
+      "snr_vlc_true": 18.340930398720925,
       "success": true
     },
     {
@@ -9855,9 +9855,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999993311704292,
-      "snr_rf_true": 1.8139537177895637,
-      "snr_vlc_true": 17.821710523385388,
+      "p_est": 0.9999997488899263,
+      "snr_rf_true": 1.3681470287994453,
+      "snr_vlc_true": 17.93366434169327,
       "success": true
     },
     {
@@ -9865,9 +9865,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999962757412219,
-      "snr_rf_true": 1.797264470441104,
-      "snr_vlc_true": 17.002818973727756,
+      "p_est": 0.9999975561524972,
+      "snr_rf_true": 0.9315355399382481,
+      "snr_vlc_true": 17.345984500500016,
       "success": true
     },
     {
@@ -9875,9 +9875,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999988186248294,
-      "snr_rf_true": 0.8470607194084998,
-      "snr_vlc_true": 17.68434217609991,
+      "p_est": 0.9999966235395197,
+      "snr_rf_true": 1.5527168519619399,
+      "snr_vlc_true": 17.096033074843167,
       "success": true
     },
     {
@@ -9885,9 +9885,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999999970136747,
-      "snr_rf_true": 0.8880750907866808,
-      "snr_vlc_true": 18.34093039867208,
+      "p_est": 0.9999947900380064,
+      "snr_rf_true": 1.5421796125229292,
+      "snr_vlc_true": 16.604632753088982,
       "success": true
     },
     {
@@ -9895,9 +9895,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.999999748889926,
-      "snr_rf_true": 1.3681205529096658,
-      "snr_vlc_true": 17.933664341650285,
+      "p_est": 0.9999935709218029,
+      "snr_rf_true": 2.34414092599323,
+      "snr_vlc_true": 16.27789503819635,
       "success": true
     },
     {
@@ -9905,9 +9905,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999975561524971,
-      "snr_rf_true": 0.9315106526018553,
-      "snr_vlc_true": 17.34598450046219,
+      "p_est": 0.9999970073845299,
+      "snr_rf_true": 2.3703934296227507,
+      "snr_vlc_true": 17.198908125753626,
       "success": true
     },
     {
@@ -9915,9 +9915,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999966235395196,
-      "snr_rf_true": 1.5526934578657308,
-      "snr_vlc_true": 17.096033074809878,
+      "p_est": 0.9999931008986265,
+      "snr_rf_true": 2.211719806731305,
+      "snr_vlc_true": 16.151923208661906,
       "success": true
     },
     {
@@ -9925,9 +9925,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999947900380063,
-      "snr_rf_true": 1.5421576220724926,
-      "snr_vlc_true": 16.60463275305969,
+      "p_est": 0.999994360621126,
+      "snr_rf_true": 2.9266057785047437,
+      "snr_vlc_true": 16.489543896227126,
       "success": true
     },
     {
@@ -9935,9 +9935,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999935709218027,
-      "snr_rf_true": 2.3441202549698197,
-      "snr_vlc_true": 16.27789503817057,
+      "p_est": 0.9999985226495971,
+      "snr_rf_true": 3.091585017987586,
+      "snr_vlc_true": 17.60501727600122,
       "success": true
     },
     {
@@ -9945,9 +9945,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999970073845299,
-      "snr_rf_true": 2.3703739988607446,
-      "snr_vlc_true": 17.19890812573094,
+      "p_est": 0.9999967106017835,
+      "snr_rf_true": 3.657766469978667,
+      "snr_vlc_true": 17.119366802198627,
       "success": true
     },
     {
@@ -9955,29 +9955,29 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999931008986264,
-      "snr_rf_true": 2.211701541815019,
-      "snr_vlc_true": 16.151923208641943,
+      "p_est": 0.9999990716675514,
+      "snr_rf_true": 3.9233020285009554,
+      "snr_vlc_true": 17.752160650264848,
       "success": true
     },
     {
       "t": 996,
-      "action": "VLC",
-      "K_rf": 0,
-      "K_vlc": 2,
-      "p_est": 0.9999943606211259,
-      "snr_rf_true": 2.926588609483435,
-      "snr_vlc_true": 16.489543896209558,
-      "success": true
+      "action": "DUP",
+      "K_rf": 1,
+      "K_vlc": 1,
+      "p_est": 0.08887785529411285,
+      "snr_rf_true": 3.899702099189302,
+      "snr_vlc_true": -15.0,
+      "success": false
     },
     {
       "t": 997,
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999985226495971,
-      "snr_rf_true": 3.0915688791075557,
-      "snr_vlc_true": 17.605017275985762,
+      "p_est": 0.9999999967554044,
+      "snr_rf_true": 3.152183567830541,
+      "snr_vlc_true": 18.197446895383894,
       "success": true
     },
     {
@@ -9985,9 +9985,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999967106017834,
-      "snr_rf_true": 3.6577512994314385,
-      "snr_vlc_true": 17.119366802185024,
+      "p_est": 0.9999999980649418,
+      "snr_rf_true": 2.401024410133628,
+      "snr_vlc_true": 18.924967639367225,
       "success": true
     },
     {
@@ -9995,9 +9995,9 @@
       "action": "VLC",
       "K_rf": 0,
       "K_vlc": 2,
-      "p_est": 0.9999990716675513,
-      "snr_rf_true": 3.9232877681865603,
-      "snr_vlc_true": 17.75216065025288,
+      "p_est": 0.9999999992394918,
+      "snr_rf_true": 2.9324483101495833,
+      "snr_vlc_true": 19.577495446779047,
       "success": true
     }
   ]

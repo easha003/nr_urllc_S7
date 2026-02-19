@@ -165,13 +165,13 @@ def evaluate_policy(policy_name: str, policy_config: Dict,
             pc = PolicyConfig(
                 name=policy_config['hybrid']['policy'],
                 K_total=policy_config['hybrid']['K_total'],
-                p_gate=policy_config['hybrid'].get('p_gate', 0.97),
+                p_gate=policy_config['hybrid'].get('p_gate', 0.78),
                 dup_split=tuple(policy_config['hybrid'].get('dup_split', [1,1])),
                 allow_switch=policy_config['hybrid'].get('allow_switch', True),
                 hysteresis_margin_prob=policy_config['hybrid'].get('hysteresis_margin_prob', 0.05),
                 epsilon=policy_config['hybrid'].get('epsilon', 0.0),
             )
-            conf_k = policy_config['hybrid'].get('conf_k', 1.0)
+            conf_k = policy_config['hybrid'].get('conf_k', 0.8)
             policy = HybridController(rf_lut, vlc_lut, pc, predictor=predictor, conf_k=conf_k)
         
         # Run simulation

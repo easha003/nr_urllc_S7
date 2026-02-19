@@ -114,8 +114,8 @@ class SNRThresholdPolicy:
     
     def __init__(self, rf_lut: LinkLUT, vlc_lut: LinkLUT, 
                  K_total: int = 2,
-                 threshold_rf: float = 12.0,
-                 threshold_vlc: float = 12.0):
+                 threshold_rf: float = 9.0,
+                 threshold_vlc: float = 11.0):
         self.rf = rf_lut
         self.vlc = vlc_lut
         self.K_total = K_total
@@ -172,8 +172,8 @@ def create_baseline(name: str, rf_lut: LinkLUT = None, vlc_lut: LinkLUT = None,
     elif name == 'threshold':
         if rf_lut is None or vlc_lut is None:
             raise ValueError("Threshold policy requires rf_lut and vlc_lut")
-        threshold_rf = kwargs.get('threshold_rf', 12.0)
-        threshold_vlc = kwargs.get('threshold_vlc', 12.0)
+        threshold_rf = kwargs.get('threshold_rf', 9.0)
+        threshold_vlc = kwargs.get('threshold_vlc', 11.0)
         return SNRThresholdPolicy(rf_lut, vlc_lut, K_total, threshold_rf, threshold_vlc)
     else:
         raise ValueError(f"Unknown baseline: {name}")

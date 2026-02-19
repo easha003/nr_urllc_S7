@@ -23,21 +23,21 @@ mpl.rcParams['legend.fontsize'] = 9
 mpl.rcParams['figure.titlesize'] = 12
 
 DISPLAY_POLICY = {
-    "rf_only": "RF_only",
-    "vlc_only": "VLC_only",
-    "always_dup": "always_DUP",
-    "conditional_dup_balanced": "conditional_DUP_balanced",
-    "oracle": "oracle",
-    "threshold": "threshold",
-    "best_link": "best_link",
+    "rf_only": "RF-only",
+    "vlc_only": "VLC-only",
+    "always_dup": "Always-DUP",
+    "conditional_dup_balanced": "Conditional-DUP",
+    "oracle": "Oracle",
+    "threshold": "Threshold",
+    "best_link": "Best-Link",
 }
 DISPLAY_SCENARIO = {
-    "RF_good": "RF Good",
-    "VLC_good": "VLC Good",
+    "rf_good": "RF-Good",
+    "vlc_good": "VLC-Good",
 }
 
 def pretty_scenario(s: str) -> str:
-    return DISPLAY_SCENARIO.get(s, s.replace("_", " ").title())
+    return DISPLAY_SCENARIO.get(s, s.replace("_", "-").title())
 
 
 def load_results(results_dir: Path) -> Dict:
@@ -362,6 +362,21 @@ def main(results_dir: str, output_dir: str):
     
     plot_scenario_heatmap(results, manifest,
                          output_path / 'scenario_heatmap.png')
+    
+    plot_timely_delivery_comparison(results, manifest, 
+                                    output_path / 'timely_delivery_comparison.pdf')
+    
+    plot_energy_vs_performance(results, manifest,
+                               output_path / 'energy_vs_performance.pdf')
+    
+    plot_action_distribution(results, manifest,
+                            output_path / 'action_distribution.pdf')
+    
+    plot_latency_comparison(results, manifest,
+                           output_path / 'latency_comparison.pdf')
+    
+    plot_scenario_heatmap(results, manifest,
+                         output_path / 'scenario_heatmap.pdf')
     
     print(f"\nAll figures saved to: {output_path}")
 

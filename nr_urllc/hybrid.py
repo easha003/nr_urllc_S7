@@ -12,9 +12,9 @@ PolicyName = Literal["rf_only", "vlc_only", "best_link", "conditional_dup"]
 
 @dataclass
 class PolicyConfig:
-    name: PolicyName = "best_link"
+    name: PolicyName = "conditional_dup"
     K_total: int = 2
-    p_gate: float = 0.97
+    p_gate: float = 0.78
     dup_split: Tuple[int, int] = (1, 1)
     allow_switch: bool = True
     hysteresis_margin_prob: float = 0.05
@@ -26,7 +26,7 @@ class ControllerState:
 
 class HybridController:
     def __init__(self, rf_lut: LinkLUT, vlc_lut: LinkLUT, policy: PolicyConfig,
-                 predictor: AR1SnrPredictor | None = None, conf_k: float = 1.0):
+                 predictor: AR1SnrPredictor | None = None, conf_k: float = 0.8):
         self.rf = rf_lut
         self.vlc = vlc_lut
         self.cfg = policy
@@ -94,7 +94,7 @@ class HybridController:
             p_dup = 1.0 - (1.0 - p_rf_k) * (1.0 - p_vl_k)
             
             # ✅ IMPROVED: Adaptive DUP triggering based on uncertainty
-            uncertainty_penalty = 0.5 * (sig_rf + sig_vl) / 4.0  # Normalize to [0, ~0.5]
+            uncertainty_penalty = 0.3 * (sig_rf + sig_vl) / 4.0  # Normalize to [0, ~0.5]
             effective_p_gate = self.cfg.p_gate - uncertainty_penalty
             
             # ✅ FIX: Use DUP when uncertain OR when required for reliability
