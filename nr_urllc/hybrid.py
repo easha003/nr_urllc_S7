@@ -94,7 +94,7 @@ class HybridController:
             p_dup = 1.0 - (1.0 - p_rf_k) * (1.0 - p_vl_k)
             
             # ✅ IMPROVED: Adaptive DUP triggering based on uncertainty
-            uncertainty_penalty = 0.3 * (sig_rf + sig_vl) / 4.0  # Normalize to [0, ~0.5]
+            uncertainty_penalty = 0.5 * (sig_rf + sig_vl) / 4.0  # Normalize to [0, ~0.5]
             effective_p_gate = self.cfg.p_gate - uncertainty_penalty
             
             # ✅ FIX: Use DUP when uncertain OR when required for reliability
@@ -104,9 +104,9 @@ class HybridController:
             elif (sig_rf > 3.0 or sig_vl > 3.0) and p_dup >= (effective_p_gate - 0.1):
                 # High uncertainty → use DUP even with slightly lower probability
                 use_dup = True
-            elif p_rf >= self.cfg.p_gate and p_vl >= self.cfg.p_gate:
-                # Both links good → use DUP for extra reliability
-                use_dup = True
+            # elif p_rf >= self.cfg.p_gate and p_vl >= self.cfg.p_gate:
+            #     # Both links good → use DUP for extra reliability
+            #     use_dup = True
             
             if use_dup:
                 self.state.last_choice = "DUP"

@@ -103,45 +103,94 @@ class OraclePolicy:
         return best_action
 
 
-class SNRThresholdPolicy:
-    """
-    Simple threshold-based policy.
+# class SNRThresholdPolicy:
+#     """
+#     Simple threshold-based policy.
     
-    Use RF if SNR_RF > threshold_rf AND SNR_VLC < threshold_vlc,
-    use VLC if SNR_VLC > threshold_vlc AND SNR_RF < threshold_rf,
-    otherwise use DUP.
-    """
+#     Use RF if SNR_RF > threshold_rf AND SNR_VLC < threshold_vlc,
+#     use VLC if SNR_VLC > threshold_vlc AND SNR_RF < threshold_rf,
+#     otherwise use DUP.
+#     """
     
-    def __init__(self, rf_lut: LinkLUT, vlc_lut: LinkLUT, 
+#     def __init__(self, rf_lut: LinkLUT, vlc_lut: LinkLUT, 
+#                  K_total: int = 2,
+#                  threshold_rf: float = 9.0,
+#                  threshold_vlc: float = 11.0):
+#         self.rf = rf_lut
+#         self.vlc = vlc_lut
+#         self.K_total = K_total
+#         self.threshold_rf = threshold_rf
+#         self.threshold_vlc = threshold_vlc
+    
+#     def decide(self, snr_rf: float, snr_vlc: float) -> Dict:
+#         """Threshold-based decision."""
+#         if snr_rf >= self.threshold_rf and snr_vlc < self.threshold_vlc:
+#             # RF is good, VLC is poor -> use RF
+#             p_est = self.rf.p_timely(snr_rf, self.K_total)
+#             return {'action': 'RF', 'K_rf': self.K_total, 'K_vlc': 0, 'p_est': p_est}
+        
+#         elif snr_vlc >= self.threshold_vlc and snr_rf < self.threshold_rf:
+#             # VLC is good, RF is poor -> use VLC
+#             p_est = self.vlc.p_timely(snr_vlc, self.K_total)
+#             return {'action': 'VLC', 'K_rf': 0, 'K_vlc': self.K_total, 'p_est': p_est}
+        
+#         else:
+#             # Both good or both poor -> use DUP
+#             k_rf, k_vlc = 1, 1
+#             p_rf = self.rf.p_timely(snr_rf, k_rf)
+#             p_vlc = self.vlc.p_timely(snr_vlc, k_vlc)
+#             p_dup = 1.0 - (1.0 - p_rf) * (1.0 - p_vlc)
+#             return {'action': 'DUP', 'K_rf': k_rf, 'K_vlc': k_vlc, 'p_est': p_dup}
+
+class BeliefThresholdPolicy:
+    """
+    Mean-only belief threshold under partial observability.
+
+    - Decides early (before measurements).
+    - Uses ONLY predicted means (mu_rf, mu_vlc). Ignores sigma (uncertainty).
+    - Does NOT use LUT geometry to choose actions (LUT is used only to log p_est).
+    - No DUP: resolves ambiguity by choosing the higher predicted mean link.
+    """
+
+    def __init__(self, rf_lut: LinkLUT, vlc_lut: LinkLUT, predictor,
                  K_total: int = 2,
-                 threshold_rf: float = 9.0,
-                 threshold_vlc: float = 11.0):
+                 threshold_rf: float = 10.0,
+                 threshold_vlc: float = 10.0):
         self.rf = rf_lut
         self.vlc = vlc_lut
+        self.predictor = predictor
         self.K_total = K_total
         self.threshold_rf = threshold_rf
         self.threshold_vlc = threshold_vlc
-    
-    def decide(self, snr_rf: float, snr_vlc: float) -> Dict:
-        """Threshold-based decision."""
-        if snr_rf >= self.threshold_rf and snr_vlc < self.threshold_vlc:
-            # RF is good, VLC is poor -> use RF
-            p_est = self.rf.p_timely(snr_rf, self.K_total)
-            return {'action': 'RF', 'K_rf': self.K_total, 'K_vlc': 0, 'p_est': p_est}
-        
-        elif snr_vlc >= self.threshold_vlc and snr_rf < self.threshold_rf:
-            # VLC is good, RF is poor -> use VLC
-            p_est = self.vlc.p_timely(snr_vlc, self.K_total)
-            return {'action': 'VLC', 'K_rf': 0, 'K_vlc': self.K_total, 'p_est': p_est}
-        
-        else:
-            # Both good or both poor -> use DUP
-            k_rf, k_vlc = 1, 1
-            p_rf = self.rf.p_timely(snr_rf, k_rf)
-            p_vlc = self.vlc.p_timely(snr_vlc, k_vlc)
-            p_dup = 1.0 - (1.0 - p_rf) * (1.0 - p_vlc)
-            return {'action': 'DUP', 'K_rf': k_rf, 'K_vlc': k_vlc, 'p_est': p_dup}
 
+    def decide_early(self) -> Dict:
+        # Predict next-slot belief
+        (mu_rf, sig_rf), (mu_vlc, sig_vlc) = self.predictor.predict_next()
+
+        # Mean-only threshold scores (ignore uncertainty)
+        x_rf = mu_rf
+        x_vlc = mu_vlc
+
+        # Mean-thresholding (NO DUP)
+        if x_rf >= self.threshold_rf and x_vlc < self.threshold_vlc:
+            action = 'RF'
+            K_rf, K_vlc = self.K_total, 0
+            p_est = self.rf.p_timely(x_rf, self.K_total)  # logging only
+
+        elif x_vlc >= self.threshold_vlc and x_rf < self.threshold_rf:
+            action = 'VLC'
+            K_rf, K_vlc = 0, self.K_total
+            p_est = self.vlc.p_timely(x_vlc, self.K_total)  # logging only
+
+        else:
+            # Ambiguous case: both appear good or both appear poor -> use DUP
+            k_rf, k_vlc = 1, 1
+            p_rf = self.rf.p_timely(x_rf, k_rf)      # optional: only for logging
+            p_vlc = self.vlc.p_timely(x_vlc, k_vlc)  # optional: only for logging
+            p_dup = 1.0 - (1.0 - p_rf) * (1.0 - p_vlc)
+            return {'action': 'DUP', 'K_rf': k_rf, 'K_vlc': k_vlc, 'p_est': float(p_dup)}
+
+        return {'action': action, 'K_rf': K_rf, 'K_vlc': K_vlc, 'p_est': float(p_est)}
 
 def create_baseline(name: str, rf_lut: LinkLUT = None, vlc_lut: LinkLUT = None, 
                    K_total: int = 2, **kwargs) -> BaselinePolicy:
@@ -169,11 +218,15 @@ def create_baseline(name: str, rf_lut: LinkLUT = None, vlc_lut: LinkLUT = None,
         if rf_lut is None or vlc_lut is None:
             raise ValueError("Oracle policy requires rf_lut and vlc_lut")
         return OraclePolicy(rf_lut, vlc_lut, K_total)
-    elif name == 'threshold':
+    elif name == 'threshold_belief':
         if rf_lut is None or vlc_lut is None:
-            raise ValueError("Threshold policy requires rf_lut and vlc_lut")
-        threshold_rf = kwargs.get('threshold_rf', 9.0)
-        threshold_vlc = kwargs.get('threshold_vlc', 11.0)
-        return SNRThresholdPolicy(rf_lut, vlc_lut, K_total, threshold_rf, threshold_vlc)
+            raise ValueError("Belief-threshold policy requires rf_lut and vlc_lut")
+        predictor = kwargs.get('predictor', None)
+        if predictor is None:
+            raise ValueError("Belief-threshold policy requires a predictor instance")
+
+        threshold_rf = kwargs.get('threshold_rf', 10.0)
+        threshold_vlc = kwargs.get('threshold_vlc', 10.0)
+        return BeliefThresholdPolicy(rf_lut, vlc_lut, predictor, K_total, threshold_rf, threshold_vlc)
     else:
         raise ValueError(f"Unknown baseline: {name}")

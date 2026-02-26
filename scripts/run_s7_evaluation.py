@@ -156,10 +156,14 @@ def evaluate_policy(policy_name: str, policy_config: Dict,
             predictor = None
         
         # Create policy
-        if policy_name in ['rf_only', 'vlc_only', 'always_dup', 'oracle', 'threshold']:
-            # Baseline policy
+        if policy_name in ['rf_only', 'vlc_only', 'always_dup', 'oracle', 'threshold', 'threshold_belief']:
             K_total = policy_config.get('K_total', 2)
-            policy = create_baseline(policy_name, rf_lut, vlc_lut, K_total)
+
+            # Pass YAML params like threshold_rf, threshold_vlc, split, etc.
+            kwargs = {k: v for k, v in policy_config.items()
+                    if k not in ['name', 'K_total', 'hybrid', 'predictor']}
+
+            policy = create_baseline(policy_name, rf_lut, vlc_lut, K_total, **kwargs, predictor=predictor)
         else:
             # HybridController
             pc = PolicyConfig(

@@ -24,9 +24,9 @@ class ChannelConfig:
     rho: float = -0.3  # Negative = complementary fading
     
     # VLC blockage model (2-state Markov)
-    blockage_prob_enter: float = 0.05   # P(blocked | not blocked)
+    blockage_prob_enter: float = 0.1   # P(blocked | not blocked)
     blockage_prob_stay: float = 0.7     # P(blocked | blocked)
-    blockage_snr: float = -15.0         # SNR when blocked
+    blockage_snr: float = -12.0         # SNR when blocked
     
     # Measurement noise
     r_meas: float = 0.5
@@ -159,7 +159,7 @@ class ScenarioConfig:
     rf_offset: float = 0.0
     vlc_offset: float = 0.0
     rho: float = -0.3
-    blockage_prob_enter: float = 0.05
+    blockage_prob_enter: float = 0.1
     blockage_prob_stay: float = 0.7
 
 
@@ -186,17 +186,17 @@ SCENARIOS = {
     'correlated_blockage': ScenarioConfig(
         name='Correlated Blockage',
         rf_offset=-2.0,  # RF slightly degraded when VLC blocked
-        vlc_offset=0.0,
+        vlc_offset=-6.5,
         rho=-0.3,
-        blockage_prob_enter=0.1,  # More frequent blockage
-        blockage_prob_stay=0.8     # Longer blockage duration
+        blockage_prob_enter=0.25,  # More frequent blockage
+        blockage_prob_stay=0.85     # Longer blockage duration
     ),
     'balanced': ScenarioConfig(
         name='Balanced',
         rf_offset=0.0,
         vlc_offset=0.0,
         rho=0.0,  # Independent
-        blockage_prob_enter=0.05,
+        blockage_prob_enter=0.1,
         blockage_prob_stay=0.7
     )
 }

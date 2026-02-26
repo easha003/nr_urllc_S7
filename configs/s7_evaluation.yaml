@@ -37,11 +37,34 @@ policies:
     name: "Oracle (Upper Bound)"
     K_total: 2
   
-  threshold:
-    name: "SNR-Threshold"
+  # threshold:
+  #   name: "SNR-Threshold"
+  #   K_total: 2
+  #   threshold_rf: 1.0
+  #   threshold_vlc: 2.0
+
+  threshold_belief:
+    name: "Threshold (Belief-Based)"
     K_total: 2
-    threshold_rf: 10.0
-    threshold_vlc: 10.0
+    threshold_rf: 7.0
+    threshold_vlc: 12.0
+    predictor:
+      model: ar1_per_link
+      rf:
+        phi: 0.94
+        q: 0.3
+        m: 8.0
+      vlc:
+        phi: 0.88
+        q: 0.5
+        m: 12.5
+        blockage_threshold: -12.0
+        blockage_recovery_rate: 0.95
+      r: 0.5
+      mu_rf: 8.0
+      var_rf: 2.0
+      mu_vlc: 12.5
+      var_vlc: 2.0
   
   best_link:
     name: "Best-Link (Predictive)"
