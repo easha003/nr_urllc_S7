@@ -28,7 +28,7 @@ DISPLAY_POLICY = {
     "always_dup": "Always-DUP",
     "conditional_dup_balanced": "Conditional-DUP",
     "oracle": "Oracle",
-    "threshold": "Threshold",
+    "threshold_belief": "Threshold-Belief",
     "best_link": "Best-Link",
 }
 DISPLAY_SCENARIO = {
